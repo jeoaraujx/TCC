@@ -1,0 +1,65 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[Datchanamoorthy, S e B 2023]{Datchanamoorthy_2023}
+\abntrefinfo{Datchanamoorthy, S e B}{Datchanamoorthy; S; B}{2023}
+{DATCHANAMOORTHY, K.; S, A. M.~G.; B, P. Text mining: Clustering using bert and probabilistic topic modeling.
+\textbf{Social Informatics Journal}, 2023.
+Dispon{\'\i}vel em: \url{https://api.semanticscholar.org/CorpusID:267122800}.}
+
+\bibitem[Devlin \textit{et al.} 2019]{Devlin}
+\abntrefinfo{Devlin \textit{et al.}}{Devlin \textit{et al.}}{2019}
+{DEVLIN, J. \textit{et al.} \textbf{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}. 2019.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1810.04805}.}
+
+\bibitem[Dillan e Fudholi 2023]{Dillan_2023}
+\abntrefinfo{Dillan e Fudholi}{Dillan; Fudholi}{2023}
+{DILLAN, T.; FUDHOLI, D.~H. Ldaviewer: An automatic language-agnostic system for discovering state-of-the-art topics in research using topic modeling, bidirectional encoder representations from transformers, and entity linking.
+\textbf{IEEE Access}, v.~11, p. 59142--59163, 2023.}
+
+\bibitem[Galli \textit{et al.} 2024]{Galli}
+\abntrefinfo{Galli \textit{et al.}}{Galli \textit{et al.}}{2024}
+{GALLI, C. \textit{et al.} Topic modeling for faster literature screening using transformer-based embeddings.
+\textbf{Metrics}, v.~1, n.~1, 2024.
+ISSN 3042-5042.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/3042-5042/1/1/2}.}
+
+\bibitem[Grootendorst 2022]{Grootendorst_2022}
+\abntrefinfo{Grootendorst}{Grootendorst}{2022}
+{GROOTENDORST, M. \textbf{BERTopic: Neural topic modeling with a class-based TF-IDF procedure}. 2022.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2203.05794}.}
+
+\bibitem[Mohammadi e Karami 2020]{Mohammadi}
+\abntrefinfo{Mohammadi e Karami}{Mohammadi; Karami}{2020}
+{MOHAMMADI, E.; KARAMI, A. Exploring research trends in big data across disciplines: A text mining analysis.
+\textbf{Journal of Information Science}, v.~48, 06 2020.}
+
+\bibitem[Vaswani \textit{et al.} 2017]{vaswani_2017}
+\abntrefinfo{Vaswani \textit{et al.}}{Vaswani \textit{et al.}}{2017}
+{VASWANI, A. \textit{et al.} \textbf{Attention Is All You Need}. 2017.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1706.03762}.}
+
+\bibitem[Wang, Hohman e Chau 2023]{Wang_2023}
+\abntrefinfo{Wang, Hohman e Chau}{Wang; Hohman; Chau}{2023}
+{WANG, Z.~J.; HOHMAN, F.; CHAU, D.~H. \textbf{WizMap: Scalable Interactive Visualization for Exploring Large Machine Learning Embeddings}. 2023.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2306.09328}.}
+
+\bibitem[Weng, Wu e Dyer 2022]{Weng_2022}
+\abntrefinfo{Weng, Wu e Dyer}{Weng; Wu; Dyer}{2022}
+{WENG, M.-H.; WU, S.; DYER, M. Identification and visualization of key topics in scientific publications with transformer-based language models and document clustering methods.
+\textbf{Applied Sciences}, v.~12, n.~21, 2022.
+ISSN 2076-3417.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/12/21/11220}.}
+
+\bibitem[Xie \textit{et al.} 2020]{Xie}
+\abntrefinfo{Xie \textit{et al.}}{Xie \textit{et al.}}{2020}
+{XIE, Q. \textit{et al.} Monolingual and multilingual topic analysis using lda and bert embeddings.
+\textbf{Journal of Informetrics}, v.~14, n.~3, p. 101055, 2020.
+ISSN 1751-1577.
+Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S1751157719305127}.}
+
+\end{thebibliography}

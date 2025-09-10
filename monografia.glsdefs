@@ -1,0 +1,672 @@
+\glsdefs@newdocentry{SIMCC}%
+{%
+name={SIMCC},%
+sort={SIMCC},%
+type={main},%
+first={SIMCC},%
+firstplural={SIMCCs},%
+text={SIMCC},%
+plural={SIMCCs},%
+description={Sistema de Mapeamento de Competências Científicas da Bahia},%
+descriptionplural={Sistema de Mapeamento de Competências Científicas da Bahia},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{IA}%
+{%
+name={IA},%
+sort={IA},%
+type={main},%
+first={IA},%
+firstplural={IAs},%
+text={IA},%
+plural={IAs},%
+description={Inteligência Artificial},%
+descriptionplural={Inteligência Artificial},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PNL}%
+{%
+name={PNL},%
+sort={PNL},%
+type={main},%
+first={PNL},%
+firstplural={PNLs},%
+text={PNL},%
+plural={PNLs},%
+description={Processamento de Linguagem Natural},%
+descriptionplural={Processamento de Linguagem Natural},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{TCC}%
+{%
+name={TCC},%
+sort={TCC},%
+type={main},%
+first={TCC},%
+firstplural={TCCs},%
+text={TCC},%
+plural={TCCs},%
+description={Trabalho de Conclusão de Curso},%
+descriptionplural={Trabalho de Conclusão de Curso},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LLM}%
+{%
+name={LLM},%
+sort={LLM},%
+type={main},%
+first={LLM},%
+firstplural={LLMs},%
+text={LLM},%
+plural={LLMs},%
+description={Large Language Model},%
+descriptionplural={Large Language Model},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{BERT}%
+{%
+name={BERT},%
+sort={BERT},%
+type={main},%
+first={BERT},%
+firstplural={BERTs},%
+text={BERT},%
+plural={BERTs},%
+description={Bidirectional Encoder Representations from Transformers},%
+descriptionplural={Bidirectional Encoder Representations from Transformers},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{GPT}%
+{%
+name={GPT},%
+sort={GPT},%
+type={main},%
+first={GPT},%
+firstplural={GPTs},%
+text={GPT},%
+plural={GPTs},%
+description={Generative Pre-trained Transformer},%
+descriptionplural={Generative Pre-trained Transformer},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{GPT-4}%
+{%
+name={GPT-4},%
+sort={GPT-4},%
+type={main},%
+first={GPT-4},%
+firstplural={GPT-4s},%
+text={GPT-4},%
+plural={GPT-4s},%
+description={Generative Pre-trained Transformer 4.0},%
+descriptionplural={Generative Pre-trained Transformer 4.0},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LDA}%
+{%
+name={LDA},%
+sort={LDA},%
+type={main},%
+first={LDA},%
+firstplural={LDAs},%
+text={LDA},%
+plural={LDAs},%
+description={Latent Dirichlet Allocation},%
+descriptionplural={Latent Dirichlet Allocation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{NMF}%
+{%
+name={NMF},%
+sort={NMF},%
+type={main},%
+first={NMF},%
+firstplural={NMFs},%
+text={NMF},%
+plural={NMFs},%
+description={Non-negative Matrix Factorization},%
+descriptionplural={Non-negative Matrix Factorization},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{UMAP}%
+{%
+name={UMAP},%
+sort={UMAP},%
+type={main},%
+first={UMAP},%
+firstplural={UMAPs},%
+text={UMAP},%
+plural={UMAPs},%
+description={Uniform Manifold Approximation and Projection},%
+descriptionplural={Uniform Manifold Approximation and Projection},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{HDBSCAN}%
+{%
+name={HDBSCAN},%
+sort={HDBSCAN},%
+type={main},%
+first={HDBSCAN},%
+firstplural={HDBSCANs},%
+text={HDBSCAN},%
+plural={HDBSCANs},%
+description={Hierarchical Density-Based Spatial Clustering of Applications with Noise},%
+descriptionplural={Hierarchical Density-Based Spatial Clustering of Applications with Noise},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SBERT}%
+{%
+name={S-BERT},%
+sort={S-BERT},%
+type={main},%
+first={S-BERT},%
+firstplural={S-BERTs},%
+text={S-BERT},%
+plural={S-BERTs},%
+description={Sentence-BERT},%
+descriptionplural={Sentence-BERT},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{CNPQ}%
+{%
+name={CNPq},%
+sort={CNPq},%
+type={main},%
+first={CNPq},%
+firstplural={CNPqs},%
+text={CNPq},%
+plural={CNPqs},%
+description={Conselho Nacional de Desenvolvimento Científico e Tecnológico},%
+descriptionplural={Conselho Nacional de Desenvolvimento Científico e Tecnológico},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DGP}%
+{%
+name={DGP},%
+sort={DGP},%
+type={main},%
+first={DGP},%
+firstplural={DGPs},%
+text={DGP},%
+plural={DGPs},%
+description={Diretório dos Grupos de Pesquisa},%
+descriptionplural={Diretório dos Grupos de Pesquisa},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JCR}%
+{%
+name={JCR},%
+sort={JCR},%
+type={main},%
+first={JCR},%
+firstplural={JCRs},%
+text={JCR},%
+plural={JCRs},%
+description={Journal Citation Reports},%
+descriptionplural={Journal Citation Reports},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{API}%
+{%
+name={API},%
+sort={API},%
+type={main},%
+first={API},%
+firstplural={APIs},%
+text={API},%
+plural={APIs},%
+description={Application Programming Interface},%
+descriptionplural={Application Programming Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{TFIDF}%
+{%
+name={TF-IDF},%
+sort={TF-IDF},%
+type={main},%
+first={TF-IDF},%
+firstplural={TF-IDFs},%
+text={TF-IDF},%
+plural={TF-IDFs},%
+description={Term Frequency-Inverse Document Frequency},%
+descriptionplural={Term Frequency-Inverse Document Frequency},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cTFIDF}%
+{%
+name={c-TF-IDF},%
+sort={c-TF-IDF},%
+type={main},%
+first={c-TF-IDF},%
+firstplural={c-TF-IDFs},%
+text={c-TF-IDF},%
+plural={c-TF-IDFs},%
+description={Class-based Term Frequency-Inverse Document Frequency},%
+descriptionplural={Class-based Term Frequency-Inverse Document Frequency},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DSR}%
+{%
+name={DSR},%
+sort={DSR},%
+type={main},%
+first={DSR},%
+firstplural={DSRs},%
+text={DSR},%
+plural={DSRs},%
+description={Design Science Research},%
+descriptionplural={Design Science Research},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LSA}%
+{%
+name={LSA},%
+sort={LSA},%
+type={main},%
+first={LSA},%
+firstplural={LSAs},%
+text={LSA},%
+plural={LSAs},%
+description={Latent Semantic Analysis},%
+descriptionplural={Latent Semantic Analysis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{NLTK}%
+{%
+name={NLTK},%
+sort={NLTK},%
+type={main},%
+first={NLTK},%
+firstplural={NLTKs},%
+text={NLTK},%
+plural={NLTKs},%
+description={Natural Language Toolkit},%
+descriptionplural={Natural Language Toolkit},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PCA}%
+{%
+name={PCA},%
+sort={PCA},%
+type={main},%
+first={PCA},%
+firstplural={PCAs},%
+text={PCA},%
+plural={PCAs},%
+description={Principal Component Analysis},%
+descriptionplural={Principal Component Analysis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{tSNE}%
+{%
+name={t-SNE},%
+sort={t-SNE},%
+type={main},%
+first={t-SNE},%
+firstplural={t-SNEs},%
+text={t-SNE},%
+plural={t-SNEs},%
+description={t-distributed Stochastic Neighbor Embedding},%
+descriptionplural={t-distributed Stochastic Neighbor Embedding},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
