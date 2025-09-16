@@ -1,39 +1,31 @@
 \chapter[METODOLOGIA]{METODOLOGIA}
-A metodologia Design Science Research (DSR) é adotada neste estudo como estrutura principal para o desenvolvimento de um artefato que combina o BERTopic e o GPT-4, aplicado à plataforma SIMCC, para melhorar a análise e classificação de publicações científicas. O DSR é amplamente utilizado em pesquisas tecnológicas e de sistemas de informação, sendo adequado para solucionar problemas práticos por meio da criação e validação de artefatos inovadores \cite{Dresch}
+Este estudo adota a Design Science Research (DSR) como sua principal estrutura metodológica para o desenvolvimento e a validação de um artefato tecnológico. A DSR é particularmente adequada para esta pesquisa, pois seu foco reside na criação de soluções com caráter de inovação para problemas práticos, alinhando rigor científico com relevância aplicada (\citeonline{Dresch_2015}). O objetivo é construir um pipeline computacional que combina BERTopic e GPT-4 para otimizar a análise de publicações científicas na plataforma SIMCC.
 
-O DSR se destaca por sua abordagem iterativa e estruturada, composta por etapas que vão desde a identificação do problema até a apresentação dos resultados. Ele enfatiza a relevância do artefato para resolver o problema proposto e seu rigor científico na construção e avaliação. Essa metodologia é amplamente reconhecida por sua aplicabilidade em projetos que combinam pesquisa acadêmica e desenvolvimento tecnológico, como no experimento prático que realizaremos no SIMCC.
+O processo de DSR orienta o projeto de forma iterativa, desde a concepção do problema até a comunicação dos resultados, conforme ilustrado no fluxograma da Figura 5. A seguir, cada etapa do DSR é detalhada e contextualizada no escopo deste trabalho.
 
-No contexto dessa pesquisa, o DSR pode ser explorado da seguinte maneira:
+\section{Identificação do Problema e Definição de Objetivos}
+A primeira fase da DSR, representada na Figura 5 pelos campos ``Contexto'' e ``Problema'', consiste na identificação de uma lacuna relevante. Atualmente, a busca na plataforma SIMCC é limitada a palavras-chave, o que dificulta a identificação de conexões semânticas, temas interdisciplinares e publicações em diferentes idiomas. Essa limitação evidencia a necessidade de uma solução que otimize a gestão do conhecimento acadêmico. O problema de pesquisa, portanto, é: como a combinação de técnicas avançadas de modelagem de tópicos (BERTopic) e modelos de linguagem de grande escala (GPT-4) pode superar as limitações das buscas tradicionais na plataforma SIMCC, melhorando a análise e a classificação de temas emergentes?
+
+A partir disso, formulam-se as ``Conjecturas Teóricas'': a integração do BERTopic com o GPT-4 tem o potencial de melhorar significativamente a identificação, classificação e visualização de temas emergentes, oferecendo uma compreensão mais profunda dos dados por meio de uma rotulagem semântica enriquecida e visualizações interativas.
+
+\section{Desenvolvimento do Artefato}
+Com base nos objetivos, a etapa seguinte é o desenvolvimento do ``Artefato'', que neste trabalho é o pipeline integrado ao SIMCC. Este pipeline é projetado para:
 
 \begin{itemize}
-    \item \textbf{Identificação do Problema:}
-        O problema de pesquisa a ser resolvido neste estudo é como a combinação de técnicas avançadas de modelagem de tópicos, como o BERTopic, com modelos de linguagem de grande escala (LLMs), como o GPT-4, aplicadas à plataforma SIMCC, pode melhorar a identificação, análise e classificação de temas emergentes em grandes volumes de publicações científicas. Este desafio busca superar as limitações das abordagens tradicionais de busca por palavras-chave e lidar com as complexidades do contexto interdisciplinar e multilíngue.
-
-        A utilização de palavras-chave como método principal de busca na plataforma SIMCC apresenta diversas limitações. Uma das principais é a falta de contexto semântico nas buscas, o que dificulta a identificação de conexões e relações mais profundas entre os termos. Além disso, o sistema de busca tradicional não é capaz de lidar adequadamente com as nuances interdisciplinar e multilíngues presentes em textos acadêmicos, o que pode levar à perda de artigos relevantes e ao aumento da ambiguidade nas buscas. Outro desafio significativo é a dificuldade em identificar temas emergentes em grandes volumes de dados científicos, uma vez que a busca por palavras-chave tende a ser limitada pela superficialidade dos termos e pela falta de técnicas que identifiquem padrões emergentes.
-
-        Esses desafios indicam a necessidade de uma solução que vá além das abordagens tradicionais. É essencial uma ferramenta que combine técnicas avançadas de processamento de linguagem natural (PLN) e que permita, não apenas identificar e classificar tópicos de maneira mais precisa, mas também oferecer uma interface de visualização intuitiva que facilite a análise e compreensão dos temas emergentes, ajudando a superar as limitações atuais da plataforma SIMCC.
-
-    \item \textbf{Definição dos Objetivos do Artefato:}
-        O artefato desenvolvido neste trabalho visa otimizar a análise e a visualização de tópicos em grandes volumes de publicações científicas. Para atingir esse objetivo, o pipeline proposto integra o BERTopic, utilizando embeddings contextuais, UMAP e HDBSCAN para a identificação precisa dos tópicos centrais presentes nos textos. Além disso, incorpora o GPT-4, que tem como função enriquecer semanticamente os tópicos gerados, oferecendo rótulos interpretáveis e relevantes que tornam os resultados mais acessíveis e compreensíveis.
-
-        A solução também inclui uma interface de visualização interativa, baseada em modelos de mapeamento como o WizMap, permitindo que os usuários naveguem de forma intuitiva entre os tópicos identificados, facilitando a análise e compreensão das relações entre eles. A combinação dessas técnicas visa não apenas melhorar a precisão na identificação de temas emergentes, mas também reduzir significativamente o tempo necessário para a análise de grandes volumes de publicações científicas, tornando o processo mais eficiente e acessível aos pesquisadores.
-
-    \item \textbf{Desenvolvimento do Artefato:}
-        O desenvolvimento do artefato envolve a construção de um pipeline experimental estruturado para processar e analisar publicações científicas indexadas na plataforma SIMCC. O primeiro passo desse processo é a coleta e o pré-processamento dos dados. As publicações serão submetidas a técnicas de pré-processamento, como tokenização, remoção de stopwords e lematização, a fim de preparar os textos para a geração de embeddings contextuais com o Sentence-BERT. Esses embeddings serão essenciais para representar as relações semânticas presentes nas publicações.
-
-        Em seguida, a modelagem de tópicos será realizada com o uso do BERTopic, que identificará os tópicos centrais dos textos, integrando técnicas como UMAP para a redução de dimensionalidade e HDBSCAN para o agrupamento temático. A redução de dimensionalidade com o UMAP permitirá uma melhor organização dos dados, mantendo as estruturas semânticas tanto locais quanto globais. O HDBSCAN, por sua vez, será responsável por identificar e agrupar os tópicos com base na densidade dos dados, formando clusters temáticos representativos.
-
-        Após a identificação dos clusters, o próximo passo será a rotulagem semântica dos tópicos com o GPT-4. O GPT-4 será utilizado para interpretar os clusters gerados e criar rótulos temáticos enriquecidos semanticamente, tornando os tópicos mais claros e interpretáveis para os pesquisadores.
-
-        Por fim, será implementada uma interface de visualização interativa baseada no modelo WizMap, que apresentará os tópicos como clusters organizados em um espaço bidimensional ou tridimensional. Essa visualização permitirá aos usuários navegar pelos tópicos de maneira intuitiva, facilitando a análise e compreensão das relações entre os diferentes temas. As ferramentas utilizadas para a implementação incluem as bibliotecas Transformers, umap-learn, hdbscan e plataformas como Dash e Plotly para a criação da interface de visualização.
-
-    \item \textbf{Validação do Artefato:}
-        A validação do artefato será realizada por meio de aplicações de métricas de avaliação para medir a qualidade dos tópicos gerados. A principal métrica utilizada será o Topic Coherence Score, que permite avaliar a coerência dos tópicos identificados pelo pipeline, verificando a consistência semântica das palavras e temas dentro de cada cluster. Além disso, será feita uma comparação entre o tempo de análise do sistema atual do SIMCC e o pipeline proposto, com o intuito de demonstrar a eficiência do novo sistema na redução do tempo necessário para a identificação e classificação dos temas.
-
-    \item \textbf{Apresentação dos Resultados Obtidos:}
-        Após a conformidade dos resultados com as métricas utilizadas para verificar a consistência semântica dos clusters, esses serão apresentados em cenários reais, destacando a aplicação prática e funcionamento dos artefatos construídos. Primeiramente, será analisada a precisão e a coesão dos tópicos identificados, evidenciando a capacidade do pipeline proposto em gerar temas consistentes e representativos a partir das publicações científicas. Em seguida, será abordada a eficácia da rotulagem semântica realizada pelo GPT-4, que permitirá avaliar como o modelo contribui para a interpretação e clareza dos tópicos gerados.
+    \item Realizar a modelagem de tópicos com o BERTopic, utilizando embeddings contextuais para identificar padrões temáticos de forma robusta.
+    \item Utilizar o GPT-4 para a rotulagem semântica, gerando rótulos descritivos e precisos que facilitam a interpretação dos resultados.
+    \item Apresentar os tópicos em uma interface gráfica interativa, como o WizMap, para facilitar a exploração das conexões temáticas.
 \end{itemize}
 
+A construção deste artefato se apoia no ``Estado da Técnica'' , que envolve uma revisão da literatura sobre Modelagem de Tópicos, Embeddings Contextuais, Redução de Dimensionalidade (UMAP), Algoritmos de Clusterização (HDBSCAN) e LLMs.
+
+\section{Avaliação e Validação}
+O ciclo de DSR exige uma avaliação rigorosa, representada no diagrama pelas ``Avaliações'' 1, 2 e 3. A validação do artefato (Avaliação 1: O artefato é válido?) será conduzida por meio de métricas quantitativas e qualitativas. Utilizaremos o \textit{Topic Coherence Score} para medir a coerência semântica dos tópicos gerados pelo pipeline. Adicionalmente, será realizada uma análise comparativa do tempo de análise entre o sistema atual e a solução proposta, visando demonstrar ganhos de eficiência.
+
+A Avaliação 2 (O problema foi resolvido?) e a Avaliação 3 (As conjecturas teóricas parecem válidas?) serão respondidas ao final do experimento. A apresentação dos resultados, mostrando a precisão dos tópicos e a clareza dos rótulos gerados pelo GPT-4, servirá para validar se o artefato efetivamente soluciona o problema identificado e se as conjecturas teóricas se confirmam na prática.
+
+\section{Apresentação dos Resultados e Comunicação}
+A etapa final do ciclo DSR, embora não explicitada como uma caixa separada no diagrama, é a comunicação dos achados. Os resultados obtidos serão documentados detalhadamente neste trabalho, destacando o funcionamento do pipeline, a qualidade dos tópicos identificados e a eficácia da interface de visualização. O objetivo é não apenas apresentar uma solução tecnológica, mas também contribuir com conhecimento para as áreas de Ciência da Informação e Processamento de Linguagem Natural.
 
 \begin{figure}[b]
     \caption{\label{dsr}Adaptação da Design Science Research para este projeto.}

@@ -44,6 +44,11 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1810.04805}.}
 {DILLAN, T.; FUDHOLI, D.~H. Ldaviewer: An automatic language-agnostic system for discovering state-of-the-art topics in research using topic modeling, bidirectional encoder representations from transformers, and entity linking.
 \textbf{IEEE Access}, v.~11, p. 59142--59163, 2023.}
 
+\bibitem[Dresch, Lacerda e Antunes 2015]{Dresch_2015}
+\abntrefinfo{Dresch, Lacerda e Antunes}{Dresch; Lacerda; Antunes}{2015}
+{DRESCH, A.; LACERDA, D.; ANTUNES, J. \textbf{Design Science Research: Método de Pesquisa para Avanço da Ciência e Tecnologia}. [S.l.]: Editora FGV, 2015.
+ISBN 978-85-8260-298-0.}
+
 \bibitem[Galli \textit{et al.} 2024]{Galli_2024}
 \abntrefinfo{Galli \textit{et al.}}{Galli \textit{et al.}}{2024}
 {GALLI, C. \textit{et al.} Topic modeling for faster literature screening using transformer-based embeddings.
@@ -79,6 +84,11 @@ ISBN 1-58113-096-1.}
 {HOFMANN, T. Hofmann, t.: Unsupervised learning by probabilistic latent semantic analysis. machine learning 42(1-2), 177-196.
 \textbf{Machine Learning}, v.~42, p. 177--196, 01 2001.}
 
+\bibitem[Jorge \textit{et al.} 2025]{Jorge_2025}
+\abntrefinfo{Jorge \textit{et al.}}{Jorge \textit{et al.}}{2025}
+{JORGE, E. M.~F. \textit{et al.} Recuperando especialistas em energias renováveis por meio de taxonomia facetada e técnicas de processamento de linguagem natural: um experimento de mineração de dados acadêmicos aplicados por pesquisadores das universidades estaduais da bahia.
+\textbf{Informaç{\~a}o \& Informaç{\~a}o}, v.~30, n.~2, p. 242--268, 2025.}
+
 \bibitem[Jung \textit{et al.} 2024]{Jung_2024}
 \abntrefinfo{Jung \textit{et al.}}{Jung \textit{et al.}}{2024}
 {JUNG, H.~S. \textit{et al.} Expansive data, extensive model: Investigating discussion topics around llm through unsupervised machine learning in academic papers and news.
@@ -91,17 +101,20 @@ Dispon{\'\i}vel em: \url{https://doi.org/10.1371/journal.pone.0304680}.}
 \textbf{Palgrave Communications}, v.~11, n.~1, p. 1--15, December 2024.
 Dispon{\'\i}vel em: \url{https://ideas.repec.org/a/pal/palcom/v11y2024i1d10.1057\_s41599-024-03044-y.html}.}
 
-\bibitem[Liu e Zheng 2023]{Liu_2023}
-\abntrefinfo{Liu e Zheng}{Liu; Zheng}{2023}
-{LIU, J.; ZHENG, C. Summary of the gpt-4 technical report.
-\textbf{arXiv preprint}, 2023.
-Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2303.08774}.}
+\bibitem[Kozlowski, Pradier e Benz 2024]{Kozlowski_2024}
+\abntrefinfo{Kozlowski, Pradier e Benz}{Kozlowski; Pradier; Benz}{2024}
+{KOZLOWSKI, D.; PRADIER, C.; BENZ, P. \textbf{Generative AI for automatic topic labelling}. 2024.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2408.07003}.}
 
 \bibitem[Maaten e Hinton 2008]{Maaten_2008}
 \abntrefinfo{Maaten e Hinton}{Maaten; Hinton}{2008}
 {MAATEN, L. van~der; HINTON, G. Visualizing data using t-sne.
 \textbf{Journal of Machine Learning Research}, v.~9, n.~86, p. 2579--2605, 2008.
 Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v9/vandermaaten08a.html}.}
+
+\bibitem[MacQueen 1967]{MacQueen_1967}
+\abntrefinfo{MacQueen}{MacQueen}{1967}
+{MACQUEEN, J. Some methods for classification and analysis of multivariate observations. In:  \textbf{Proceedings of the 5th Berkeley Symposium on Mathematical Statistics and Probability}. Berkeley: University of California Press, 1967.  (Statistics, v.~1), p. 281--297. Dispon{\'\i}vel em: \url{http://projecteuclid.org/euclid.bsmsp/1200512992}.}
 
 \bibitem[McInnes, Healy e Melville 2018]{McInnes_2018}
 \abntrefinfo{McInnes, Healy e Melville}{McInnes; Healy; Melville}{2018}
@@ -115,7 +128,7 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1802.03426}.}
 ISSN 0360-5442.
 Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0360544224000744}.}
 
-\bibitem[Mifrah e Benlahmar 2020]{Mifrah}
+\bibitem[Mifrah e Benlahmar 2020]{Mifrah_2020}
 \abntrefinfo{Mifrah e Benlahmar}{Mifrah; Benlahmar}{2020}
 {MIFRAH, S.; BENLAHMAR, E.~H. Topic modeling coherence: A comparative study between lda and nmf models using covid’19 corpus.
 \textbf{International Journal of Advanced Trends in Computer Science and Engineering}, 08 2020.}
@@ -161,6 +174,12 @@ Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0140
 {REIMERS, N.; GUREVYCH, I. \textbf{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}. 2019.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1908.10084}.}
 
+\bibitem[Santos \textit{et al.} 2024]{Santos_2024}
+\abntrefinfo{Santos \textit{et al.}}{Santos \textit{et al.}}{2024}
+{SANTOS, M. S.~d. \textit{et al.} Solução para mapeamento e consulta das competências dos pesquisadores: uma arquitetura para extração, integração e consultas de informações acadêmicas.
+\textbf{Cadernos de Prospecção}, v.~17, n.~2, p. 671–688, abr. 2024.
+Dispon{\'\i}vel em: \url{https://periodicos.ufba.br/index.php/nit/article/view/56670}.}
+
 \bibitem[Vaswani \textit{et al.} 2017]{vaswani_2017}
 \abntrefinfo{Vaswani \textit{et al.}}{Vaswani \textit{et al.}}{2017}
 {VASWANI, A. \textit{et al.} \textbf{Attention Is All You Need}. 2017.
@@ -177,6 +196,12 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2306.09328}.}
 \textbf{Applied Sciences}, v.~12, n.~21, 2022.
 ISSN 2076-3417.
 Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/12/21/11220}.}
+
+\bibitem[Wijanto, Widiastuti e Yong 2024]{Wijanto_2024}
+\abntrefinfo{Wijanto, Widiastuti e Yong}{Wijanto; Widiastuti; Yong}{2024}
+{WIJANTO, M.~C.; WIDIASTUTI, I.; YONG, H.-S. Topic modeling for scientific articles: Exploring optimal hyperparameter tuning in bert.
+\textbf{International Journal on Advanced Science, Engineering and Information Technology}, v.~14, n.~3, p. 912–919, Jun. 2024.
+Dispon{\'\i}vel em: \url{https://ijaseit.insightsociety.org/index.php/ijaseit/article/view/19347}.}
 
 \bibitem[Xie \textit{et al.} 2020]{Xie_2020}
 \abntrefinfo{Xie \textit{et al.}}{Xie \textit{et al.}}{2020}

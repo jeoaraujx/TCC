@@ -33,7 +33,7 @@
 \backcite {Hofmann_1999,Hofmann_2001}{{18}{2.3}{section.2.3}}
 \backcite {Datchanamoorthy_2023}{{18}{2.3}{section.2.3}}
 \backcite {Blei_2003}{{18}{2.3}{section.2.3}}
-\backcite {Mifrah}{{18}{2.3}{section.2.3}}
+\backcite {Mifrah_2020}{{18}{2.3}{section.2.3}}
 \backcite {Polyzos_2022}{{18}{2.3}{section.2.3}}
 \backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
 \backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
@@ -78,3 +78,34 @@
 \backcite {Grootendorst_2022}{{24}{2.5}{section.2.5}}
 \backcite {Meng_2024, Galli_2024}{{24}{2.5}{section.2.5}}
 \backcite {Meng_2024, Galli_2024}{{24}{2.5}{section.2.5}}
+\backcite {Jung_2024}{{26}{3}{chapter.3}}
+\backcite {Jung_2024}{{26}{3}{chapter.3}}
+\backcite {Reimers_2019}{{26}{3}{chapter.3}}
+\backcite {Wijanto_2024}{{26}{3}{chapter.3}}
+\backcite {Grootendorst_2022}{{26}{3}{chapter.3}}
+\backcite {Kozlowski_2024}{{27}{3}{chapter.3}}
+\backcite {Kozlowski_2024}{{27}{3}{chapter.3}}
+\backcite {Meng_2024}{{27}{3}{chapter.3}}
+\backcite {Meng_2024}{{27}{3}{chapter.3}}
+\backcite {Gana_2024}{{27}{3}{chapter.3}}
+\backcite {Meng_2024}{{27}{3}{chapter.3}}
+\backcite {Kozlowski_2024}{{27}{3}{chapter.3}}
+\backcite {Jung_2024}{{27}{3}{chapter.3}}
+\backcite {Wijanto_2024}{{28}{3}{chapter.3}}
+\backcite {Kozlowski_2024}{{28}{3}{chapter.3}}
+\backcite {Meng_2024}{{28}{3}{chapter.3}}
+\backcite {Gana_2024}{{28}{3}{chapter.3}}
+\backcite {Dresch_2015}{{30}{4}{chapter.4}}
+\backcite {Santos_2024}{{33}{5}{chapter.5}}
+\backcite {Jorge_2025}{{33}{5}{chapter.5}}
+\backcite {Jorge_2025}{{34}{5.1.1}{subsection.5.1.1}}
+\backcite {Santos_2024}{{34}{5.1.1}{subsection.5.1.1}}
+\backcite {Wang_2023}{{35}{5.1.2}{subsection.5.1.2}}
+\backcite {Santos_2024}{{35}{5.2.1}{subsection.5.2.1}}
+\backcite {McInnes_2018}{{37}{5.2.3}{subsection.5.2.3}}
+\backcite {MacQueen_1967}{{39}{5.2.4}{subsection.5.2.4}}
+\backcite {Gana_2024}{{40}{5.2.4}{subsection.5.2.4}}
+\backcite {Jung_2024}{{40}{5.2.4}{subsection.5.2.4}}
+\backcite {Wang_2023}{{41}{5.2.6}{subsection.5.2.6}}
+\backcite {Wang_2023}{{42}{5.2.6}{subsection.5.2.6}}
+\backcite {Wang_2023}{{42}{6}{figure.caption.18}}
