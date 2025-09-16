@@ -26,9 +26,12 @@
 \contentsline {subsection}{\numberline {5.2.3}Rotulagem Semântica com GPT-4}{37}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Visualização Interativa com WizMap}{37}{subsection.5.2.4}%
 \contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Resultados Esperados}}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Validação do Pipeline e seus Resultados}{39}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Validação Quantitativa}{39}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Validação Qualitativa}{40}{subsection.6.1.2}%
 \cftinsert {POS}
 \vspace {\cftbeforepartskip }
 \vspace {\cftbeforepartskip }
 \vspace {-38pt}
-\contentsline {chapter}{REFER\^ENCIAS}{41}{chapter*.22}%
+\contentsline {chapter}{REFER\^ENCIAS}{42}{chapter*.22}%
 \vspace {\cftbeforepartskip }

@@ -1,16 +1,41 @@
 \chapter[Resultados Esperados]{RESULTADOS ESPERADOS}
-O estudo proposto espera alcançar uma série de resultados significativos que visam melhorar a análise e a gestão de publicações científicas na plataforma SIMCC. Em primeiro lugar, espera-se que a integração do BERTopic com o GPT-4 permita buscas mais precisas e contextuais, superando as limitações das abordagens tradicionais baseadas em palavras-chave exatas. Com essa combinação, os usuários da plataforma devem obter resultados mais relevantes e completos, especialmente em áreas interdisciplinares, onde sinônimos e variações terminológicas são frequentes.
+A execução deste projeto visa a construção de um artefato computacional funcional e a geração de um conjunto de resultados que permitam uma nova forma de análise sobre o acervo de publicações da plataforma SIMCC. As expectativas estão centradas na qualidade dos produtos gerados pelo pipeline e na sua capacidade de revelar estruturas de conhecimento latentes nos dados.
 
-Outro resultado esperado é a capacidade do pipeline proposto de identificar tópicos emergentes de forma mais eficiente. Ao capturar nuances semânticas que escapam das abordagens tradicionais, espera-se que os tópicos gerados sejam mais coesos e representativos, facilitando a descoberta de tendências e áreas de pesquisa em ascensão. Essa melhoria na identificação de tópicos emergentes deve contribuir para uma análise mais aprofundada e estratégica das publicações científicas.
+Primeiramente, espera-se que a modelagem de tópicos realizada pelo BERTopic seja eficaz, resultando em agrupamentos (clusters) de publicações que sejam semanticamente coesos e representativos. A expectativa é que o pipeline consiga processar o corpus textual do SIMCC e identificar tópicos distintos, separando com clareza diferentes áreas do saber, mesmo em campos interdisciplinares onde a terminologia se sobrepõe.
 
-A implementação do WizMap como ferramenta de visualização interativa também é um dos principais resultados esperados. Essa abordagem deve proporcionar uma experiência de navegação mais intuitiva e visual dos tópicos, permitindo que os usuários explorem os clusters de tópicos em diferentes níveis de granularidade. A visualização interativa deve facilitar a compreensão das relações entre os diferentes temas, tornando a análise mais acessível e enriquecedora.
+Em segundo lugar, um resultado esperado crucial é a qualidade da rotulagem semântica gerada pelo GPT-4. Espera-se que os rótulos produzidos sejam significativamente mais descritivos e acurados do que uma abordagem de linha de base, como a simples extração das palavras-chave mais frequentes (c-TF-IDF). A hipótese é que o GPT-4 fornecerá títulos concisos e humanamente inteligíveis que capturem a essência temática de cada cluster, aumentando drasticamente a interpretabilidade dos resultados.
 
-Além disso, espera-se que o pipeline proposto reduza significativamente o tempo necessário para a análise de grandes volumes de publicações científicas. A automação e a otimização das etapas de modelagem de tópicos e rotulagem semântica devem tornar o processo mais eficiente e acessível aos pesquisadores, permitindo que eles se concentrem em insights e descobertas em vez de tarefas manuais e demoradas.
+Por fim, o resultado agregado mais importante é a geração de um mapa de conhecimento funcional e explorável. O pipeline completo deverá produzir os dados necessários (vetores de documentos, atribuições de tópicos e rótulos semânticos) para alimentar a ferramenta WizMap. O artefato final permitirá a identificação de grandes áreas de concentração de pesquisa, nichos de especialização e potenciais conexões entre diferentes campos do conhecimento acadêmico na Bahia.
 
-A rotulagem semântica realizada pelo GPT-4 também deve apresentar melhorias significativas. Espera-se que os rótulos gerados sejam mais descritivos e contextualizados, superando as limitações da rotulagem automática tradicional. Esses rótulos mais ricos e informativos devem facilitar a interpretação e a exploração dos tópicos, contribuindo para uma análise mais clara e precisa.
+\section{Validação do Pipeline e seus Resultados}
 
-A validação do pipeline será realizada por meio de métricas de avaliação, como o Topic Coherence Score, que mede a coerência dos tópicos identificados. Espera-se que os tópicos gerados apresentem alta coerência semântica, demonstrando a eficácia do pipeline na análise de publicações científicas. Essa validação deve confirmar que a solução proposta é robusta e capaz de lidar com os desafios da análise de grandes volumes de dados textuais.
+Para garantir o rigor científico e a validade do artefato desenvolvido, será empregada uma abordagem de validação mista, combinando métricas quantitativas e análises qualitativas. Esta etapa é fundamental para aferir se os resultados gerados são consistentes, coerentes e úteis.
 
-Por fim, espera-se que a solução proposta contribua significativamente para a gestão do conhecimento acadêmico. Ao oferecer uma ferramenta robusta e escalável para a análise e categorização de publicações científicas, a plataforma SIMCC deve ser aprimorada, proporcionando uma experiência mais eficiente e enriquecedora para os usuários. Além disso, os resultados obtidos serão documentados e publicados em eventos científicos e periódicos relevantes, contribuindo para o avanço do conhecimento na área de Ciência da Informação e Processamento de Linguagem Natural. A disseminação dos resultados deve inspirar novas pesquisas e aplicações práticas em diferentes contextos acadêmicos e industriais.
+\subsection{Validação Quantitativa}
 
-Em resumo, os resultados esperados indicam que a integração do BERTopic com o GPT-4 e a visualização interativa com o WizMap proporcionarão uma solução inovadora e eficaz para a análise de publicações científicas. Essa abordagem deve superar as limitações das abordagens tradicionais, oferecendo uma ferramenta valiosa para a gestão do conhecimento acadêmico e contribuindo para o avanço da ciência e tecnologia.
+A qualidade dos tópicos gerados pelo BERTopic será avaliada objetivamente por meio de métricas consolidadas na literatura de PLN:
+
+\begin{itemize}
+    \item \textbf{Topic Coherence (Coerência de Tópicos)}: Será calculada a pontuação de coerência (e.g., C\_v ou NPMI) para os tópicos gerados. Esta métrica avalia o grau de similaridade semântica entre as palavras mais importantes de um mesmo tópico. Espera-se que o pipeline alcance altos escores de coerência, indicando que os agrupamentos são tematicamente consistentes.
+    
+    \item \textbf{Topic Diversity (Diversidade de Tópicos)}: Será medida a diversidade dos tópicos para garantir que o modelo não está gerando clusters redundantes. Uma alta diversidade, aliada a uma alta coerência, sugere uma modelagem de tópicos robusta e bem-sucedida.
+\end{itemize}
+
+\subsection{Validação Qualitativa}
+
+A validação qualitativa é essencial para confirmar se os resultados quantitativos se traduzem em valor prático e interpretativo:
+
+\begin{itemize}
+    \item \textbf{Análise por Especialistas}: Uma amostra dos tópicos gerados (incluindo o rótulo do GPT-4 e os documentos mais representativos de cada cluster) será apresentada a pesquisadores ou especialistas familiarizados com o cenário acadêmico da Bahia. Eles serão solicitados a avaliar os tópicos com base em critérios como:
+    \begin{itemize}
+        \item \textbf{Coerência}: Os documentos dentro do cluster pertencem de fato ao mesmo tema?
+        \item \textbf{Representatividade}: O rótulo gerado pelo GPT-4 descreve adequadamente o conteúdo do tópico?
+        \item \textbf{Relevância}: O tópico identificado representa uma área de pesquisa reconhecível e relevante?
+    \end{itemize}
+    
+    \item \textbf{Análise de Casos de Uso}: Serão selecionados pesquisadores ou grupos de pesquisa com linhas de atuação bem definidas e conhecidas dentro da base do SIMCC. A validação consistirá em verificar se o pipeline consegue agrupar corretamente as publicações desses pesquisadores em um cluster coeso e se o rótulo gerado pelo GPT-4 corresponde à sua linha de pesquisa. O sucesso nesta etapa fornecerá uma forte evidência da validade prática do sistema.
+    
+    \item \textbf{Comparação de Rótulos (Baseline vs. GPT-4)}: Para validar especificamente a contribuição do GPT-4, será conduzida uma comparação direta. Para um mesmo tópico, será apresentado o rótulo gerado pelo GPT-4 e um rótulo de linha de base (e.g., as 3 palavras-chave mais importantes do c-TF-IDF). Avaliadores humanos indicarão qual dos dois rótulos é mais informativo e preciso, permitindo quantificar a melhoria na interpretabilidade.
+\end{itemize}
+
+A combinação desses métodos de validação fornecerá uma avaliação completa e robusta do pipeline, atestando não apenas sua funcionalidade técnica, mas também sua eficácia na geração de conhecimento útil e confiável a partir dos dados da plataforma SIMCC.
