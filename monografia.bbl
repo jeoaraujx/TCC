@@ -112,10 +112,6 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2408.07003}.}
 \textbf{Journal of Machine Learning Research}, v.~9, n.~86, p. 2579--2605, 2008.
 Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v9/vandermaaten08a.html}.}
 
-\bibitem[MacQueen 1967]{MacQueen_1967}
-\abntrefinfo{MacQueen}{MacQueen}{1967}
-{MACQUEEN, J. Some methods for classification and analysis of multivariate observations. In:  \textbf{Proceedings of the 5th Berkeley Symposium on Mathematical Statistics and Probability}. Berkeley: University of California Press, 1967.  (Statistics, v.~1), p. 281--297. Dispon{\'\i}vel em: \url{http://projecteuclid.org/euclid.bsmsp/1200512992}.}
-
 \bibitem[McInnes, Healy e Melville 2018]{McInnes_2018}
 \abntrefinfo{McInnes, Healy e Melville}{McInnes; Healy; Melville}{2018}
 {MCINNES, L.; HEALY, J.; MELVILLE, J. \textbf{UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}. 2018.

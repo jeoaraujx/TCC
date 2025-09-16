@@ -667,10 +667,13 @@ INPUT ./caps/5projeto.tex
 INPUT ./caps/5projeto.tex
 INPUT ./caps/5projeto.tex
 INPUT caps/5projeto.tex
-INPUT /home/jeoston.araujo/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
 INPUT /home/jeoston.araujo/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT /home/jeoston.araujo/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
-INPUT /home/jeoston.araujo/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
+INPUT /home/jeoston.araujo/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
+INPUT ./figs/Arquitetura SIMCC.png
+INPUT ./figs/Arquitetura SIMCC.png
+INPUT ./figs/Arquitetura SIMCC.png
+INPUT ./figs/Arquitetura SIMCC.png
 INPUT ./figs/Wizmap.png
 INPUT ./figs/Wizmap.png
 INPUT ./figs/Wizmap.png
