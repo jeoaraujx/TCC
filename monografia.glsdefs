@@ -54,17 +54,45 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{PNL}%
+\glsdefs@newdocentry{PLN}%
 {%
-name={PNL},%
-sort={PNL},%
+name={PLN},%
+sort={PLN},%
 type={main},%
-first={PNL},%
-firstplural={PNLs},%
-text={PNL},%
-plural={PNLs},%
+first={PLN},%
+firstplural={PLNs},%
+text={PLN},%
+plural={PLNs},%
 description={Processamento de Linguagem Natural},%
 descriptionplural={Processamento de Linguagem Natural},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{NLP}%
+{%
+name={NLP},%
+sort={NLP},%
+type={main},%
+first={NLP},%
+firstplural={NLPs},%
+text={NLP},%
+plural={NLPs},%
+description={Natural Language Processing},%
+descriptionplural={Natural Language Processing},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -166,6 +194,34 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{SBERT}%
+{%
+name={SBERT},%
+sort={SBERT},%
+type={main},%
+first={SBERT},%
+firstplural={SBERTs},%
+text={SBERT},%
+plural={SBERTs},%
+description={Sentence-BERT},%
+descriptionplural={Sentence-BERT},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
 \glsdefs@newdocentry{GPT}%
 {%
 name={GPT},%
@@ -233,6 +289,34 @@ text={LDA},%
 plural={LDAs},%
 description={Latent Dirichlet Allocation},%
 descriptionplural={Latent Dirichlet Allocation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SVD}%
+{%
+name={SVD},%
+sort={SVD},%
+type={main},%
+first={SVD},%
+firstplural={SVDs},%
+text={SVD},%
+plural={SVDs},%
+description={Singular Value Decomposition},%
+descriptionplural={Singular Value Decomposition},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -334,7 +418,7 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{SBERT}%
+\glsdefs@newdocentry{S-BERT}%
 {%
 name={S-BERT},%
 sort={S-BERT},%
@@ -569,6 +653,34 @@ text={LSA},%
 plural={LSAs},%
 description={Latent Semantic Analysis},%
 descriptionplural={Latent Semantic Analysis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PLSA}%
+{%
+name={PLSA},%
+sort={PLSA},%
+type={main},%
+first={PLSA},%
+firstplural={PLSAs},%
+text={PLSA},%
+plural={PLSAs},%
+description={Probabilistic Latent Semantic Analysis},%
+descriptionplural={Probabilistic Latent Semantic Analysis},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%

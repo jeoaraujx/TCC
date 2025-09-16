@@ -5,13 +5,36 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v<VERSION> }
 
+\bibitem[Achiam \textit{et al.} 2023]{Achiam_2023}
+\abntrefinfo{Achiam \textit{et al.}}{Achiam \textit{et al.}}{2023}
+{ACHIAM, J. \textit{et al.} Gpts are gpts: An early look at the labor market impact potential of large language models.
+\textbf{arXiv preprint}, 2023.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2304.02142}.}
+
+\bibitem[Blei, Ng e Jordan 2003]{Blei_2003}
+\abntrefinfo{Blei, Ng e Jordan}{Blei; Ng; Jordan}{2003}
+{BLEI, D.~M.; NG, A.~Y.; JORDAN, M.~I. Latent dirichlet allocation.
+\textbf{Journal of Machine Learning Research}, MIT Press, v.~3, n.~Jan, p. 993--1022, 2003.
+ISSN 1532-4435.
+Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v3/blei03a.html}.}
+
+\bibitem[Campello, Moulavi e Sander 2013]{Campello_2013}
+\abntrefinfo{Campello, Moulavi e Sander}{Campello; Moulavi; Sander}{2013}
+{CAMPELLO, R. J. G.~B.; MOULAVI, D.; SANDER, J. Density-based clustering based on hierarchical density estimates. In:  PEI, J. \textit{et al.} (Ed.). \textbf{Advances in Knowledge Discovery and Data Mining}. Berlin, Heidelberg: Springer Berlin Heidelberg, 2013. p. 160--172.}
+
 \bibitem[Datchanamoorthy, S e B 2023]{Datchanamoorthy_2023}
 \abntrefinfo{Datchanamoorthy, S e B}{Datchanamoorthy; S; B}{2023}
 {DATCHANAMOORTHY, K.; S, A. M.~G.; B, P. Text mining: Clustering using bert and probabilistic topic modeling.
 \textbf{Social Informatics Journal}, 2023.
 Dispon{\'\i}vel em: \url{https://api.semanticscholar.org/CorpusID:267122800}.}
 
-\bibitem[Devlin \textit{et al.} 2019]{Devlin}
+\bibitem[Deerwester \textit{et al.} 1990]{Deerwester_1990}
+\abntrefinfo{Deerwester \textit{et al.}}{Deerwester \textit{et al.}}{1990}
+{DEERWESTER, S. \textit{et al.} Indexing by latent semantic analysis.
+\textbf{Journal of the American Society for Information Science}, v.~41, n.~6, p. 391--407, 1990.
+Dispon{\'\i}vel em: \url{https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002/\%28SICI\%291097-4571\%28199009\%2941\%3A6\%3C391\%3A\%3AAID-ASI1\%3E3.0.CO\%3B2-9}.}
+
+\bibitem[Devlin \textit{et al.} 2019]{Devlin_2019}
 \abntrefinfo{Devlin \textit{et al.}}{Devlin \textit{et al.}}{2019}
 {DEVLIN, J. \textit{et al.} \textbf{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}. 2019.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1810.04805}.}
@@ -21,22 +44,122 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1810.04805}.}
 {DILLAN, T.; FUDHOLI, D.~H. Ldaviewer: An automatic language-agnostic system for discovering state-of-the-art topics in research using topic modeling, bidirectional encoder representations from transformers, and entity linking.
 \textbf{IEEE Access}, v.~11, p. 59142--59163, 2023.}
 
-\bibitem[Galli \textit{et al.} 2024]{Galli}
+\bibitem[Galli \textit{et al.} 2024]{Galli_2024}
 \abntrefinfo{Galli \textit{et al.}}{Galli \textit{et al.}}{2024}
 {GALLI, C. \textit{et al.} Topic modeling for faster literature screening using transformer-based embeddings.
 \textbf{Metrics}, v.~1, n.~1, 2024.
 ISSN 3042-5042.
 Dispon{\'\i}vel em: \url{https://www.mdpi.com/3042-5042/1/1/2}.}
 
+\bibitem[Gana \textit{et al.} 2024]{Gana_2024}
+\abntrefinfo{Gana \textit{et al.}}{Gana \textit{et al.}}{2024}
+{GANA, B. \textit{et al.} Leveraging llms for efficient topic reviews.
+\textbf{Applied Sciences}, v.~14, n.~17, 2024.
+ISSN 2076-3417.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/14/17/7675}.}
+
+\bibitem[George e Sumathy 2023]{George_2023}
+\abntrefinfo{George e Sumathy}{George; Sumathy}{2023}
+{GEORGE, L.; SUMATHY, P. An integrated clustering and bert framework for improved topic modeling.
+\textbf{International Journal of Information Technology}, v.~15, n.~4, p. 2187--2195, 2023.
+Dispon{\'\i}vel em: \url{https://doi.org/10.1007/s41870-023-01268-w}.}
+
 \bibitem[Grootendorst 2022]{Grootendorst_2022}
 \abntrefinfo{Grootendorst}{Grootendorst}{2022}
 {GROOTENDORST, M. \textbf{BERTopic: Neural topic modeling with a class-based TF-IDF procedure}. 2022.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2203.05794}.}
 
-\bibitem[Mohammadi e Karami 2020]{Mohammadi}
+\bibitem[Hofmann 1999]{Hofmann_1999}
+\abntrefinfo{Hofmann}{Hofmann}{1999}
+{HOFMANN, T. Probabilistic latent semantic indexing. In:  \textbf{Proceedings of the 22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}. Berkeley, CA, USA: ACM Press, 1999. p. 50--57.
+ISBN 1-58113-096-1.}
+
+\bibitem[Hofmann 2001]{Hofmann_2001}
+\abntrefinfo{Hofmann}{Hofmann}{2001}
+{HOFMANN, T. Hofmann, t.: Unsupervised learning by probabilistic latent semantic analysis. machine learning 42(1-2), 177-196.
+\textbf{Machine Learning}, v.~42, p. 177--196, 01 2001.}
+
+\bibitem[Jung \textit{et al.} 2024]{Jung_2024}
+\abntrefinfo{Jung \textit{et al.}}{Jung \textit{et al.}}{2024}
+{JUNG, H.~S. \textit{et al.} Expansive data, extensive model: Investigating discussion topics around llm through unsupervised machine learning in academic papers and news.
+\textbf{PLOS ONE}, Public Library of Science, v.~19, n.~5, p. 1--18, 05 2024.
+Dispon{\'\i}vel em: \url{https://doi.org/10.1371/journal.pone.0304680}.}
+
+\bibitem[Kim, Kogler e Maliphol 2024]{Kim_2024}
+\abntrefinfo{Kim, Kogler e Maliphol}{Kim; Kogler; Maliphol}{2024}
+{KIM, K.; KOGLER, D.~F.; MALIPHOL, S. {Identifying interdisciplinary emergence in the science of science: combination of network analysis and BERTopic}.
+\textbf{Palgrave Communications}, v.~11, n.~1, p. 1--15, December 2024.
+Dispon{\'\i}vel em: \url{https://ideas.repec.org/a/pal/palcom/v11y2024i1d10.1057\_s41599-024-03044-y.html}.}
+
+\bibitem[Liu e Zheng 2023]{Liu_2023}
+\abntrefinfo{Liu e Zheng}{Liu; Zheng}{2023}
+{LIU, J.; ZHENG, C. Summary of the gpt-4 technical report.
+\textbf{arXiv preprint}, 2023.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2303.08774}.}
+
+\bibitem[Maaten e Hinton 2008]{Maaten_2008}
+\abntrefinfo{Maaten e Hinton}{Maaten; Hinton}{2008}
+{MAATEN, L. van~der; HINTON, G. Visualizing data using t-sne.
+\textbf{Journal of Machine Learning Research}, v.~9, n.~86, p. 2579--2605, 2008.
+Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v9/vandermaaten08a.html}.}
+
+\bibitem[McInnes, Healy e Melville 2018]{McInnes_2018}
+\abntrefinfo{McInnes, Healy e Melville}{McInnes; Healy; Melville}{2018}
+{MCINNES, L.; HEALY, J.; MELVILLE, J. \textbf{UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}. 2018.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1802.03426}.}
+
+\bibitem[Meng \textit{et al.} 2024]{Meng_2024}
+\abntrefinfo{Meng \textit{et al.}}{Meng \textit{et al.}}{2024}
+{MENG, F. \textit{et al.} Demand-side energy management reimagined: A comprehensive literature analysis leveraging large language models.
+\textbf{Energy}, v.~291, p. 130303, 2024.
+ISSN 0360-5442.
+Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0360544224000744}.}
+
+\bibitem[Mifrah e Benlahmar 2020]{Mifrah}
+\abntrefinfo{Mifrah e Benlahmar}{Mifrah; Benlahmar}{2020}
+{MIFRAH, S.; BENLAHMAR, E.~H. Topic modeling coherence: A comparative study between lda and nmf models using covid’19 corpus.
+\textbf{International Journal of Advanced Trends in Computer Science and Engineering}, 08 2020.}
+
+\bibitem[Mikolov \textit{et al.} 2013]{Mikolov_2013}
+\abntrefinfo{Mikolov \textit{et al.}}{Mikolov \textit{et al.}}{2013}
+{MIKOLOV, T. \textit{et al.} \textbf{Efficient Estimation of Word Representations in Vector Space}. 2013.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1301.3781}.}
+
+\bibitem[Mohammadi e Karami 2020]{Mohammadi_2020}
 \abntrefinfo{Mohammadi e Karami}{Mohammadi; Karami}{2020}
 {MOHAMMADI, E.; KARAMI, A. Exploring research trends in big data across disciplines: A text mining analysis.
 \textbf{Journal of Information Science}, v.~48, 06 2020.}
+
+\bibitem[OpenAI \textit{et al.} 2024]{OpenAI_2023}
+\abntrefinfo{OpenAI \textit{et al.}}{OpenAI \textit{et al.}}{2024}
+{OPENAI \textit{et al.} \textbf{GPT-4 Technical Report}. 2024.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2303.08774}.}
+
+\bibitem[Ouyang \textit{et al.} 2022]{Ouyang_2022}
+\abntrefinfo{Ouyang \textit{et al.}}{Ouyang \textit{et al.}}{2022}
+{OUYANG, L. \textit{et al.} Training language models to follow instructions with human feedback.
+\textbf{Advances in Neural Information Processing Systems}, v.~35, p. 27730--27744, 2022.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2203.02155}.}
+
+\bibitem[Pennington, Socher e Manning 2014]{Pennington_2014}
+\abntrefinfo{Pennington, Socher e Manning}{Pennington; Socher; Manning}{2014}
+{PENNINGTON, J.; SOCHER, R.; MANNING, C. {G}lo{V}e: Global vectors for word representation. In:  MOSCHITTI, A.; PANG, B.; DAELEMANS, W. (Ed.). \textbf{Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing ({EMNLP})}. Doha, Qatar: Association for Computational Linguistics, 2014. p. 1532--1543. Dispon{\'\i}vel em: \url{https://aclanthology.org/D14-1162}.}
+
+\bibitem[Polyzos e Wang 2022]{Polyzos_2022}
+\abntrefinfo{Polyzos e Wang}{Polyzos; Wang}{2022}
+{POLYZOS, E.; WANG, F. Twitter and market efficiency in energy markets: Evidence using lda clustered topic extraction.
+\textbf{Energy Economics}, v.~114, p. 106264, 2022.
+ISSN 0140-9883.
+Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0140988322004017}.}
+
+\bibitem[Radford e Narasimhan 2018]{Radford_2018}
+\abntrefinfo{Radford e Narasimhan}{Radford; Narasimhan}{2018}
+{RADFORD, A.; NARASIMHAN, K. Improving language understanding by generative pre-training. In:  . [s.n.], 2018. Dispon{\'\i}vel em: \url{https://api.semanticscholar.org/CorpusID:49313245}.}
+
+\bibitem[Reimers e Gurevych 2019]{Reimers_2019}
+\abntrefinfo{Reimers e Gurevych}{Reimers; Gurevych}{2019}
+{REIMERS, N.; GUREVYCH, I. \textbf{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}. 2019.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1908.10084}.}
 
 \bibitem[Vaswani \textit{et al.} 2017]{vaswani_2017}
 \abntrefinfo{Vaswani \textit{et al.}}{Vaswani \textit{et al.}}{2017}
@@ -55,7 +178,7 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2306.09328}.}
 ISSN 2076-3417.
 Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/12/21/11220}.}
 
-\bibitem[Xie \textit{et al.} 2020]{Xie}
+\bibitem[Xie \textit{et al.} 2020]{Xie_2020}
 \abntrefinfo{Xie \textit{et al.}}{Xie \textit{et al.}}{2020}
 {XIE, Q. \textit{et al.} Monolingual and multilingual topic analysis using lda and bert embeddings.
 \textbf{Journal of Informetrics}, v.~14, n.~3, p. 101055, 2020.

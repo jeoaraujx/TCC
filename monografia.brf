@@ -1,13 +1,80 @@
-\backcite {Galli}{{12}{1}{chapter.1}}
+\backcite {Galli_2024}{{12}{1}{chapter.1}}
 \backcite {Datchanamoorthy_2023}{{12}{1}{chapter.1}}
-\backcite {Mohammadi}{{12}{1}{chapter.1}}
-\backcite {Xie}{{12}{1}{chapter.1}}
+\backcite {Mohammadi_2020}{{12}{1}{chapter.1}}
+\backcite {Xie_2020}{{12}{1}{chapter.1}}
 \backcite {vaswani_2017}{{12}{1}{chapter.1}}
-\backcite {Devlin}{{12}{1}{chapter.1}}
-\backcite {Galli}{{12}{1}{chapter.1}}
+\backcite {Devlin_2019}{{12}{1}{chapter.1}}
+\backcite {Galli_2024}{{12}{1}{chapter.1}}
 \backcite {Grootendorst_2022}{{12}{1}{chapter.1}}
 \backcite {Datchanamoorthy_2023}{{12}{1}{chapter.1}}
 \backcite {Dillan_2023}{{12}{1}{chapter.1}}
 \backcite {Weng_2022}{{13}{1}{chapter.1}}
 \backcite {Grootendorst_2022}{{13}{1}{chapter.1}}
 \backcite {Wang_2023}{{13}{1}{chapter.1}}
+\backcite {Kim_2024}{{14}{2.1}{section.2.1}}
+\backcite {Xie_2020}{{14}{2.1}{section.2.1}}
+\backcite {Xie_2020}{{14}{2.1}{section.2.1}}
+\backcite {Galli_2024}{{14}{2.1}{section.2.1}}
+\backcite {Mikolov_2013}{{15}{2.2}{section.2.2}}
+\backcite {Pennington_2014}{{15}{2.2}{section.2.2}}
+\backcite {Galli_2024}{{15}{2.2}{section.2.2}}
+\backcite {vaswani_2017}{{15}{2.2}{section.2.2}}
+\backcite {vaswani_2017}{{16}{1}{figure.caption.12}}
+\backcite {Devlin_2019}{{16}{2.2}{figure.caption.12}}
+\backcite {Radford_2018}{{16}{2.2}{figure.caption.12}}
+\backcite {Reimers_2019}{{17}{2.2}{figure.caption.12}}
+\backcite {Grootendorst_2022}{{17}{2.2}{figure.caption.12}}
+\backcite {Weng_2022}{{17}{2.2}{figure.caption.12}}
+\backcite {Jung_2024}{{17}{2.3}{section.2.3}}
+\backcite {Deerwester_1990}{{18}{2.3}{section.2.3}}
+\backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
+\backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
+\backcite {Hofmann_1999,Hofmann_2001}{{18}{2.3}{section.2.3}}
+\backcite {Hofmann_1999,Hofmann_2001}{{18}{2.3}{section.2.3}}
+\backcite {Datchanamoorthy_2023}{{18}{2.3}{section.2.3}}
+\backcite {Blei_2003}{{18}{2.3}{section.2.3}}
+\backcite {Mifrah}{{18}{2.3}{section.2.3}}
+\backcite {Polyzos_2022}{{18}{2.3}{section.2.3}}
+\backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
+\backcite {George_2023, Xie_2020}{{18}{2.3}{section.2.3}}
+\backcite {Datchanamoorthy_2023}{{19}{2.3}{section.2.3}}
+\backcite {Datchanamoorthy_2023}{{19}{2.3}{section.2.3}}
+\backcite {vaswani_2017, Devlin_2019, Radford_2018}{{19}{2.3}{section.2.3}}
+\backcite {vaswani_2017, Devlin_2019, Radford_2018}{{19}{2.3}{section.2.3}}
+\backcite {vaswani_2017, Devlin_2019, Radford_2018}{{19}{2.3}{section.2.3}}
+\backcite {Devlin_2019}{{19}{2.4}{section.2.4}}
+\backcite {vaswani_2017}{{19}{2.4}{section.2.4}}
+\backcite {Reimers_2019}{{19}{2.4}{section.2.4}}
+\backcite {Grootendorst_2022}{{19}{2.4}{section.2.4}}
+\backcite {George_2023, Jung_2024, Datchanamoorthy_2023}{{20}{2.4}{section.2.4}}
+\backcite {George_2023, Jung_2024, Datchanamoorthy_2023}{{20}{2.4}{section.2.4}}
+\backcite {George_2023, Jung_2024, Datchanamoorthy_2023}{{20}{2.4}{section.2.4}}
+\backcite {Jung_2024}{{20}{2}{figure.caption.13}}
+\backcite {McInnes_2018}{{20}{2.4}{figure.caption.13}}
+\backcite {Maaten_2008}{{20}{2.4}{figure.caption.13}}
+\backcite {McInnes_2018}{{21}{3}{figure.caption.14}}
+\backcite {Campello_2013}{{21}{2.4}{figure.caption.14}}
+\backcite {Campello_2013}{{22}{4}{figure.caption.15}}
+\backcite {Gana_2024, Grootendorst_2022}{{22}{2.4}{figure.caption.15}}
+\backcite {Gana_2024, Grootendorst_2022}{{22}{2.4}{figure.caption.15}}
+\backcite {Meng_2024, Gana_2024}{{23}{2.5}{section.2.5}}
+\backcite {Meng_2024, Gana_2024}{{23}{2.5}{section.2.5}}
+\backcite {vaswani_2017}{{23}{2.5}{section.2.5}}
+\backcite {Devlin_2019, Jung_2024}{{23}{2.5}{section.2.5}}
+\backcite {Devlin_2019, Jung_2024}{{23}{2.5}{section.2.5}}
+\backcite {Gana_2024}{{23}{2.5}{section.2.5}}
+\backcite {Radford_2018, Jung_2024}{{23}{2.5}{section.2.5}}
+\backcite {Radford_2018, Jung_2024}{{23}{2.5}{section.2.5}}
+\backcite {Devlin_2019, Datchanamoorthy_2023}{{23}{2.5}{section.2.5}}
+\backcite {Devlin_2019, Datchanamoorthy_2023}{{23}{2.5}{section.2.5}}
+\backcite {Radford_2018}{{24}{2.5}{section.2.5}}
+\backcite {vaswani_2017}{{24}{2.5}{section.2.5}}
+\backcite {OpenAI_2023}{{24}{2.5}{section.2.5}}
+\backcite {Liu_2023, Achiam_2023}{{24}{2.5}{section.2.5}}
+\backcite {Liu_2023, Achiam_2023}{{24}{2.5}{section.2.5}}
+\backcite {OpenAI_2023, Ouyang_2022}{{24}{2.5}{section.2.5}}
+\backcite {OpenAI_2023, Ouyang_2022}{{24}{2.5}{section.2.5}}
+\backcite {Achiam_2023}{{24}{2.5}{section.2.5}}
+\backcite {Grootendorst_2022}{{24}{2.5}{section.2.5}}
+\backcite {Meng_2024, Galli_2024}{{24}{2.5}{section.2.5}}
+\backcite {Meng_2024, Galli_2024}{{24}{2.5}{section.2.5}}
