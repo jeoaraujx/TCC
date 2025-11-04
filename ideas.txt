@@ -1,5 +1,0 @@
-Novo título:
-
-- Análise Contextual de Publicações no SIMCC: Um Pipeline com BERTopic e GPT-4 para a Descoberta de Temas Emergentes
-- Um Pipeline com BERTopic e GPT-4 para Análise de Publicações Científicas: Um Experimento Prático Aplicado à Plataforma do SIMCC
-- Uma Abordagem Híbrida para Modelagem de Tópicos em Publicações Científicas: Combinando BERTopic e LLMs para uma Visualização Interativa no SIMCC

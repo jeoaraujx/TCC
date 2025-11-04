@@ -1,36 +1,8 @@
-\glsdefs@newdocentry{SIMCC}%
+\glsdefs@newdocentry{ia}%
 {%
-name={SIMCC},%
-sort={SIMCC},%
-type={main},%
-first={SIMCC},%
-firstplural={SIMCCs},%
-text={SIMCC},%
-plural={SIMCCs},%
-description={Sistema de Mapeamento de Competências Científicas da Bahia},%
-descriptionplural={Sistema de Mapeamento de Competências Científicas da Bahia},%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
-counter={page},%
-parent={},%
-%
-}%
-
-\glsdefs@newdocentry{IA}%
-{%
-name={IA},%
+name={\acronymfont {\glsentryshort {ia}}},%
 sort={IA},%
-type={main},%
+type={acronym},%
 first={IA},%
 firstplural={IAs},%
 text={IA},%
@@ -45,20 +17,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Inteligência Artificial},%
+longplural={Inteligência Artificials},%
+short={IA},%
+shortplural={IAs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{PLN}%
+\glsdefs@newdocentry{pln}%
 {%
-name={PLN},%
+name={\acronymfont {\glsentryshort {pln}}},%
 sort={PLN},%
-type={main},%
+type={acronym},%
 first={PLN},%
 firstplural={PLNs},%
 text={PLN},%
@@ -73,20 +45,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Processamento de Linguagem Natural},%
+longplural={Processamento de Linguagem Naturals},%
+short={PLN},%
+shortplural={PLNs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{NLP}%
+\glsdefs@newdocentry{nlp}%
 {%
-name={NLP},%
+name={\acronymfont {\glsentryshort {nlp}}},%
 sort={NLP},%
-type={main},%
+type={acronym},%
 first={NLP},%
 firstplural={NLPs},%
 text={NLP},%
@@ -101,20 +73,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Natural Language Processing},%
+longplural={Natural Language Processings},%
+short={NLP},%
+shortplural={NLPs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{TCC}%
+\glsdefs@newdocentry{tcc}%
 {%
-name={TCC},%
+name={\acronymfont {\glsentryshort {tcc}}},%
 sort={TCC},%
-type={main},%
+type={acronym},%
 first={TCC},%
 firstplural={TCCs},%
 text={TCC},%
@@ -129,20 +101,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Trabalho de Conclusão de Curso},%
+longplural={Trabalho de Conclusão de Cursos},%
+short={TCC},%
+shortplural={TCCs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{LLM}%
+\glsdefs@newdocentry{llm}%
 {%
-name={LLM},%
+name={\acronymfont {\glsentryshort {llm}}},%
 sort={LLM},%
-type={main},%
+type={acronym},%
 first={LLM},%
 firstplural={LLMs},%
 text={LLM},%
@@ -157,26 +129,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Large Language Model},%
+longplural={Large Language Models},%
+short={LLM},%
+shortplural={LLMs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{BERT}%
+\glsdefs@newdocentry{bert}%
 {%
-name={BERT},%
+name={\acronymfont {\glsentryshort {bert}}},%
 sort={BERT},%
-type={main},%
+type={acronym},%
 first={BERT},%
 firstplural={BERTs},%
 text={BERT},%
 plural={BERTs},%
-description={Bidirectional Encoder Representations from Transformers},%
-descriptionplural={Bidirectional Encoder Representations from Transformers},%
+description={Representações Bidirecionais Codificadas de Transformadores},%
+descriptionplural={Representações Bidirecionais Codificadas de Transformadores},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -185,26 +157,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Representações Bidirecionais Codificadas de Transformadores},%
+longplural={Representações Bidirecionais Codificadas de Transformadoress},%
+short={BERT},%
+shortplural={BERTs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{SBERT}%
+\glsdefs@newdocentry{sbert}%
 {%
-name={SBERT},%
+name={\acronymfont {\glsentryshort {sbert}}},%
 sort={SBERT},%
-type={main},%
+type={acronym},%
 first={SBERT},%
 firstplural={SBERTs},%
 text={SBERT},%
 plural={SBERTs},%
-description={Sentence-BERT},%
-descriptionplural={Sentence-BERT},%
+description={BERT para Sentenças},%
+descriptionplural={BERT para Sentenças},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -213,26 +185,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={BERT para Sentenças},%
+longplural={BERT para Sentençass},%
+short={SBERT},%
+shortplural={SBERTs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{GPT}%
+\glsdefs@newdocentry{gpt}%
 {%
-name={GPT},%
+name={\acronymfont {\glsentryshort {gpt}}},%
 sort={GPT},%
-type={main},%
+type={acronym},%
 first={GPT},%
 firstplural={GPTs},%
 text={GPT},%
 plural={GPTs},%
-description={Generative Pre-trained Transformer},%
-descriptionplural={Generative Pre-trained Transformer},%
+description={Transformador Pré-treinado Generativo},%
+descriptionplural={Transformador Pré-treinado Generativo},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -241,20 +213,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Transformador Pré-treinado Generativo},%
+longplural={Transformador Pré-treinado Generativos},%
+short={GPT},%
+shortplural={GPTs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{GPT-4}%
+\glsdefs@newdocentry{gpt4}%
 {%
-name={GPT-4},%
+name={\acronymfont {\glsentryshort {gpt4}}},%
 sort={GPT-4},%
-type={main},%
+type={acronym},%
 first={GPT-4},%
 firstplural={GPT-4s},%
 text={GPT-4},%
@@ -269,26 +241,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Generative Pre-trained Transformer 4.0},%
+longplural={Generative Pre-trained Transformer 4.0s},%
+short={GPT-4},%
+shortplural={GPT-4s},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{LDA}%
+\glsdefs@newdocentry{lda}%
 {%
-name={LDA},%
+name={\acronymfont {\glsentryshort {lda}}},%
 sort={LDA},%
-type={main},%
+type={acronym},%
 first={LDA},%
 firstplural={LDAs},%
 text={LDA},%
 plural={LDAs},%
-description={Latent Dirichlet Allocation},%
-descriptionplural={Latent Dirichlet Allocation},%
+description={Latent Dirichlet Allocation (Alocação de Dirichlet Latente)},%
+descriptionplural={Latent Dirichlet Allocation (Alocação de Dirichlet Latente)},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -297,26 +269,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Latent Dirichlet Allocation (Alocação de Dirichlet Latente)},%
+longplural={Latent Dirichlet Allocation (Alocação de Dirichlet Latente)s},%
+short={LDA},%
+shortplural={LDAs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{SVD}%
+\glsdefs@newdocentry{svd}%
 {%
-name={SVD},%
+name={\acronymfont {\glsentryshort {svd}}},%
 sort={SVD},%
-type={main},%
+type={acronym},%
 first={SVD},%
 firstplural={SVDs},%
 text={SVD},%
 plural={SVDs},%
-description={Singular Value Decomposition},%
-descriptionplural={Singular Value Decomposition},%
+description={Singular Value Decomposition (Decomposição em Valores Singulares)},%
+descriptionplural={Singular Value Decomposition (Decomposição em Valores Singulares)},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -325,20 +297,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Singular Value Decomposition (Decomposição em Valores Singulares)},%
+longplural={Singular Value Decomposition (Decomposição em Valores Singulares)s},%
+short={SVD},%
+shortplural={SVDs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{NMF}%
+\glsdefs@newdocentry{nmf}%
 {%
-name={NMF},%
+name={\acronymfont {\glsentryshort {nmf}}},%
 sort={NMF},%
-type={main},%
+type={acronym},%
 first={NMF},%
 firstplural={NMFs},%
 text={NMF},%
@@ -353,20 +325,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Non-negative Matrix Factorization},%
+longplural={Non-negative Matrix Factorizations},%
+short={NMF},%
+shortplural={NMFs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{UMAP}%
+\glsdefs@newdocentry{umap}%
 {%
-name={UMAP},%
+name={\acronymfont {\glsentryshort {umap}}},%
 sort={UMAP},%
-type={main},%
+type={acronym},%
 first={UMAP},%
 firstplural={UMAPs},%
 text={UMAP},%
@@ -381,20 +353,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Uniform Manifold Approximation and Projection},%
+longplural={Uniform Manifold Approximation and Projections},%
+short={UMAP},%
+shortplural={UMAPs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{HDBSCAN}%
+\glsdefs@newdocentry{hdbscan}%
 {%
-name={HDBSCAN},%
+name={\acronymfont {\glsentryshort {hdbscan}}},%
 sort={HDBSCAN},%
-type={main},%
+type={acronym},%
 first={HDBSCAN},%
 firstplural={HDBSCANs},%
 text={HDBSCAN},%
@@ -409,48 +381,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Hierarchical Density-Based Spatial Clustering of Applications with Noise},%
+longplural={Hierarchical Density-Based Spatial Clustering of Applications with Noises},%
+short={HDBSCAN},%
+shortplural={HDBSCANs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{S-BERT}%
+\glsdefs@newdocentry{cnpq}%
 {%
-name={S-BERT},%
-sort={S-BERT},%
-type={main},%
-first={S-BERT},%
-firstplural={S-BERTs},%
-text={S-BERT},%
-plural={S-BERTs},%
-description={Sentence-BERT},%
-descriptionplural={Sentence-BERT},%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
-counter={page},%
-parent={},%
-%
-}%
-
-\glsdefs@newdocentry{CNPQ}%
-{%
-name={CNPq},%
+name={\acronymfont {\glsentryshort {cnpq}}},%
 sort={CNPq},%
-type={main},%
+type={acronym},%
 first={CNPq},%
 firstplural={CNPqs},%
 text={CNPq},%
@@ -465,20 +409,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Conselho Nacional de Desenvolvimento Científico e Tecnológico},%
+longplural={Conselho Nacional de Desenvolvimento Científico e Tecnológicos},%
+short={CNPq},%
+shortplural={CNPqs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{DGP}%
+\glsdefs@newdocentry{dgp}%
 {%
-name={DGP},%
+name={\acronymfont {\glsentryshort {dgp}}},%
 sort={DGP},%
-type={main},%
+type={acronym},%
 first={DGP},%
 firstplural={DGPs},%
 text={DGP},%
@@ -493,20 +437,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Diretório dos Grupos de Pesquisa},%
+longplural={Diretório dos Grupos de Pesquisas},%
+short={DGP},%
+shortplural={DGPs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{JCR}%
+\glsdefs@newdocentry{jcr}%
 {%
-name={JCR},%
+name={\acronymfont {\glsentryshort {jcr}}},%
 sort={JCR},%
-type={main},%
+type={acronym},%
 first={JCR},%
 firstplural={JCRs},%
 text={JCR},%
@@ -521,20 +465,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Journal Citation Reports},%
+longplural={Journal Citation Reportss},%
+short={JCR},%
+shortplural={JCRs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{API}%
+\glsdefs@newdocentry{api}%
 {%
-name={API},%
+name={\acronymfont {\glsentryshort {api}}},%
 sort={API},%
-type={main},%
+type={acronym},%
 first={API},%
 firstplural={APIs},%
 text={API},%
@@ -549,20 +493,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Application Programming Interface},%
+longplural={Application Programming Interfaces},%
+short={API},%
+shortplural={APIs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{TFIDF}%
+\glsdefs@newdocentry{tfidf}%
 {%
-name={TF-IDF},%
+name={\acronymfont {\glsentryshort {tfidf}}},%
 sort={TF-IDF},%
-type={main},%
+type={acronym},%
 first={TF-IDF},%
 firstplural={TF-IDFs},%
 text={TF-IDF},%
@@ -577,20 +521,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Term Frequency-Inverse Document Frequency},%
+longplural={Term Frequency-Inverse Document Frequencys},%
+short={TF-IDF},%
+shortplural={TF-IDFs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{cTFIDF}%
+\glsdefs@newdocentry{ctfidf}%
 {%
-name={c-TF-IDF},%
+name={\acronymfont {\glsentryshort {ctfidf}}},%
 sort={c-TF-IDF},%
-type={main},%
+type={acronym},%
 first={c-TF-IDF},%
 firstplural={c-TF-IDFs},%
 text={c-TF-IDF},%
@@ -605,20 +549,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Class-based Term Frequency-Inverse Document Frequency},%
+longplural={Class-based Term Frequency-Inverse Document Frequencys},%
+short={c-TF-IDF},%
+shortplural={c-TF-IDFs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{DSR}%
+\glsdefs@newdocentry{dsr}%
 {%
-name={DSR},%
+name={\acronymfont {\glsentryshort {dsr}}},%
 sort={DSR},%
-type={main},%
+type={acronym},%
 first={DSR},%
 firstplural={DSRs},%
 text={DSR},%
@@ -633,26 +577,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Design Science Research},%
+longplural={Design Science Researchs},%
+short={DSR},%
+shortplural={DSRs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{LSA}%
+\glsdefs@newdocentry{lsa}%
 {%
-name={LSA},%
+name={\acronymfont {\glsentryshort {lsa}}},%
 sort={LSA},%
-type={main},%
+type={acronym},%
 first={LSA},%
 firstplural={LSAs},%
 text={LSA},%
 plural={LSAs},%
-description={Latent Semantic Analysis},%
-descriptionplural={Latent Semantic Analysis},%
+description={Latent Semantic Analysis (Análise Semântica Latente)},%
+descriptionplural={Latent Semantic Analysis (Análise Semântica Latente)},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -661,26 +605,26 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Latent Semantic Analysis (Análise Semântica Latente)},%
+longplural={Latent Semantic Analysis (Análise Semântica Latente)s},%
+short={LSA},%
+shortplural={LSAs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{PLSA}%
+\glsdefs@newdocentry{plsa}%
 {%
-name={PLSA},%
+name={\acronymfont {\glsentryshort {plsa}}},%
 sort={PLSA},%
-type={main},%
+type={acronym},%
 first={PLSA},%
 firstplural={PLSAs},%
 text={PLSA},%
 plural={PLSAs},%
-description={Probabilistic Latent Semantic Analysis},%
-descriptionplural={Probabilistic Latent Semantic Analysis},%
+description={Probabilistic Latent Semantic Analysis (Análise Semântica Latente Probabilística)},%
+descriptionplural={Probabilistic Latent Semantic Analysis (Análise Semântica Latente Probabilística)},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -689,20 +633,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Probabilistic Latent Semantic Analysis (Análise Semântica Latente Probabilística)},%
+longplural={Probabilistic Latent Semantic Analysis (Análise Semântica Latente Probabilística)s},%
+short={PLSA},%
+shortplural={PLSAs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{NLTK}%
+\glsdefs@newdocentry{nltk}%
 {%
-name={NLTK},%
+name={\acronymfont {\glsentryshort {nltk}}},%
 sort={NLTK},%
-type={main},%
+type={acronym},%
 first={NLTK},%
 firstplural={NLTKs},%
 text={NLTK},%
@@ -717,20 +661,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Natural Language Toolkit},%
+longplural={Natural Language Toolkits},%
+short={NLTK},%
+shortplural={NLTKs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{PCA}%
+\glsdefs@newdocentry{pca}%
 {%
-name={PCA},%
+name={\acronymfont {\glsentryshort {pca}}},%
 sort={PCA},%
-type={main},%
+type={acronym},%
 first={PCA},%
 firstplural={PCAs},%
 text={PCA},%
@@ -745,20 +689,20 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={Principal Component Analysis},%
+longplural={Principal Component Analysiss},%
+short={PCA},%
+shortplural={PCAs},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{tSNE}%
+\glsdefs@newdocentry{tsne}%
 {%
-name={t-SNE},%
+name={\acronymfont {\glsentryshort {tsne}}},%
 sort={t-SNE},%
-type={main},%
+type={acronym},%
 first={t-SNE},%
 firstplural={t-SNEs},%
 text={t-SNE},%
@@ -773,10 +717,178 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
+long={t-distributed Stochastic Neighbor Embedding},%
+longplural={t-distributed Stochastic Neighbor Embeddings},%
+short={t-SNE},%
+shortplural={t-SNEs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bertopic}%
+{%
+name={\acronymfont {\glsentryshort {bertopic}}},%
+sort={BERTopic},%
+type={acronym},%
+first={BERTopic},%
+firstplural={BERTopics},%
+text={BERTopic},%
+plural={BERTopics},%
+description={Modelagem de tópicos baseada em embeddings BERT},%
+descriptionplural={Modelagem de tópicos baseada em embeddings BERT},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Modelagem de tópicos baseada em embeddings BERT},%
+longplural={Modelagem de tópicos baseada em embeddings BERTs},%
+short={BERTopic},%
+shortplural={BERTopics},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{wizmap}%
+{%
+name={\acronymfont {\glsentryshort {wizmap}}},%
+sort={WizMap},%
+type={acronym},%
+first={WizMap},%
+firstplural={WizMaps},%
+text={WizMap},%
+plural={WizMaps},%
+description={Ferramenta de visualização para mapas de conhecimento},%
+descriptionplural={Ferramenta de visualização para mapas de conhecimento},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Ferramenta de visualização para mapas de conhecimento},%
+longplural={Ferramenta de visualização para mapas de conhecimentos},%
+short={WizMap},%
+shortplural={WizMaps},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rnn}%
+{%
+name={\acronymfont {\glsentryshort {rnn}}},%
+sort={RNN},%
+type={acronym},%
+first={RNN},%
+firstplural={RNNs},%
+text={RNN},%
+plural={RNNs},%
+description={Rede Neural Recorrente},%
+descriptionplural={Rede Neural Recorrente},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Rede Neural Recorrente},%
+longplural={Rede Neural Recorrentes},%
+short={RNN},%
+shortplural={RNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cbow}%
+{%
+name={\acronymfont {\glsentryshort {cbow}}},%
+sort={CBOW},%
+type={acronym},%
+first={CBOW},%
+firstplural={CBOWs},%
+text={CBOW},%
+plural={CBOWs},%
+description={Continuous Bag-of-Words},%
+descriptionplural={Continuous Bag-of-Words},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Continuous Bag-of-Words},%
+longplural={Continuous Bag-of-Wordss},%
+short={CBOW},%
+shortplural={CBOWs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{mlm}%
+{%
+name={\acronymfont {\glsentryshort {mlm}}},%
+sort={MLM},%
+type={acronym},%
+first={MLM},%
+firstplural={MLMs},%
+text={MLM},%
+plural={MLMs},%
+description={Modelo de Linguagem Mascarado},%
+descriptionplural={Modelo de Linguagem Mascarado},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Modelo de Linguagem Mascarado},%
+longplural={Modelo de Linguagem Mascarados},%
+short={MLM},%
+shortplural={MLMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{elmo}%
+{%
+name={\acronymfont {\glsentryshort {elmo}}},%
+sort={ELMo},%
+type={acronym},%
+first={ELMo},%
+firstplural={ELMos},%
+text={ELMo},%
+plural={ELMos},%
+description={Representações de Linguagem por Modelos de Linguagem},%
+descriptionplural={Representações de Linguagem por Modelos de Linguagem},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Representações de Linguagem por Modelos de Linguagem},%
+longplural={Representações de Linguagem por Modelos de Linguagems},%
+short={ELMo},%
+shortplural={ELMos},%
 counter={page},%
 parent={},%
 %

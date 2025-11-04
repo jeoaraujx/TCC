@@ -1,36 +1,3 @@
-% Inseridas atualizações das normas de 2023.
-
-%Modelo de Trabalho de Conclusão de Curso para o curso de Sistemas de Informação do Departamento de Ciêcias Exatas e da Terra, Campus I, da Universidade do Estado da Bahia (CSI/DCET1/UNEB). 
-
-%A estrutura de arquivos foi criada e as customizações necessárias implementadas pelo prof. Dr. Vagner de Souza Fonseca a partir da classe abntex2.
-
-% Este documento só deverá ser alterado para incluir ou excluir
-% elementos pré e pós textuais. Use o comentário do latex (%) caso
-% deseje excluir algum elemento.
-
-% PREÂMBULO  =======================================================
-%Pacotes e configurações
-
-%% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%% 
-%% The Current Maintainer of this work is the abnTeX2 team, led
-%% by Lauro César Araujo. Further information are available on 
-%% http://abntex2.googlecode.com/
-%%
-%% This work consists of the files abntex2-modelo-trabalho-academico.tex,
-%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
-%%
-
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 % abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
@@ -74,7 +41,7 @@
 %\addto{\captionsbrazil}{%
 %  \renewcommand{\bibname}{REFER\^{E}NCIAS}
 %}
-
+\usepackage{float}
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
@@ -131,13 +98,12 @@
 
 \usepackage[small]{caption}
 \usepackage{subcaption}
-\captionsetup[figure]{font=small}
-\captionsetup[table]{font=small}
 
 %\mt{} marca texto dentro das chaves.
 \usepackage{ulem}
 \newcommand\mt{\bgroup\markoverwith
   {\textcolor{yellow}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon} 
+
 \usepackage[acronym]{glossaries}
 \makeglossaries
 % --- 
@@ -174,22 +140,6 @@
 
 % informações do PDF
 \makeatletter
-
-% No indice subseções com letras maiúsculas
-% \let\oldcontentsline\contentsline
-% \def\contentsline#1#2{%
-%   \expandafter\ifx\csname l@#1\endcsname\l@section
-%     \expandafter\@firstoftwo
-%   \else
-%     \expandafter\@secondoftwo
-%   \fi
-%   {%
-%     \oldcontentsline{#1}{\MakeTextUppercase{#2}}%
-%   }{%
-%     \oldcontentsline{#1}{#2}%
-%   }%
-% }
-
 
 \hypersetup{
      	%pagebackref=true,
@@ -260,14 +210,6 @@
 %\renewcommand{\listtablename}{LISTA DE TABELAS}
 %\renewcommand{\agradecimentosname}{AGRADECIMENTOS}
 %\renewcommand{\anu_orientadorname}{ANU_ORIENTADOR}
-%\renewcommand{\listadesiglasname}{LISTA DE ABREVIATURAS E SIGLAS}
-%\renewcommand{\listadesimbolosname}{LISTA DE S\'IMBOLOS}
-%% ajusta nomes usados com a macro \autoref
-%\renewcommand{\pageautorefname}{p\'agina}
-%\renewcommand{\sectionautorefname}{se{\c c}\~ao}
-%\renewcommand{\subsectionautorefname}{subse{\c c}\~ao}
-%\renewcommand{\paragraphautorefname}{par\'agrafo}
-%\renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
 }
 
 % Início do documento
@@ -290,10 +232,10 @@
 % Folha de rosto (* indica que há a ficha bibliográfica)
 \imprimirfolhaderosto
 
-\input{nao_editar/anu_orientador}
+\input{./nao_editar/anu_orientador}
 
 %\input{pre/__errata} %se houver, descomente essa linha
-\input{editar/aprovacao}
+\input{./editar/aprovacao}
 
 %Agradecimentos
 \begin{agradecimentos}
@@ -334,6 +276,8 @@
 
 %Siglas
 \input{./editar/siglas}
+\printacronyms
+\cleardoublepage
 
 %Símbolos
 \ifsimbolos
