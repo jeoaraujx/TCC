@@ -132,6 +132,14 @@ INPUT ./nao_editar/config/cchetex.sty
 INPUT ./nao_editar/config/cchetex.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
@@ -566,6 +574,10 @@ INPUT editar/resumo_eng.tex
 INPUT ./monografia.lof
 INPUT ./monografia.lof
 INPUT monografia.lof
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./monografia.lot
 INPUT ./monografia.lot
 INPUT monografia.lot
@@ -649,6 +661,50 @@ INPUT ./caps/2.4 - Abordagem tradicional.tex
 INPUT caps/2.4 - Abordagem tradicional.tex
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT ./caps/2.5 - Bertopic.tex
+INPUT ./caps/2.5 - Bertopic.tex
+INPUT caps/2.5 - Bertopic.tex
+INPUT ./figs/Bertopic_arch.png
+INPUT ./figs/Bertopic_arch.png
+INPUT ./figs/Bertopic_arch.png
+INPUT ./figs/Bertopic_arch.png
+INPUT ./figs/Bertopic_arch.png
+INPUT ./figs/UMAP.png
+INPUT ./figs/UMAP.png
+INPUT ./figs/UMAP.png
+INPUT ./figs/UMAP.png
+INPUT ./figs/UMAP.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT ./figs/HDBSCAN.png
+INPUT ./figs/HDBSCAN.png
+INPUT ./figs/HDBSCAN.png
+INPUT ./figs/HDBSCAN.png
+INPUT ./figs/HDBSCAN.png
+INPUT ./caps/2.6 - Visualização de dados.tex
+INPUT ./caps/2.6 - Visualização de dados.tex
+INPUT caps/2.6 - Visualização de dados.tex
+INPUT ./figs/Wizmap_interface.png
+INPUT ./figs/Wizmap_interface.png
+INPUT ./figs/Wizmap_interface.png
+INPUT ./figs/Wizmap_interface.png
+INPUT ./figs/Wizmap_interface.png
+INPUT ./figs/Wizmap_quadtree.png
+INPUT ./figs/Wizmap_quadtree.png
+INPUT ./figs/Wizmap_quadtree.png
+INPUT ./figs/Wizmap_quadtree.png
+INPUT ./figs/Wizmap_quadtree.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT ./caps/3.0 - Trabalhos Correlatos.tex
+INPUT ./caps/3.0 - Trabalhos Correlatos.tex
+INPUT caps/3.0 - Trabalhos Correlatos.tex
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/lmmi9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri9.tfm
 INPUT ./monografia.bbl
 INPUT ./monografia.bbl
 INPUT monografia.bbl
@@ -668,7 +724,9 @@ INPUT ./caps/_lista.aux
 INPUT ./caps/_lista.aux
 INPUT ./monografia.brf
 INPUT ./monografia.brf
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
@@ -678,7 +736,12 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

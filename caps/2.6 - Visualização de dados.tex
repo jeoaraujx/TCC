@@ -1,0 +1,42 @@
+\section{Visualização de Dados para Análise Científica}
+
+A geração de modelos de tópicos e \textit{embeddings}, conforme discutido nas seções anteriores, produz representações vetoriais de alta dimensionalidade que capturam a semântica do domínio. No entanto, a interpretação e o uso prático desses \textit{embeddings} representam um desafio significativo, dada a sua \enquote{opacidade, alta dimensionalidade e o grande tamanho dos conjuntos de dados modernos} \cite[p. 1, Traduzido]{Wang_2023}.
+
+Para tornar esses vetores complexos inteligíveis, pesquisadores frequentemente aplicam técnicas de redução de dimensionalidade, como o \gls{umap} \cite{McInnes_2018} ou o \gls{t-sne} \cite{Maaten_2008}, para projetar os \textit{embeddings} em um espaço bidimensional (\textbf{2d}) ou tridimensional (\textbf{3d}). Embora essa projeção permita a visualização dos dados em um gráfico de dispersão (\textit{scatter plot}), a análise em larga escala permanece um desafio: em conjuntos de dados com milhões de pontos, \enquote{é exaustivo ou mesmo implausível inspecionar os dados ponto a ponto para entender a estrutura global} \cite[p. 2, Traduzido]{Wang_2023}.
+
+Abordagens alternativas, como gráficos de contorno (\textit{contour plots}), podem resumir a distribuição global, mas \enquote{restringem a exploração das estruturas locais de um \textit{embedding}} \cite[p. 2, Traduzido]{Wang_2023}. Para preencher a lacuna entre a visão global (contornos) e a exploração local (pontos), ferramentas de visualização interativa tornam-se essenciais.
+
+Neste contexto, surge o \gls{wizmap}\footnote{O repositório de código aberto do \gls{wizmap} está disponível em: \url{https://github.com/poloclub/wizmap}. Uma demonstração interativa da ferramenta, analisando artigos científicos (a que o \textit{dataset} deste estudo de caso se assemelha), pode ser acessada em: \url{https://fossil-explorer.com/wizmap/?dataURL=https://fossil-explorer.com/wizmap/data/dsm-papers/data.ndjson&gridURL=https://fossil-explorer.com/wizmap/data/dsm-papers/grid.json}}, \enquote{uma ferramenta de visualização interativa escalável que capacita pesquisadores e especialistas de domínio a explorar e interpretar \textit{embeddings} com milhões de pontos} \cite[p. 2, Traduzido]{Wang_2023}. A ferramenta emprega um \enquote{design de interação familiar semelhante a um mapa} (\textit{map-like interaction design}), permitindo que o usuário navegue pelo espaço semântico com ações de \textit{pan} e \textit{zoom}.
+
+A interface do \gls{wizmap}, ilustrada na Figura \ref{fig:Wizmap_interface}, é dividida em três componentes principais: (A) A Visão de Mapa (\textit{Map View}), que integra as camadas de visualização; (B) O Painel de Busca (\textit{Search Panel}), que permite a filtragem por texto; e (C) O Painel de Controle (\textit{Control Panel}), para customização da visualização \cite[p. 1]{Wang_2023}.
+
+\begin{figure}[H]
+    \centering
+    % Nota: Figura 1 do artigo wizmap.pdf (p. 1)
+    \includegraphics[width=0.7\textwidth]{figs/Wizmap_interface.png} 
+    \caption{Interface da ferramenta \gls{wizmap} e seus componentes principais.}
+    \label{fig:Wizmap_interface}
+    \legend{Fonte: \citeonline[p. 1]{Wang_2023}}
+\end{figure}
+
+A principal inovação do \gls{wizmap} é a sua capacidade de escalar para milhões de pontos diretamente no navegador do usuário, sem a necessidade de servidores dedicados. Isso é alcançado através do uso de tecnologias web modernas, como \gls{webgl}\footnote{Disponível em: \url{https://developer.mozilla.org/pt-BR/docs/Web/API/WebGL_API}} para renderização gráfica, \textit{Web Workers}\footnote{Disponível em: \url{https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API}.} para paralelização, e a \textit{Streams API}\footnote{Disponível em: \url{https://developer.mozilla.org/pt-BR/docs/Web/API/Streams_API}.} para o carregamento de dados \cite[p. 2, 4]{Wang_2023}.
+
+A \enquote{Visão de Mapa} (\textit{Map View}), sua interface primária, integra três camadas de visualização \cite[p. 4]{Wang_2023}:
+\begin{enumerate}
+    \item \textbf{Contorno de Distribuição:} Utiliza \gls{kde} para fornecer uma visão geral da estrutura global e das áreas de alta densidade.
+    \item \textbf{Gráfico de Dispersão (\textit{Scatter Plot}):} Permite a investigação de \textit{embeddings} individuais em nível local.
+    \item \textbf{Rótulos Multi-Resolução:} Permite uma interpretação contextual em diferentes níveis de granularidade.
+\end{enumerate}
+
+Para implementar os Rótulos Multi-Resolução, o \gls{wizmap} utiliza uma estrutura de dados \textit{quadtree}, conforme detalhado na Figura \ref{fig:wizmap_quadtree}. O \textit{quadtree} particiona recursivamente o espaço \textbf{2d} (A) em quadrantes, que são representados como nós em uma árvore (B). A ferramenta então agrega as informações de baixo para cima, permitindo que os rótulos se \enquote{ajustem em resolução à medida que os usuários aumentam o \textit{zoom}} \cite[p. 2-3]{Wang_2023}.
+
+\begin{figure}[H]
+    \centering
+    % Nota: Figura 3 do artigo wizmap.pdf (p. 3)
+    \includegraphics[width=0.7\textwidth]{figs/Wizmap_quadtree.png} 
+    \caption{Estrutura de dados \textit{Quadtree} usada pelo \gls{wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf{2d}. (B) Representação em árvore.}
+    \label{fig:wizmap_quadtree}
+    \legend{Fonte: \citeonline[p. 3]{Wang_2023}}
+\end{figure}
+
+Ferramentas como o \gls{wizmap}, que combinam redução de dimensionalidade com interfaces interativas de multi-resolução e busca semântica, são fundamentais para traduzir a saída matemática de modelos como o \gls{bertopic} em mapas de conhecimento navegáveis, facilitando a descoberta de padrões latentes em grandes base de dados textuais.

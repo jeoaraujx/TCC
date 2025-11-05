@@ -5,12 +5,25 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Angelov 2020]{Angelov_2020}
+\abntrefinfo{Angelov}{ANGELOV}{2020}
+{ANGELOV, D. \textbf{Top2Vec: Distributed Representations of Topics}. 2020.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2008.09470}.}
+
 \bibitem[Blei, Ng e Jordan 2003]{Blei_2003}
 \abntrefinfo{Blei, Ng e Jordan}{BLEI; NG; JORDAN}{2003}
 {BLEI, D.~M.; NG, A.~Y.; JORDAN, M.~I. Latent dirichlet allocation.
 \textbf{Journal of Machine Learning Research}, MIT Press, v.~3, n.~Jan, p. 993--1022, 2003.
 ISSN 1532-4435.
 Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v3/blei03a.html}.}
+
+\bibitem[Campello, Moulavi e Sander 2013]{Campello_2013}
+\abntrefinfo{Campello, Moulavi e Sander}{CAMPELLO; MOULAVI; SANDER}{2013}
+{CAMPELLO, R. J. G.~B.; MOULAVI, D.; SANDER, J. Density-based clustering based on hierarchical density estimates. In:  PEI, J. \textit{et al.} (Ed.). \textbf{Advances in Knowledge Discovery and Data Mining}. Berlin, Heidelberg: Springer Berlin Heidelberg, 2013. p. 160--172.}
+
+\bibitem[Carbonell e Goldstein 1998]{Carbonell_1998}
+\abntrefinfo{Carbonell e Goldstein}{CARBONELL; GOLDSTEIN}{1998}
+{CARBONELL, J.~G.; GOLDSTEIN, J. The use of {MMR}, diversity-based reranking for reordering documents and producing summaries. In:  \textbf{Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}. Melbourne, Australia: ACM, 1998. p. 335--336. Dispon{\'\i}vel em: \url{https://doi.org/10.1145/290941.291025}.}
 
 \bibitem[Datchanamoorthy, S e B 2023]{Datchanamoorthy_2023}
 \abntrefinfo{Datchanamoorthy, S e B}{DATCHANAMOORTHY; S; B}{2023}
@@ -42,6 +55,10 @@ Dispon{\'\i}vel em: \url{https://www.mdpi.com/3042-5042/1/1/2}.}
 \textbf{International Journal of Information Technology}, v.~15, n.~4, p. 2187--2195, 2023.
 Dispon{\'\i}vel em: \url{https://doi.org/10.1007/s41870-023-01268-w}.}
 
+\bibitem[Gerasimenko \textit{et al.} 2023]{Gerasimenko_2023}
+\abntrefinfo{Gerasimenko \textit{et al.}}{GERASIMENKO \textit{et al.}}{2023}
+{GERASIMENKO, N. \textit{et al.} Incremental topic modeling for scientific trend topics extraction. In:  \textbf{Computational Linguistics and Intellectual Technologies: Proceedings of the International Conference "Dialogue 2023"}. [S.l.: s.n.], 2023. p. 88--103.}
+
 \bibitem[Grootendorst 2022]{Grootendorst_2022}
 \abntrefinfo{Grootendorst}{GROOTENDORST}{2022}
 {GROOTENDORST, M. \textbf{BERTopic: Neural topic modeling with a class-based TF-IDF procedure}. 2022.
@@ -57,6 +74,16 @@ ISBN 1-58113-096-1.}
 {HOFMANN, T. Hofmann, t.: Unsupervised learning by probabilistic latent semantic analysis. machine learning 42(1-2), 177-196.
 \textbf{Machine Learning}, v.~42, p. 177--196, 01 2001.}
 
+\bibitem[Joachims 1997]{Joachims_1997}
+\abntrefinfo{Joachims}{JOACHIMS}{1997}
+{JOACHIMS, T. A probabilistic analysis of the rocchio algorithm with tfidf for text categorization. In:  . [S.l.: s.n.], 1997. p. 143--151.}
+
+\bibitem[Jung \textit{et al.} 2024]{Jung_2024}
+\abntrefinfo{Jung \textit{et al.}}{JUNG \textit{et al.}}{2024}
+{JUNG, H.~S. \textit{et al.} Expansive data, extensive model: Investigating discussion topics around llm through unsupervised machine learning in academic papers and news.
+\textbf{PLOS ONE}, Public Library of Science, v.~19, n.~5, p. 1--18, 05 2024.
+Dispon{\'\i}vel em: \url{https://doi.org/10.1371/journal.pone.0304680}.}
+
 \bibitem[Jurafsky e Martin 2009]{Jurafsky_2009}
 \abntrefinfo{Jurafsky e Martin}{JURAFSKY; MARTIN}{2009}
 {JURAFSKY, D.; MARTIN, J. \textbf{Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition}. Pearson Prentice Hall, 2009.  (Prentice Hall series in artificial intelligence).
@@ -68,10 +95,32 @@ ISBN 9780131873216. Dispon{\'\i}vel em: \url{https://books.google.com.br/books?i
 \textbf{Palgrave Communications}, v.~11, n.~1, p. 1--15, December 2024.
 Dispon{\'\i}vel em: \url{https://ideas.repec.org/a/pal/palcom/v11y2024i1d10.1057\_s41599-024-03044-y.html}.}
 
+\bibitem[Maaten e Hinton 2008]{Maaten_2008}
+\abntrefinfo{Maaten e Hinton}{MAATEN; HINTON}{2008}
+{MAATEN, L. van~der; HINTON, G. Visualizing data using t-sne.
+\textbf{Journal of Machine Learning Research}, v.~9, n.~86, p. 2579--2605, 2008.
+Dispon{\'\i}vel em: \url{http://jmlr.org/papers/v9/vandermaaten08a.html}.}
+
+\bibitem[MacQueen 1967]{MacQueen_1967}
+\abntrefinfo{MacQueen}{MACQUEEN}{1967}
+{MACQUEEN, J. Some methods for classification and analysis of multivariate observations. In:  \textbf{Proceedings of the 5th Berkeley Symposium on Mathematical Statistics and Probability}. Berkeley: University of California Press, 1967.  (Statistics, v.~1), p. 281--297. Dispon{\'\i}vel em: \url{http://projecteuclid.org/euclid.bsmsp/1200512992}.}
+
 \bibitem[Manning e Schutze 1999]{Manning_1999}
 \abntrefinfo{Manning e Schutze}{MANNING; SCHUTZE}{1999}
 {MANNING, C.; SCHUTZE, H. \textbf{Foundations of Statistical Natural Language Processing}. MIT Press, 1999.  (Foundations of Statistical Natural Language Processing).
 ISBN 9780262133609. Dispon{\'\i}vel em: \url{https://books.google.com.br/books?id=YiFDxbEX3SUC}.}
+
+\bibitem[McInnes, Healy e Melville 2018]{McInnes_2018}
+\abntrefinfo{McInnes, Healy e Melville}{MCINNES; HEALY; MELVILLE}{2018}
+{MCINNES, L.; HEALY, J.; MELVILLE, J. \textbf{UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}. 2018.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1802.03426}.}
+
+\bibitem[Meng \textit{et al.} 2024]{Meng_2024}
+\abntrefinfo{Meng \textit{et al.}}{MENG \textit{et al.}}{2024}
+{MENG, F. \textit{et al.} Demand-side energy management reimagined: A comprehensive literature analysis leveraging large language models.
+\textbf{Energy}, v.~291, p. 130303, 2024.
+ISSN 0360-5442.
+Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0360544224000744}.}
 
 \bibitem[Mifrah e Benlahmar 2020]{Mifrah_2020}
 \abntrefinfo{Mifrah e Benlahmar}{MIFRAH; BENLAHMAR}{2020}
@@ -108,6 +157,11 @@ Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0140
 {REIMERS, N.; GUREVYCH, I. \textbf{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}. 2019.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1908.10084}.}
 
+\bibitem[Sia, Dalmia e Mielke 2020]{Sia_2020}
+\abntrefinfo{Sia, Dalmia e Mielke}{SIA; DALMIA; MIELKE}{2020}
+{SIA, S.; DALMIA, A.; MIELKE, S.~J. \textbf{Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!} 2020.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2004.14914}.}
+
 \bibitem[Taylor 1953]{Taylor_1953}
 \abntrefinfo{Taylor}{TAYLOR}{1953}
 {TAYLOR, W.~L. Cloze procedure: A new tool for measuring readability.
@@ -122,6 +176,12 @@ Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1706.03762}.}
 \abntrefinfo{Wang, Hohman e Chau}{WANG; HOHMAN; CHAU}{2023}
 {WANG, Z.~J.; HOHMAN, F.; CHAU, D.~H. \textbf{WizMap: Scalable Interactive Visualization for Exploring Large Machine Learning Embeddings}. 2023.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2306.09328}.}
+
+\bibitem[Wijanto, Widiastuti e Yong 2024]{Wijanto_2024}
+\abntrefinfo{Wijanto, Widiastuti e Yong}{WIJANTO; WIDIASTUTI; YONG}{2024}
+{WIJANTO, M.~C.; WIDIASTUTI, I.; YONG, H.-S. Topic modeling for scientific articles: Exploring optimal hyperparameter tuning in bert.
+\textbf{International Journal on Advanced Science, Engineering and Information Technology}, v.~14, n.~3, p. 912–919, Jun. 2024.
+Dispon{\'\i}vel em: \url{https://ijaseit.insightsociety.org/index.php/ijaseit/article/view/19347}.}
 
 \bibitem[Xie \textit{et al.} 2020]{Xie_2020}
 \abntrefinfo{Xie \textit{et al.}}{XIE \textit{et al.}}{2020}

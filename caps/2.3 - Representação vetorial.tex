@@ -1,17 +1,17 @@
-\subsection{A Evolução das Representações Vetoriais em PLN}
+\section{A Evolução das Representações Vetoriais em PLN}
 
 O avanço no campo do \gls{pln} tem sido marcado pela busca por representações vetoriais que capturem não apenas informações sintáticas, mas também aspectos semânticos e contextuais dos textos.
 
-\subsubsection{Embeddings Estáticos: Limitações do Bag-of-Words}
+\subsection{Embeddings Estáticos: Limitações do Bag-of-Words}
 
-As primeiras abordagens de sucesso, como o \textit{Word2Vec} proposto por \citeonline{Mikolov_2013}\footnote{O \textit{Word2Vec} (2013) foi seminal por introduzir duas arquiteturas eficientes, \textit{Skip-gram} e \textit{CBOW}, que aprendem vetores de palavras prevendo o contexto em que elas aparecem, baseando-se na hipótese distribucional.} e o \textit{GloVe} proposto por \citeonline{Pennington_2014}\footnote{O \textit{GloVe} (2014), ou “Global Vectors”, diferencia-se por combinar as estatísticas globais de coocorrência de palavras (como o LSA) com a modelagem baseada em janelas de contexto (como o \textit{Word2Vec}), capturando relações lineares entre palavras.}, consolidaram a noção de \textit{embeddings}. Estes são vetores em espaços de alta dimensionalidade capazes de representar o significado aproximado de uma palavra.
+As primeiras abordagens de sucesso, como o \textit{Word2Vec} proposto por \citeonline{Mikolov_2013}\footnote{O \textit{Word2Vec} (2013) foi seminal por introduzir duas arquiteturas eficientes, \textit{Skip-gram} e \textit{CBOW}, que aprendem vetores de palavras prevendo o contexto em que elas aparecem, baseando-se na hipótese distribucional.} e o \textit{GloVe} proposto por \citeonline{Pennington_2014}\footnote{O \textit{GloVe} (2014), ou \enquote{Global Vectors}, diferencia-se por combinar as estatísticas globais de coocorrência de palavras (como o LSA) com a modelagem baseada em janelas de contexto (como o \textit{Word2Vec}), capturando relações lineares entre palavras.}, consolidaram a noção de \textit{embeddings}. Estes são vetores em espaços de alta dimensionalidade capazes de representar o significado aproximado de uma palavra.
 
-O avanço conceitual desses modelos foi o de permitir que o significado semântico fosse quantificado. Em vez de tratar palavras como identificadores discretos (como em uma abordagem \textit{bag-of-words}), os \textit{embeddings} posicionam termos com significados similares próximos uns dos outros no espaço vetorial. Isso permite que relações semânticas sejam capturadas matematicamente, como no exemplo clássico “Rei - Homem + Mulher $\approx$ Rainha” \cite{Mikolov_2013}. \citeonline{Xie_2020} na literatura de \gls{pln} refere-se a este espaço vetorial como um “espaço semântico”.
+O avanço conceitual desses modelos foi o de permitir que o significado semântico fosse quantificado. Em vez de tratar palavras como identificadores discretos (como em uma abordagem \textit{bag-of-words}), os \textit{embeddings} posicionam termos com significados similares próximos uns dos outros no espaço vetorial. Isso permite que relações semânticas sejam capturadas matematicamente, como no exemplo clássico \enquote{Rei - Homem + Mulher $\approx$ Rainha} \cite{Mikolov_2013}. \citeonline{Xie_2020} na literatura de \gls{pln} refere-se a este espaço vetorial como um \enquote{espaço semântico}.
 
 \citeonline{Galli_2024} destacam que esta capacidade de representação numérica é o alicerce da compreensão semântica no \gls{pln} moderno:
 
 \begin{citacao}
-Um componente essencial para alcançar a compreensão semântica são os \textit{embeddings} — representações numéricas que codificam o significado de palavras ou mesmo de frases — que são fundamentais no \gls{pln} para capturar relacionamentos complexos entre palavras e frases usando arquiteturas especiais [...]. \citeonline[Tradução nossa, p. 2]{Galli_2024}
+Um componente essencial para alcançar a compreensão semântica são os \textit{embeddings} — representações numéricas que codificam o significado de palavras ou mesmo de frases — que são fundamentais no \gls{pln} para capturar relacionamentos complexos entre palavras e frases usando arquiteturas especiais [...]. \citeonline[Traduzido, p. 2]{Galli_2024}
 \end{citacao}
 
 O aprendizado desses vetores ocorre através do treinamento de uma rede neural rasa em uma tarefa de previsão de contexto, conforme ilustrado na Figura \ref{fig:cbow_skipgram}. O artigo seminal de \citeonline{Mikolov_2013} propôs duas arquiteturas principais:
@@ -31,9 +31,9 @@ O aprendizado desses vetores ocorre através do treinamento de uma rede neural r
     \legend{Fonte: \citeonline[p. 5]{Mikolov_2013}}
 \end{figure}
 
-Embora inovadores, esses modelos apresentavam a limitação de atribuir um único vetor fixo a cada termo, independentemente do contexto de ocorrência. Por exemplo, a palavra “banco” teria a mesma representação vetorial em “banco financeiro” e “banco da praça”. Tal restrição, usualmente referida como o problema da ambiguidade do significado da palavra (\textit{ambiguity of word meaning}), compromete a precisão em tarefas que exigem desambiguação semântica.
+Embora inovadores, esses modelos apresentavam a limitação de atribuir um único vetor fixo a cada termo, independentemente do contexto de ocorrência. Por exemplo, a palavra \enquote{banco} teria a mesma representação vetorial em \enquote{banco financeiro} e \enquote{banco da praça}. Tal restrição, usualmente referida como o problema da ambiguidade do significado da palavra (\textit{ambiguity of word meaning}), compromete a precisão em tarefas que exigem desambiguação semântica.
 
-\subsubsection{A Revolução dos Transformadores e o Mecanismo de Atenção}
+\subsection{A Revolução dos Transformadores e o Mecanismo de Atenção}
 
 A verdadeira virada de paradigma ocorreu com a introdução do modelo de Transformadores (\textit{Transformers}), proposto por \citeonline{vaswani_2017} no artigo seminal \textit{Attention Is All You Need}\footnote{Este artigo é considerado um dos trabalhos mais influentes da \gls{pln} moderna. Sua principal contribuição foi propor uma arquitetura de rede neural que dispensa totalmente as camadas recorrentes (\gls{rnn}) e convolucionais, baseando-se unicamente em mecanismos de atenção para modelar dependências globais entre a entrada e a saída \cite[p. 1]{vaswani_2017}.}. Essa arquitetura rompeu com o paradigma das \gls{rnn} e convolucionais, fundamentando-se inteiramente no mecanismo de autoatenção (\textit{self-attention}).
 
@@ -51,17 +51,17 @@ A arquitetura do Transformador, conforme apresentado na Figura \ref{fig:transfor
 
 O \textbf{Codificador} (\textit{Encoder}) é composto por uma pilha de N camadas idênticas (no artigo original, N=6). Cada camada, por sua vez, é composta por duas subcamadas principais: um mecanismo de autoatenção \textit{multi-head} (\textit{multi-head self-attention}) e uma rede neural \textit{feed-forward} (rede neural de alimentação direta) simples e totalmente conectada. Conexões residuais seguidas de normalização de camada (\textit{Add \& Norm}) são aplicadas ao redor de cada subcamada.
 
-O \textbf{Decodificador} (\textit{Decoder}), de forma similar, é uma pilha de N camadas. Além das duas subcamadas presentes no codificador, o decodificador insere uma terceira subcamada, que realiza a atenção \textit{multi-head} sobre a saída da pilha do codificador. Crucialmente, a subcamada de autoatenção do decodificador é “mascarada” (\textit{Masked Multi-Head Attention}). Esse mascaramento é o que garante que a previsão para uma posição \textit{i} só possa depender das saídas conhecidas em posições anteriores a \textit{i}, preservando a propriedade autorregressiva do modelo.
+O \textbf{Decodificador} (\textit{Decoder}), de forma similar, é uma pilha de N camadas. Além das duas subcamadas presentes no codificador, o decodificador insere uma terceira subcamada, que realiza a atenção \textit{multi-head} sobre a saída da pilha do codificador. Crucialmente, a subcamada de autoatenção do decodificador é \enquote{mascarada} (\textit{Masked Multi-Head Attention}). Esse mascaramento é o que garante que a previsão para uma posição \textit{i} só possa depender das saídas conhecidas em posições anteriores a \textit{i}, preservando a propriedade autorregressiva do modelo.
 
 Embora a arquitetura completa do Transformador tenha sido projetada para tarefas de transdução de sequência (como a tradução automática), foi a sua pilha de \textbf{Codificadores} (\textit{Encoder}) que se mostrou revolucionária para tarefas de \textit{compreensão} de linguagem. A capacidade do Codificador de processar texto de forma bidirecional e gerar representações numéricas ricas em contexto estabeleceu a base para uma nova classe de modelos focados exclusivamente na representação semântica, como será detalhado a seguir.
 
-\subsubsection{Embeddings Contextuais: BERT e SBERT}
+\subsection{Embeddings Contextuais: BERT e SBERT}
 
 Sobre essa base arquitetônica, foram desenvolvidos os modelos pré-treinados, entre os quais se destaca o \gls{bert}, introduzido por \citeonline{Devlin_2019}. O \gls{bert} utiliza a arquitetura do Codificador (\textit{Encoder}) do Transformador para gerar representações de linguagem.
 
-A inovação fundamental do \gls{bert} foi o pré-treinamento bidirecional, que diferentemente de abordagens anteriores, como o \gls{gpt} de \citeonline{Radford_2018}, que utilizava um treinamento unidirecional (da esquerda para a direita), o \gls{bert} foi projetado para “pré-treinar representações profundamente bidirecionais, condicionando conjuntamente o contexto esquerdo e direito em todas as camadas” como apontam \citeonline[p. 1, Tradução nossa]{Devlin_2019}.
+A inovação fundamental do \gls{bert} foi o pré-treinamento bidirecional, que diferentemente de abordagens anteriores, como o \gls{gpt} de \citeonline{Radford_2018}, que utilizava um treinamento unidirecional (da esquerda para a direita), o \gls{bert} foi projetado para \enquote{pré-treinar representações profundamente bidirecionais, condicionando conjuntamente o contexto esquerdo e direito em todas as camadas} como apontam \citeonline[p. 1, Traduzido]{Devlin_2019}.
 
-Para alcançar essa bidirecionalidade sem que o modelo “visse a resposta”, \citeonline{Devlin_2019} introduziu o objetivo do \gls{mlm}\footnote{O \gls{mlm} é inspirado na tarefa \textit{Cloze} \cite{Taylor_1953}, onde o modelo deve prever palavras que foram omitidas (mascaradas) de uma sentença, usando o contexto de ambas as direções (esquerda e direita) para fazer a previsão \cite[p. 1]{Devlin_2019}.}. A Figura \ref{fig:bert_vs_gpt} ilustra a diferença fundamental entre as arquiteturas de pré-treinamento, mostrando como o \gls{bert} é capaz de processar informações de toda a sequência em todas as suas camadas.
+Para alcançar essa bidirecionalidade sem que o modelo \enquote{visse a resposta}, \citeonline{Devlin_2019} introduziu o objetivo do \gls{mlm}\footnote{O \gls{mlm} é inspirado na tarefa \textit{Cloze} \cite{Taylor_1953}, onde o modelo deve prever palavras que foram omitidas (mascaradas) de uma sentença, usando o contexto de ambas as direções (esquerda e direita) para fazer a previsão \cite[p. 1]{Devlin_2019}.}. A Figura \ref{fig:bert_vs_gpt} ilustra a diferença fundamental entre as arquiteturas de pré-treinamento, mostrando como o \gls{bert} é capaz de processar informações de toda a sequência em todas as suas camadas.
 
 \begin{figure}[H]
     \centering
@@ -71,9 +71,9 @@ Para alcançar essa bidirecionalidade sem que o modelo “visse a resposta”, \
     \legend{Fonte: \citeonline[p. 13]{Devlin_2019}}
 \end{figure}
 
-Apesar de sua eficácia em tarefas de classificação, a arquitetura do \gls{bert} puro mostrou-se inadequada para tarefas de busca de similaridade semântica ou \textit{clustering}. Como \citeonline{Reimers_2019} explicam, o \gls{bert} “requer que ambas as sentenças sejam alimentadas na rede, o que causa um overhead computacional massivo”. Uma busca de similaridade em 10.000 sentenças, por exemplo, exigiria cerca de 50 milhões de inferências (aproximadamente 65 horas), tornando-o inviável para grandes \textit{corpora}.
+Apesar de sua eficácia em tarefas de classificação, a arquitetura do \gls{bert} puro mostrou-se inadequada para tarefas de busca de similaridade semântica ou \textit{clustering}. Como \citeonline{Reimers_2019} explicam, o \gls{bert} \enquote{requer que ambas as sentenças sejam alimentadas na rede, o que causa um overhead computacional massivo}. Uma busca de similaridade em 10.000 sentenças, por exemplo, exigiria cerca de 50 milhões de inferências (aproximadamente 65 horas), tornando-o inviável para grandes \textit{corpora}.
 
-Além disso, estudos empíricos demonstraram que usar os \textit{embeddings} “crus” do \gls{bert} (seja pela média das saídas ou pelo vetor do \textit{token} `[CLS]`) produz resultados insatisfatórios, muitas vezes piores do que os \textit{embeddings} estáticos como o \textit{GloVe}.
+Além disso, estudos empíricos demonstraram que usar os \textit{embeddings} \enquote{crus} do \gls{bert} (seja pela média das saídas ou pelo vetor do \textit{token} `[CLS]`) produz resultados insatisfatórios, muitas vezes piores do que os \textit{embeddings} estáticos como o \textit{GloVe}.
 
 Para resolver essa limitação, \citeonline{Reimers_2019} propuseram o \gls{sbert}. Ele modifica o \gls{bert} pré-treinado, adicionando uma operação de \textit{pooling} (sendo a média, \textit{MEAN-strategy}, a mais comum) à saída do \gls{bert} para criar um \textit{embedding} de sentença de tamanho fixo.
 

@@ -1,0 +1,49 @@
+\chapter[TRABALHOS CORRELATOS]{TRABALHOS CORRELATOS}
+
+Este capítulo apresenta uma revisão de literatura conduzida para fundamentar o estudo de metodologias de modelagem de tópicos baseadas em \textit{embeddings}, focando em sua aplicação e avaliação no domínio da análise de tendências científicas.
+
+Estudos comparativos recentes têm se dedicado a avaliar a eficácia de modelos de tópicos modernos frente a abordagens tradicionais. A pesquisa de \citeonline{Jung_2024}, por exemplo, apresenta uma análise comparativa entre métodos como \gls{lda}, \gls{nmf} e o \gls{bertopic}, aplicando-os a dados acadêmicos e de mídia. Os autores concluíram que o \gls{bertopic}, que combina \textit{embeddings} de texto com técnicas de redução de dimensionalidade e clusterização, \enquote{demonstrou predominância em diversidade e coesão de tópicos} \cite[p. 27]{Jung_2024}. Essa capacidade de capturar contextos semânticos complexos, superando a abordagem de \textit{bag-of-words} do \gls{lda}, é uma capacidade relevante para a análise de produção científica interdisciplinar.
+
+De forma similar, \citeonline{Kim_2024} propõem uma combinação de análise de redes e \gls{bertopic} para identificar a emergência de campos científicos interdisciplinares. O estudo valida o \gls{bertopic} como uma técnica de \textit{embedded topic modeling} (modelagem de tópicos embarcada) que, ao contrário das abordagens baseadas em frequência, \enquote{permite considerar o conhecimento contextual de grandes conjuntos de dados de texto} \cite[p. 3, Traduzido]{Kim_2024}. A arquitetura empregada utiliza os componentes de \textit{embeddings} \gls{bert}, \gls{umap}, \gls{hdbscan} e \gls{c-tf-idf}.
+
+A aplicação do \gls{bertopic} para a análise de publicações científicas, especificamente para a triagem de revisões sistemáticas, também foi explorada por \citeonline{Galli_2024}. O estudo aplicou o \textit{pipeline} (SBERT/UMAP/HDBSCAN/c-TF-IDF) em \textit{datasets} da literatura médica e concluiu que a ferramenta foi eficaz na segmentação e filtragem de artigos irrelevantes, reduzindo a carga de trabalho manual \cite[p. 1, 18]{Galli_2024}. Notavelmente, o trabalho também identificou a representação de tópicos padrão do \gls{c-tf-idf} como \enquote{muitas vezes obscura} \cite[p. 6, Traduzido]{Galli_2024}.
+
+Enquanto os estudos anteriores comparam o \gls{bertopic} com modelos clássicos, \citeonline{Gerasimenko_2023} o utilizam como \textit{baseline} para uma nova técnica de detecção de tendências científicas em tempo real. A pesquisa oferece uma análise detalhada do desempenho do \gls{bertopic}, concluindo que o modelo apresenta alta performance na distinção de documentos por tópicos, extraindo 90 dos 91 tópicos de tendência. No entanto, o estudo também identifica que o \gls{bertopic} \enquote{tem muita dificuldade na extração de palavras-chave} \cite[p. 10, Traduzido]{Gerasimenko_2023}, indicando um desempenho diferenciado entre as tarefas de \textit{clustering} de documentos e de representação de tópicos.
+
+A arquitetura do \gls{bertopic} é também modular, permitindo a exploração de diferentes configurações para otimizar os resultados, um ponto investigado por \citeonline{Wijanto_2024}. Em seu trabalho, os autores exploraram o ajuste de hiperparâmetros em modelos baseados em \gls{bert}, testando combinações variadas de modelos de \textit{embedding} (como \textit{RoBERTa} e \gls{sbert}), técnicas de redução de dimensionalidade (\gls{umap} e \gls{pca}) e algoritmos de clusterização (\textit{K-Means} e \gls{hdbscan}). O estudo reforça a importância da seleção criteriosa de cada componente do \textit{pipeline} para garantir a geração de tópicos coerentes e interpretáveis, sendo uma configuração validada o uso de \gls{sbert}, \gls{umap} e \gls{hdbscan} \cite{Grootendorst_2022} para documentos heterogêneos.
+
+A literatura também aponta para a validação de \textit{pipelines} coesos de modelagem de tópicos para análise bibliométrica e visualização. \citeonline{Meng_2024}, por exemplo, propõem uma metodologia que utiliza \textit{BERTopic} para mapear a evolução da pesquisa científica em um grande volume de publicações. O trabalho de \citeonline{Meng_2024} culmina no desenvolvimento de uma plataforma \textit{web} de análise bibliométrica para visualização de redes e tópicos, validando a aplicação de \textit{pipelines} de modelagem semântica como base para ferramentas de exploração interativa.
+
+Em suma, a análise dos trabalhos correlatos indica que o \gls{bertopic} é uma ferramenta validada pela literatura recente para a análise de publicações científicas. A literatura confirma sua predominância sobre métodos tradicionais em métricas de coerência \cite{Jung_2024} e sua capacidade de usar contexto semântico como apontam \citeonline{Kim_2024, Galli_2024}. Também aponta para a importância de sua modularidade \cite{Wijanto_2024} e para um desempenho diferenciado entre a clusterização de documentos (onde é forte) e a extração de palavras-chave (onde é mais fraco) \cite{Gerasimenko_2023, Galli_2024}. Por fim, a literatura valida o uso de \textit{pipelines} de modelagem como base para o desenvolvimento de plataformas de visualização interativa \cite{Meng_2024}.
+
+\section{Síntese Comparativa dos Trabalhos Correlatos}
+
+A fim de consolidar a análise da literatura e posicionar de forma clara o estado da arte, o quadro a seguir (Quadro \ref{tab:trabalhos_correlatos}) apresenta uma síntese comparativa dos trabalhos correlatos discutidos. A comparação é estruturada com base em critérios essenciais, como o objetivo principal de cada estudo, o \textit{pipeline} metodológico empregado e as tecnologias de \textit{embedding}. Essa estrutura permite visualizar as sinergias e as particularidades de cada abordagem.
+
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\captionsetup{justification=centering}
+\caption{Quadro Resumo: Comparativo de Trabalhos Correlatos}
+\label{tab:trabalhos_correlatos}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+% Tabela atualizada para ser agnóstica, incluir Galli_2024 e remover Esta Pesquisa/LLMs
+\begin{tabularx}{\linewidth}{l p{4.5cm} p{4.5cm} p{3cm} X}
+\toprule
+\textbf{Referência} & \textbf{Objetivo Principal} & \textbf{Pipeline/Método Utilizado} & \textbf{Modelo de Embedding} & \textbf{Relação com o Estado da Arte} \\
+\midrule
+\citeonline{Jung_2024} & Comparar o desempenho de modelos de tópicos (LDA, NMF, BERTopic) em textos acadêmicos e de notícias sobre LLMs \cite{Jung_2024}. & Análise comparativa de métricas de coerência e diversidade dos tópicos gerados \cite{Jung_2024}. & SBERT (implícito no BERTopic) \cite{Jung_2024}. & Estabelece o BERTopic como uma ferramenta superior aos métodos tradicionais (LDA, NMF) para a análise de textos acadêmicos \cite{Jung_2024}. \\
+\addlinespace
+\citeonline{Kim_2024} & Identificar a emergência de ciência interdisciplinar em metadados de publicações científicas \cite{Kim_2024}. & Combinação de análise de redes de coocorrência (Etapa 1) e modelagem de tópicos com BERTopic (Etapa 2) \cite{Kim_2024}. & BERT (usado para \textit{embedding vectorization}) \cite{Kim_2024}. & Valida o BERTopic como ferramenta superior às abordagens baseadas em frequência, por usar \enquote{conhecimento contextual}, para analisar publicações científicas \cite{Kim_2024}. \\
+\addlinespace
+\citeonline{Galli_2024} & Explorar como o \gls{bertopic} pode ser aplicado para acelerar a triagem de literatura em revisões sistemáticas de publicações científicas \cite{Galli_2024}. & Pipeline BERTopic padrão (SBERT $\rightarrow$ UMAP $\rightarrow$ HDBSCAN $\rightarrow$ c-TF-IDF) para identificar e filtrar \textit{clusters} irrelevantes \cite[p. 4]{Galli_2024}. & 'all-mpnet-base-v2' (SBERT) \cite[p. 4]{Galli_2024}. & Valida o \textit{pipeline} SBERT/UMAP/HDBSCAN para analisar publicações científicas e corrobora que os rótulos de \gls{c-tf-idf} são \enquote{muitas vezes obscuros} \cite[p. 6]{Galli_2024}. \\
+\addlinespace
+\citeonline{Gerasimenko_2023} & Extrair tópicos de tendências científicas (\enquote{trend topics}) em tempo real a partir de publicações \cite{Gerasimenko_2023}. & Propõe um modelo ARTM incremental e o compara com \textit{baselines}, incluindo PLSA, LDA e BERTopic \cite{Gerasimenko_2023}. & Sentence-Transformers (para o \textit{baseline} BERTopic) \cite{Gerasimenko_2023}. & Fornece uma análise comparativa do BERTopic, destacando sua alta performance em clusterização de documentos e sua fraqueza na extração de palavras-chave \cite{Gerasimenko_2023}. \\
+\addlinespace
+\citeonline{Meng_2024} & Mapear a evolução de um campo de pesquisa científica utilizando uma abordagem integrada de modelagem de tópicos e uma plataforma web \cite{Meng_2024}. & Pipeline integrado: 1. Geração de embeddings (via API de LLM); 2. Clusterização e modelagem com BERTopic; 3. Plataforma de visualização \cite[p. 3-4]{Meng_2024}. & GPT-3.5 (text-embedding-ada-002) \cite[p. 4]{Meng_2024}. & Valida a aplicação de um \textit{pipeline} de modelagem de tópicos como base para uma plataforma \textit{web} de visualização, um objetivo relevante para a análise de grandes \textit{corpora} \cite[p. 18]{Meng_2024}. \\
+\bottomrule
+\end{tabularx}
+}
+\end{table}
+\end{landscape}

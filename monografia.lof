@@ -3,3 +3,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Arquitetura do modelo Transformador.}}{18}{figure.caption.13}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Diferenças nas arquiteturas de pré-treinamento. \gls {bert} é bidirecional, \gls {gpt} é unidirecional (da esquerda para a direita) e \gls {elmo} é uma concatenação rasa de LSTMs.}}{20}{figure.caption.14}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura de inferência do \gls {sbert} para computar similaridade.}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama esquemático do \textit {pipeline} BERTopic.}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama ilustrativo do \gls {umap}, demonstrando a relação entre os hiperparâmetros \texttt {n\_neighbors} e \texttt {min\_dist} e a representação visual dos dados.}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Figura ilustrativa de um \textit {dataset} sintético com quatro \textit {clusters} e ruído de fundo.}}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Interface da ferramenta \gls {wizmap} e seus componentes principais.}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Estrutura de dados \textit {Quadtree} usada pelo \gls {wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf {2d}. (B) Representação em árvore.}}{30}{figure.caption.20}%
