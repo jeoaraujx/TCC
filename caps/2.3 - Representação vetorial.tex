@@ -23,9 +23,9 @@ O aprendizado desses vetores ocorre através do treinamento de uma rede neural r
 
 É importante notar que os \textit{embeddings} não são o produto final, mas sim um subproduto do treinamento: os vetores aprendidos na camada oculta da rede (\textit{PROJECTION} na figura) tornam-se a representação semântica da palavra, como indica \citeonline[p. 4]{Mikolov_2013}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figs/Cbow_skipgram.png} 
+    \includegraphics[width=0.7\textwidth]{figs/Cbow_skipgram.png} 
     \caption{Arquiteturas \gls{cbow} e \textit{Skip-gram}.}
     \label{fig:cbow_skipgram}
     \legend{Fonte: \citeonline[p. 5]{Mikolov_2013}}
@@ -41,7 +41,7 @@ Através dele, o modelo atribui pesos diferenciados a \textit{tokens} em uma seq
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/Transformadores.png} 
+    \includegraphics[width=0.4\textwidth]{figs/Transformadores.png} 
     \caption{Arquitetura do modelo Transformador.}
     \label{fig:transformer}
     \legend{Fonte: \citeonline[p. 3]{vaswani_2017}} 
@@ -65,7 +65,7 @@ Para alcançar essa bidirecionalidade sem que o modelo \enquote{visse a resposta
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{figs/Bert_vs_gpt.png} 
+    \includegraphics[width=0.7\textwidth]{figs/Bert_vs_gpt.png} 
     \caption{Diferenças nas arquiteturas de pré-treinamento. \gls{bert} é bidirecional, \gls{gpt} é unidirecional (da esquerda para a direita) e \gls{elmo} é uma concatenação rasa de LSTMs.}
     \label{fig:bert_vs_gpt}
     \legend{Fonte: \citeonline[p. 13]{Devlin_2019}}

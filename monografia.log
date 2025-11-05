@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  4 NOV 2025 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  4 NOV 2025 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1520,31 +1520,31 @@ Cap\'{\i }tulo 2.
 
 [15]) (./caps/2.3 - Representação vetorial.tex
 
-[16{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<figs/Cbow_skipgram.png, id=320, 407.121pt x 236.082pt>
+[16]
+<figs/Cbow_skipgram.png, id=323, 407.121pt x 236.082pt>
 File: figs/Cbow_skipgram.png Graphic file (type png)
 <use figs/Cbow_skipgram.png>
 Package pdftex.def Info: figs/Cbow_skipgram.png  used on input line 28.
-(pdftex.def)             Requested size: 409.49722pt x 237.4719pt.
+(pdftex.def)             Requested size: 318.49861pt x 184.70155pt.
 
 
-[17 <./figs/Cbow_skipgram.png>]
-<figs/Transformadores.png, id=343, 435.6275pt x 575.14874pt>
+[17{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./figs/Cbow_skipgram.png>]
+<figs/Transformadores.png, id=347, 435.6275pt x 575.14874pt>
 File: figs/Transformadores.png Graphic file (type png)
 <use figs/Transformadores.png>
 Package pdftex.def Info: figs/Transformadores.png  used on input line 44.
-(pdftex.def)             Requested size: 227.5pt x 300.36037pt.
+(pdftex.def)             Requested size: 181.99722pt x 240.27951pt.
 
 
 [18 <./figs/Transformadores.png>]
 
 [19]
-<figs/Bert_vs_gpt.png, id=389, 461.92575pt x 112.62074pt>
+<figs/Bert_vs_gpt.png, id=393, 461.92575pt x 112.62074pt>
 File: figs/Bert_vs_gpt.png Graphic file (type png)
 <use figs/Bert_vs_gpt.png>
 Package pdftex.def Info: figs/Bert_vs_gpt.png  used on input line 68.
-(pdftex.def)             Requested size: 455.0pt x 110.93636pt.
-<figs/Sbert_arch.png, id=415, 520.19344pt x 235.63031pt>
+(pdftex.def)             Requested size: 318.49861pt x 77.6551pt.
+<figs/Sbert_arch.png, id=419, 520.19344pt x 235.63031pt>
 File: figs/Sbert_arch.png Graphic file (type png)
 <use figs/Sbert_arch.png>
 Package pdftex.def Info: figs/Sbert_arch.png  used on input line 84.
@@ -1556,15 +1556,15 @@ Package pdftex.def Info: figs/Sbert_arch.png  used on input line 84.
 [21 <./figs/Sbert_arch.png>]
 
 [22{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]) (./caps/2.5 - Bertopic.tex
-<figs/Bertopic_arch.png, id=532, 429.10312pt x 429.85594pt>
+<figs/Bertopic_arch.png, id=536, 429.10312pt x 429.85594pt>
 File: figs/Bertopic_arch.png Graphic file (type png)
 <use figs/Bertopic_arch.png>
 Package pdftex.def Info: figs/Bertopic_arch.png  used on input line 13.
-(pdftex.def)             Requested size: 318.49861pt x 319.05916pt.
+(pdftex.def)             Requested size: 181.99722pt x 182.31577pt.
 
 
 [23]
-<figs/UMAP.png, id=568, 464.73625pt x 467.7475pt>
+<figs/UMAP.png, id=572, 464.73625pt x 467.7475pt>
 File: figs/UMAP.png Graphic file (type png)
 <use figs/UMAP.png>
 Package pdftex.def Info: figs/UMAP.png  used on input line 29.
@@ -1574,42 +1574,40 @@ Package pdftex.def Info: figs/UMAP.png  used on input line 29.
 [24 <./figs/Bertopic_arch.png>]
 
 [25 <./figs/UMAP.png>]
-<figs/HDBSCAN.png, id=607, 585.18625pt x 448.67625pt>
+<figs/HDBSCAN.png, id=611, 585.18625pt x 448.67625pt>
 File: figs/HDBSCAN.png Graphic file (type png)
 <use figs/HDBSCAN.png>
 Package pdftex.def Info: figs/HDBSCAN.png  used on input line 45.
-(pdftex.def)             Requested size: 318.49861pt x 244.2122pt.
+(pdftex.def)             Requested size: 181.99722pt x 139.54005pt.
 
 
 [26 <./figs/HDBSCAN.png>]) (./caps/2.6 - Visualização de dados.tex
 
 [27]
-<figs/Wizmap_interface.png, id=674, 581.17125pt x 335.00156pt>
+<figs/Wizmap_interface.png, id=683, 581.17125pt x 335.00156pt>
 File: figs/Wizmap_interface.png Graphic file (type png)
 <use figs/Wizmap_interface.png>
 Package pdftex.def Info: figs/Wizmap_interface.png  used on input line 16.
 (pdftex.def)             Requested size: 318.49861pt x 183.59201pt.
 
 
-[28]
-<figs/Wizmap_quadtree.png, id=710, 281.55188pt x 128.73094pt>
+[28 <./figs/Wizmap_interface.png>]
+<figs/Wizmap_quadtree.png, id=715, 281.55188pt x 128.73094pt>
 File: figs/Wizmap_quadtree.png Graphic file (type png)
 <use figs/Wizmap_quadtree.png>
 Package pdftex.def Info: figs/Wizmap_quadtree.png  used on input line 36.
-(pdftex.def)             Requested size: 318.49861pt x 145.63316pt.
+(pdftex.def)             Requested size: 227.5pt x 104.01808pt.
+)) (./caps/3.0 - Trabalhos Correlatos.tex
 
-
-[29 <./figs/Wizmap_interface.png>])) (./caps/3.0 - Trabalhos Correlatos.tex
-
-[30 <./figs/Wizmap_quadtree.png>]
+[29 <./figs/Wizmap_quadtree.png>]
 Cap\'{\i }tulo 3.
 
 
-[31
+[30
 
 ]
 
-[32]
+[31]
 Underfull \hbox (badness 1817) in paragraph at lines 47--47
 \T1/lmr/m/n/9 (+20) su-pe-rior aos m�-to-dos tra-di-ci-o-nais (LDA,
  []
@@ -1681,7 +1679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 
 
-[33
+[32
 
 ])) (./monografia.bbl (./monografia.brf)
 \tf@brf=\write9
@@ -1691,18 +1689,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 bibitemlist
 
 
-[34
+[33
 
 
 
 
 ]
 
-[35]
+[34]
 
-[36])
+[35])
 
-[37]
+[36]
 \tf@lof=\write10
 \openout10 = `monografia.lof'.
 
@@ -1720,16 +1718,16 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: EE7AB1A52C872EB0B8F97AC4F19356B7;6943.
+(rerunfilecheck)             Checksum: C703403BBD3AA53FE107DCABAFA105E7;6943.
  ) 
 Here is how much of TeX's memory you used:
- 43562 strings out of 467747
- 826939 string characters out of 5431120
+ 43561 strings out of 467747
+ 826932 string characters out of 5431120
  1472652 words of memory out of 5000000
  70881 multiletter control sequences out of 15000+600000
  740846 words of font info for 288 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,117p,2537b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,2537b,811s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:pca} has been referenced but does not exist, replaced by a fixed one
 
@@ -1809,10 +1807,10 @@ pdfTeX warning (dest): name{glo:bert} has been referenced but does not exist, re
 pdfTeX warning (dest): name{glo:cbow} has been referenced but does not exist, replaced by a fixed one
 
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (38 pages, 1458654 bytes).
+Output written on monografia.pdf (37 pages, 1458729 bytes).
 PDF statistics:
- 1340 PDF objects out of 1440 (max. 8388607)
- 1096 compressed objects within 11 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 1338 PDF objects out of 1440 (max. 8388607)
+ 1095 compressed objects within 11 object streams
+ 177 named destinations out of 1000 (max. 500000)
  54519 words of extra memory for PDF output out of 61914 (max. 10000000)
 

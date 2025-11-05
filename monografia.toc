@@ -13,11 +13,11 @@
 \contentsline {section}{\numberline {2.4}Abordagens Tradicionais de Modelagem de Tópicos}{21}{section.2.4}%
 \contentsline {section}{\numberline {2.5}BERTopic: Uma Abordagem Moderna}{23}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Visualização de Dados para Análise Científica}{27}{section.2.6}%
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{TRABALHOS CORRELATOS}}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Síntese Comparativa dos Trabalhos Correlatos}{32}{section.3.1}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{TRABALHOS CORRELATOS}}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Síntese Comparativa dos Trabalhos Correlatos}{31}{section.3.1}%
 \cftinsert {POS}
 \vspace {\cftbeforepartskip }
 \vspace {\cftbeforepartskip }
 \vspace {-38pt}
-\contentsline {chapter}{REFER\^ENCIAS}{34}{chapter*.25}%
+\contentsline {chapter}{REFER\^ENCIAS}{33}{chapter*.25}%
 \vspace {\cftbeforepartskip }

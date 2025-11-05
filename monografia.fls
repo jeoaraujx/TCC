@@ -634,13 +634,13 @@ INPUT ./caps/2.3 - Representação vetorial.tex
 INPUT ./caps/2.3 - Representação vetorial.tex
 INPUT caps/2.3 - Representação vetorial.tex
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./figs/Cbow_skipgram.png
 INPUT ./figs/Cbow_skipgram.png
 INPUT ./figs/Cbow_skipgram.png
 INPUT ./figs/Cbow_skipgram.png
 INPUT ./figs/Cbow_skipgram.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./figs/Transformadores.png
 INPUT ./figs/Transformadores.png
 INPUT ./figs/Transformadores.png
