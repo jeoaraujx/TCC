@@ -705,6 +705,19 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri9.tfm
+INPUT ./caps/4.0 - Metodologia.tex
+INPUT ./caps/4.0 - Metodologia.tex
+INPUT caps/4.0 - Metodologia.tex
+INPUT ./figs/DSRTrue.jpg
+INPUT ./figs/DSRTrue.jpg
+INPUT ./figs/DSRTrue.jpg
+INPUT ./figs/DSRTrue.jpg
+INPUT ./figs/DSRTrue.jpg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./monografia.bbl
 INPUT ./monografia.bbl
 INPUT monografia.bbl

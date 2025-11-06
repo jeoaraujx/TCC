@@ -1,4 +1,5 @@
 \section{Visualização de Dados para Análise Científica}
+\label{sec:visualizacao_dados}
 
 A geração de modelos de tópicos e \textit{embeddings}, conforme discutido nas seções anteriores, produz representações vetoriais de alta dimensionalidade que capturam a semântica do domínio. No entanto, a interpretação e o uso prático desses \textit{embeddings} representam um desafio significativo, dada a sua \enquote{opacidade, alta dimensionalidade e o grande tamanho dos conjuntos de dados modernos} \cite[p. 1, Traduzido]{Wang_2023}.
 
@@ -6,7 +7,7 @@ Para tornar esses vetores complexos inteligíveis, pesquisadores frequentemente 
 
 Abordagens alternativas, como gráficos de contorno (\textit{contour plots}), podem resumir a distribuição global, mas \enquote{restringem a exploração das estruturas locais de um \textit{embedding}} \cite[p. 2, Traduzido]{Wang_2023}. Para preencher a lacuna entre a visão global (contornos) e a exploração local (pontos), ferramentas de visualização interativa tornam-se essenciais.
 
-Neste contexto, surge o \gls{wizmap}\footnote{O repositório de código aberto do \gls{wizmap} está disponível em: \url{https://github.com/poloclub/wizmap}. Uma demonstração interativa da ferramenta, analisando artigos científicos (a que o \textit{dataset} deste estudo de caso se assemelha), pode ser acessada em: \url{https://fossil-explorer.com/wizmap/?dataURL=https://fossil-explorer.com/wizmap/data/dsm-papers/data.ndjson&gridURL=https://fossil-explorer.com/wizmap/data/dsm-papers/grid.json}}, \enquote{uma ferramenta de visualização interativa escalável que capacita pesquisadores e especialistas de domínio a explorar e interpretar \textit{embeddings} com milhões de pontos} \cite[p. 2, Traduzido]{Wang_2023}. A ferramenta emprega um \enquote{design de interação familiar semelhante a um mapa} (\textit{map-like interaction design}), permitindo que o usuário navegue pelo espaço semântico com ações de \textit{pan} e \textit{zoom}.
+Neste contexto, surge o \gls{wizmap}\footnote{O repositório de código aberto do \gls{wizmap} está disponível em: \url{https://github.com/poloclub/wizmap}.}, \enquote{uma ferramenta de visualização interativa escalável que capacita pesquisadores e especialistas de domínio a explorar e interpretar \textit{embeddings} com milhões de pontos} \cite[p. 2, Traduzido]{Wang_2023}. A ferramenta emprega um \enquote{design de interação familiar semelhante a um mapa} (\textit{map-like interaction design}), permitindo que o usuário navegue pelo espaço semântico com ações de \textit{pan} e \textit{zoom}.
 
 A interface do \gls{wizmap}, ilustrada na Figura \ref{fig:Wizmap_interface}, é dividida em três componentes principais: (A) A Visão de Mapa (\textit{Map View}), que integra as camadas de visualização; (B) O Painel de Busca (\textit{Search Panel}), que permite a filtragem por texto; e (C) O Painel de Controle (\textit{Control Panel}), para customização da visualização \cite[p. 1]{Wang_2023}.
 

@@ -8,3 +8,4 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Figura ilustrativa de um \textit {dataset} sintético com quatro \textit {clusters} e ruído de fundo.}}{26}{figure.caption.18}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Interface da ferramenta \gls {wizmap} e seus componentes principais.}}{28}{figure.caption.19}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Estrutura de dados \textit {Quadtree} usada pelo \gls {wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf {2d}. (B) Representação em árvore.}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Adaptação da Design Science Research para este projeto.}}{33}{figure.caption.22}%

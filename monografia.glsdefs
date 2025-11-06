@@ -950,3 +950,31 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{npmi}%
+{%
+name={\acronymfont {\glsentryshort {npmi}}},%
+sort={NPMI},%
+type={acronym},%
+first={NPMI},%
+firstplural={NPMIs},%
+text={NPMI},%
+plural={NPMIs},%
+description={\textit {Normalized Pointwise Mutual Information}},%
+descriptionplural={\textit {Normalized Pointwise Mutual Information}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Normalized Pointwise Mutual Information}},%
+longplural={\protect \textit  {Normalized Pointwise Mutual Information}s},%
+short={NPMI},%
+shortplural={NPMIs},%
+counter={page},%
+parent={},%
+%
+}%
+

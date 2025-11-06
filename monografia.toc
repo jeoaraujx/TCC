@@ -15,9 +15,16 @@
 \contentsline {section}{\numberline {2.6}Visualização de Dados para Análise Científica}{27}{section.2.6}%
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{TRABALHOS CORRELATOS}}{30}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Síntese Comparativa dos Trabalhos Correlatos}{31}{section.3.1}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{METODOLOGIA}}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Identificação do Problema e Definição de Objetivos}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Desenvolvimento do Artefato}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Avaliação e Validação}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Validação Quantitativa}{35}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Validação Qualitativa}{36}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Apresentação dos Resultados e Comunicação}{36}{section.4.4}%
 \cftinsert {POS}
 \vspace {\cftbeforepartskip }
 \vspace {\cftbeforepartskip }
 \vspace {-38pt}
-\contentsline {chapter}{REFER\^ENCIAS}{33}{chapter*.25}%
+\contentsline {chapter}{REFER\^ENCIAS}{37}{chapter*.26}%
 \vspace {\cftbeforepartskip }

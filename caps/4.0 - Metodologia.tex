@@ -1,0 +1,76 @@
+\chapter[METODOLOGIA]{METODOLOGIA}
+
+Este estudo adota a \textit{Design Science Research} (\gls{dsr})  como sua principal estrutura metodológica para o desenvolvimento e a validação de um artefato tecnológico. A \gls{dsr} é particularmente utilizada para esta pesquisa, pois seu foco reside na criação de soluções com caráter de inovação para problemas práticos, alinhando rigor científico com relevância aplicada \cite{Dresch_2015}.
+
+O objetivo é construir um \textit{pipeline} computacional para o mapeamento interativo de publicações científicas do Observatório de dados públicos de ciência e tecnologia da Bahia, combinando a modelagem de tópicos do \gls{bertopic} com a visualização interativa do \gls{wizmap}.
+
+O processo de \gls{dsr} orienta o projeto de forma iterativa, desde a concepção do problema até a comunicação dos resultados, conforme ilustrado no fluxograma da Figura \ref{fig:dsr_adaptada}. Este capítulo está estruturado para detalhar cada etapa desse processo: inicia-se pela \textbf{Identificação do Problema e Definição de Objetivos} (Seção 4.1), descreve o \textbf{Desenvolvimento do Artefato} (Seção 4.2), detalha os procedimentos de \textbf{Avaliação e Validação} (Seção 4.3) e conclui com a \textbf{Apresentação dos Resultados e Comunicação} (Seção 4.4). A seguir, cada etapa do DSR é detalhada e contextualizada no escopo deste trabalho.
+
+\begin{figure}[H]
+    \centering
+    % Nota: Figura 1 do artigo wizmap.pdf (p. 1)
+    \includegraphics[width=0.7\textwidth]{figs/DSRTrue.jpg} 
+    \caption{Adaptação da Design Science Research para este projeto.}
+    \label{fig:dsr_adaptada}
+    \legend{Fonte: O Autor}
+\end{figure}
+
+\section{Identificação do Problema e Definição de Objetivos}
+
+A primeira fase da \gls{dsr} (Figura \ref{fig:dsr_adaptada}) consiste na identificação de uma lacuna relevante. Atualmente, a exploração do acervo no Observatório de dados públicos de ciência e tecnologia da Bahia é limitada a abordagens de recuperação de informação baseadas em palavras-chave. Embora funcional, essa abordagem dificulta a identificação de conexões semânticas, a descoberta de temas interdisciplinares e a compreensão da estrutura global do conhecimento científico.
+
+Essa limitação evidencia a necessidade de uma solução que vá além da busca lexical e ofereça uma \textbf{exploração semântica e visual} da distribuição do arcervo de pesquisa na reunidas na plataforma. O problema de pesquisa, portanto, é: como um \textit{pipeline} de modelagem de tópicos (\gls{bertopic}) pode ser integrado a uma ferramenta de visualização interativa (\gls{wizmap}) para mapear o acervo de publicações do Observatório, melhorando a análise e a descoberta de temas emergentes?
+
+A partir disso, formulam-se as \enquote{Conjecturas Teóricas}: a integração do \gls{bertopic} com uma interface de mapa interativo (como o \gls{wizmap}) tem o potencial de melhorar significativamente a identificação, classificação e exploração de temas, oferecendo uma compreensão mais profunda dos dados por meio de visualizações interativas.
+
+\section{Desenvolvimento do Artefato}
+\label{sec:desenvolvimento_artefato}
+
+Com base nos objetivos definidos na seção anterior, a etapa seguinte da \gls{dsr} é o desenvolvimento do \enquote{Artefato}. Neste trabalho, o artefato é um \textit{pipeline} computacional para o mapeamento interativo do conhecimento científico contido no acervo do Observatório.
+
+Este \textit{pipeline} é projetado para executar as seguintes funções-chave:
+\begin{enumerate}
+    \item Realizar a modelagem de tópicos com o \gls{bertopic}, utilizando \textit{embeddings} contextuais (Seção \ref{sec:bert_sbert}) para identificar padrões temáticos de forma semântica e com alta coerência, capazes de agrupar documentos mesmo com variações lexicais.
+    \item Aplicar o \gls{mmr} (\textit{Maximal Marginal Relevance}), detalhado na Seção \ref{sec:bertopic}, como uma etapa de pós-processamento para refinar os rótulos de tópicos derivados do \gls{c-tf-idf}.
+    \item Apresentar os tópicos e documentos em uma interface gráfica interativa (\gls{wizmap}) para facilitar a exploração visual das conexões temáticas (Seção \ref{sec:visualizacao_dados}).
+\end{enumerate}
+
+A construção deste artefato se apoia no \enquote{Estado da Técnica}, detalhado no Capítulo \ref{chap:referencial_teorico}. O \textit{pipeline} integra os conceitos de Modelagem de Tópicos (\gls{bertopic}), Embeddings Contextuais (\gls{sbert}), Redução de Dimensionalidade (\gls{umap}), Algoritmos de Clusterização (\gls{hdbscan}) e Visualização de Dados Interativa (\gls{wizmap}).
+
+\section{Avaliação e Validação}
+\label{sec:avaliacao_validacao}
+
+O ciclo de \gls{dsr} exige uma avaliação com o caráter mais rigoroso, representada no diagrama pelas \enquote{Avaliações} 1, 2 e 3. Para garantir o rigor científico e a validade do artefato desenvolvido, será empregada uma abordagem de validação mista, combinando métricas quantitativas e análises qualitativas. Esta etapa é fundamental para aferir se os resultados gerados são consistentes, coerentes e se resolvem o problema de exploração de conhecimento identificado.
+
+\subsection{Validação Quantitativa}
+\label{sec:validacao_quantitativa}
+
+A validação quantitativa foca em avaliar objetivamente a qualidade dos tópicos gerados pelo \textit{pipeline} do \gls{bertopic}. Serão utilizadas métricas consolidadas na literatura de \gls{pln}:
+
+\begin{itemize}
+    \item \textbf{Coerência de Tópicos (\textit{Topic Coherence}):} 
+    A coerência avalia a consistência semântica e a interpretabilidade de um tópico. Um tópico é considerado coerente se as palavras que o representam aparecem frequentemente juntas no \textit{corpus}, indicando que formam um conceito semântico lógico \cite{Jung_2024}. Para esta avaliação, será calculada a pontuação \textbf{\gls{npmi}} (\textit{Normalized Pointwise Mutual Information}). O cálculo da \gls{npmi} consiste em extrair os $N$ termos mais representativos de cada tópico (ex: $N=10$), formar pares desses termos, e calcular a probabilidade de sua coocorrência (aparição conjunta) nos documentos do \textit{corpus} original, normalizada pela probabilidade de suas ocorrências individuais. A pontuação \gls{npmi} varia de +1 (coocorrência perfeita) a -1 (nunca aparecem juntas). Um escore positivo indica que os termos coexistem mais do que o esperado pelo acaso, e escores mais altos indicarão um modelo mais coerente.
+    
+    \item \textbf{Diversidade de Tópicos (\textit{Topic Diversity}):}
+    A diversidade é utilizada para garantir que o modelo não está gerando tópicos redundantes, ou seja, \textit{clusters} diferentes descritos pelas mesmas palavras-chave. Um modelo ideal deve apresentar tópicos que sejam, ao mesmo tempo, coerentes (alta \gls{npmi}) e distintos entre si (alta diversidade). A métrica é calculada como a \enquote{porcentagem de palavras únicas em todos os tópicos} \cite[p. 5, Traduzido]{Grootendorst_2022} e é definida pela fórmula $M / (N \times k)$, onde $M$ é o número de palavras únicas extraídas nos $k$ termos principais de todos os $N$ tópicos \cite[p. 5]{Jung_2024}. O resultado varia de 0 (todos os tópicos são idênticos) a 1 (todos os termos em todos os tópicos são únicos).
+\end{itemize}
+
+\subsection{Validação Qualitativa}
+\label{sec:validacao_qualitativa}
+
+A validação qualitativa é essencial para confirmar se os resultados quantitativos se traduzem em valor prático e interpretabilidade. Esta etapa responde diretamente à \enquote{Avaliação 2} (O problema foi resolvido?), verificando se o artefato de fato soluciona o problema da exploração de conhecimento identificado. Esta validação será focada em dois componentes e conduzida por um especialista da área:
+
+\begin{itemize}
+    \item \textbf{Análise de Rótulos (Interpretabilidade):} Para validar a eficácia da etapa de refinamento (Seção \ref{sec:desenvolvimento_artefato}, item 2), será conduzida uma comparação direta. Para uma amostra de tópicos, será apresentado ao especialista o rótulo de linha de base (ex: as 3 palavras-chave do \gls{c-tf-idf} puro) e o rótulo refinado (as 3 palavras-chave selecionadas pelo \gls{mmr}). O especialista avaliará qual dos dois rótulos é mais informativo, menos redundante e mais preciso, permitindo aferir a melhoria na interpretabilidade.
+
+    \item \textbf{Inspeção Visual dos \textit{Clusters} (Validade Semântica):} Para validar se os \textit{clusters} possuem coerência semântica interna (i.e., se estão \enquote{bem formados}) e se o mapa reflete uma estrutura de conhecimento válida, o especialista inspecionará o \gls{wizmap}. A validação consistirá em selecionar alguns \textit{clusters} e analisar os documentos que os compõem (através dos \textit{tooltips} de cada \textit{datapoint}). Se os documentos dentro de um mesmo \textit{cluster} forem coesos e pertencerem ao tema descrito pelo rótulo, o artefato será considerado válido para resolver o problema da exploração semântica.
+\end{itemize}
+
+\section{Apresentação dos Resultados e Comunicação}
+\label{sec:comunicacao}
+
+A etapa final do ciclo \gls{dsr}, conforme o \textit{framework} de \citeonline{Dresch_2015}, é a \enquote{Comunicação}. Esta fase é dedicada à documentação e disseminação dos achados obtidos durante o desenvolvimento e a avaliação do artefato.
+
+Os resultados da aplicação do \textit{pipeline} e de sua validação (conforme definido na Seção \ref{sec:avaliacao_validacao}) serão detalhados nos capítulos subsequentes. O \textbf{Capítulo \ref{chap:projeto_desenvolvimento}} apresentará a implementação técnica do artefato e a arquitetura da solução. O \textbf{Capítulo \ref{chap:resultados}} analisará os dados gerados, a qualidade dos tópicos (via \gls{npmi} e Diversidade) e a validade da interface de visualização.
+
+O objetivo desta comunicação é apresentar e validar uma solução tecnológica para o problema de exploração de conhecimento no Observatório, documentando o processo de desenvolvimento e os resultados obtidos. Este trabalho visa demonstrar a aplicação prática de técnicas de modelagem de tópicos e visualização interativa, consolidando o aprendizado e a experiência adquiridos no desenvolvimento de um sistema funcional.

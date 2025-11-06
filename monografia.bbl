@@ -42,6 +42,11 @@ Dispon{\'\i}vel em: \url{https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002
 {DEVLIN, J. \textit{et al.} \textbf{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}. 2019.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1810.04805}.}
 
+\bibitem[Dresch, Lacerda e Antunes 2015]{Dresch_2015}
+\abntrefinfo{Dresch, Lacerda e Antunes}{DRESCH; LACERDA; ANTUNES}{2015}
+{DRESCH, A.; LACERDA, D.; ANTUNES, J. \textbf{Design Science Research: Método de Pesquisa para Avanço da Ciência e Tecnologia}. [S.l.]: Editora FGV, 2015.
+ISBN 978-85-8260-298-0.}
+
 \bibitem[Galli \textit{et al.} 2024]{Galli_2024}
 \abntrefinfo{Galli \textit{et al.}}{GALLI \textit{et al.}}{2024}
 {GALLI, C. \textit{et al.} Topic modeling for faster literature screening using transformer-based embeddings.

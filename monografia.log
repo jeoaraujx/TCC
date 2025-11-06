@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  4 NOV 2025 22:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  6 NOV 2025 00:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1450,8 +1450,8 @@ l.235
 [6
 
 ] (./editar/resumo_eng.tex)
-Overfull \hbox (8.90399pt too wide) in paragraph at lines 3--29
-[]\T1/lmr/bx/n/12 (-20) Key-words\T1/lmr/m/n/12 (-20) : Nat-u-ral Lan-guage Pro-cess-ing; Ar-ti-fi-cial In-tel-li-gence; Topic Mod-el-ing; BERTopic;
+Overfull \hbox (4.97028pt too wide) in paragraph at lines 4--29
+\T1/lmr/bx/n/12 (-20) Keywords: \T1/lmr/m/n/12 (-20) Nat-u-ral Lan-guage Pro-cess-ing; Ar-ti-fi-cial In-tel-li-gence; Topic Mod-el-ing; BERTopic;
  []
 
 
@@ -1521,7 +1521,7 @@ Cap\'{\i }tulo 2.
 [15]) (./caps/2.3 - Representação vetorial.tex
 
 [16]
-<figs/Cbow_skipgram.png, id=323, 407.121pt x 236.082pt>
+<figs/Cbow_skipgram.png, id=351, 407.121pt x 236.082pt>
 File: figs/Cbow_skipgram.png Graphic file (type png)
 <use figs/Cbow_skipgram.png>
 Package pdftex.def Info: figs/Cbow_skipgram.png  used on input line 28.
@@ -1529,7 +1529,7 @@ Package pdftex.def Info: figs/Cbow_skipgram.png  used on input line 28.
 
 
 [17{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./figs/Cbow_skipgram.png>]
-<figs/Transformadores.png, id=347, 435.6275pt x 575.14874pt>
+<figs/Transformadores.png, id=375, 435.6275pt x 575.14874pt>
 File: figs/Transformadores.png Graphic file (type png)
 <use figs/Transformadores.png>
 Package pdftex.def Info: figs/Transformadores.png  used on input line 44.
@@ -1539,15 +1539,15 @@ Package pdftex.def Info: figs/Transformadores.png  used on input line 44.
 [18 <./figs/Transformadores.png>]
 
 [19]
-<figs/Bert_vs_gpt.png, id=393, 461.92575pt x 112.62074pt>
+<figs/Bert_vs_gpt.png, id=422, 461.92575pt x 112.62074pt>
 File: figs/Bert_vs_gpt.png Graphic file (type png)
 <use figs/Bert_vs_gpt.png>
-Package pdftex.def Info: figs/Bert_vs_gpt.png  used on input line 68.
+Package pdftex.def Info: figs/Bert_vs_gpt.png  used on input line 69.
 (pdftex.def)             Requested size: 318.49861pt x 77.6551pt.
-<figs/Sbert_arch.png, id=419, 520.19344pt x 235.63031pt>
+<figs/Sbert_arch.png, id=448, 520.19344pt x 235.63031pt>
 File: figs/Sbert_arch.png Graphic file (type png)
 <use figs/Sbert_arch.png>
-Package pdftex.def Info: figs/Sbert_arch.png  used on input line 84.
+Package pdftex.def Info: figs/Sbert_arch.png  used on input line 85.
 (pdftex.def)             Requested size: 318.49861pt x 144.26999pt.
 
 
@@ -1556,46 +1556,46 @@ Package pdftex.def Info: figs/Sbert_arch.png  used on input line 84.
 [21 <./figs/Sbert_arch.png>]
 
 [22{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]) (./caps/2.5 - Bertopic.tex
-<figs/Bertopic_arch.png, id=536, 429.10312pt x 429.85594pt>
+<figs/Bertopic_arch.png, id=565, 429.10312pt x 429.85594pt>
 File: figs/Bertopic_arch.png Graphic file (type png)
 <use figs/Bertopic_arch.png>
-Package pdftex.def Info: figs/Bertopic_arch.png  used on input line 13.
+Package pdftex.def Info: figs/Bertopic_arch.png  used on input line 14.
 (pdftex.def)             Requested size: 181.99722pt x 182.31577pt.
 
 
 [23]
-<figs/UMAP.png, id=572, 464.73625pt x 467.7475pt>
+<figs/UMAP.png, id=600, 464.73625pt x 467.7475pt>
 File: figs/UMAP.png Graphic file (type png)
 <use figs/UMAP.png>
-Package pdftex.def Info: figs/UMAP.png  used on input line 29.
+Package pdftex.def Info: figs/UMAP.png  used on input line 30.
 (pdftex.def)             Requested size: 318.49861pt x 320.56924pt.
 
 
 [24 <./figs/Bertopic_arch.png>]
 
 [25 <./figs/UMAP.png>]
-<figs/HDBSCAN.png, id=611, 585.18625pt x 448.67625pt>
+<figs/HDBSCAN.png, id=638, 585.18625pt x 448.67625pt>
 File: figs/HDBSCAN.png Graphic file (type png)
 <use figs/HDBSCAN.png>
-Package pdftex.def Info: figs/HDBSCAN.png  used on input line 45.
+Package pdftex.def Info: figs/HDBSCAN.png  used on input line 46.
 (pdftex.def)             Requested size: 181.99722pt x 139.54005pt.
 
 
 [26 <./figs/HDBSCAN.png>]) (./caps/2.6 - Visualização de dados.tex
 
 [27]
-<figs/Wizmap_interface.png, id=683, 581.17125pt x 335.00156pt>
+<figs/Wizmap_interface.png, id=708, 581.17125pt x 335.00156pt>
 File: figs/Wizmap_interface.png Graphic file (type png)
 <use figs/Wizmap_interface.png>
-Package pdftex.def Info: figs/Wizmap_interface.png  used on input line 16.
+Package pdftex.def Info: figs/Wizmap_interface.png  used on input line 17.
 (pdftex.def)             Requested size: 318.49861pt x 183.59201pt.
 
 
 [28 <./figs/Wizmap_interface.png>]
-<figs/Wizmap_quadtree.png, id=715, 281.55188pt x 128.73094pt>
+<figs/Wizmap_quadtree.png, id=742, 281.55188pt x 128.73094pt>
 File: figs/Wizmap_quadtree.png Graphic file (type png)
 <use figs/Wizmap_quadtree.png>
-Package pdftex.def Info: figs/Wizmap_quadtree.png  used on input line 36.
+Package pdftex.def Info: figs/Wizmap_quadtree.png  used on input line 37.
 (pdftex.def)             Requested size: 227.5pt x 104.01808pt.
 )) (./caps/3.0 - Trabalhos Correlatos.tex
 
@@ -1681,7 +1681,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 [32
 
-])) (./monografia.bbl (./monografia.brf)
+]) (./caps/4.0 - Metodologia.tex
+Cap\'{\i }tulo 4.
+<figs/DSRTrue.jpg, id=1039, 1097.09875pt x 917.4275pt>
+File: figs/DSRTrue.jpg Graphic file (type jpg)
+<use figs/DSRTrue.jpg>
+Package pdftex.def Info: figs/DSRTrue.jpg  used on input line 12.
+(pdftex.def)             Requested size: 318.49861pt x 266.32713pt.
+
+
+[33
+
+
+ <./figs/DSRTrue.jpg>]
+
+[34]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 51.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[35{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+
+LaTeX Warning: Reference `chap:projeto_desenvolvimento' on page 36 undefined on input line 74.
+
+
+LaTeX Warning: Reference `chap:resultados' on page 36 undefined on input line 74.
+
+))
+
+[36] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write9
 \openout9 = `monografia.brf'.
 
@@ -1689,18 +1718,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 bibitemlist
 
 
-[33
-
+[37
 
 
 
 ]
 
-[34]
+[38]
 
-[35])
+[39])
 
-[36]
+[40]
 \tf@lof=\write10
 \openout10 = `monografia.lof'.
 
@@ -1717,17 +1745,24 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: C703403BBD3AA53FE107DCABAFA105E7;6943.
+(rerunfilecheck)             Checksum: E8A240CE1FB6190DE4F999FB12C1BB5F;7202.
  ) 
 Here is how much of TeX's memory you used:
- 43561 strings out of 467747
- 826932 string characters out of 5431120
- 1472652 words of memory out of 5000000
- 70881 multiletter control sequences out of 15000+600000
- 740846 words of font info for 288 fonts, out of 8000000 for 9000
+ 43711 strings out of 467747
+ 829608 string characters out of 5431120
+ 1473965 words of memory out of 5000000
+ 70984 multiletter control sequences out of 15000+600000
+ 742303 words of font info for 299 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,117p,2537b,811s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,2537b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{glo:npmi} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{glo:pca} has been referenced but does not exist, replaced by a fixed one
 
@@ -1742,12 +1777,6 @@ pdfTeX warning (dest): name{glo:webgl} has been referenced but does not exist, r
 
 
 pdfTeX warning (dest): name{glo:t-sne} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:mmr} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:hdbscan} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{glo:c-tf-idf} has been referenced but does not exist, replaced by a fixed one
@@ -1774,9 +1803,6 @@ pdfTeX warning (dest): name{glo:rnn} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:dsr} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{glo:bertopic} has been referenced but does not exist, replaced by a fixed one
-
-
 pdfTeX warning (dest): name{glo:lda} has been referenced but does not exist, replaced by a fixed one
 
 
@@ -1784,12 +1810,6 @@ pdfTeX warning (dest): name{glo:ia} has been referenced but does not exist, repl
 
 
 pdfTeX warning (dest): name{glo:pln} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:wizmap} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:umap} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{glo:sbert} has been referenced but does not exist, replaced by a fixed one
@@ -1806,11 +1826,26 @@ pdfTeX warning (dest): name{glo:bert} has been referenced but does not exist, re
 
 pdfTeX warning (dest): name{glo:cbow} has been referenced but does not exist, replaced by a fixed one
 
+
+pdfTeX warning (dest): name{glo:wizmap} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:mmr} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:hdbscan} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:umap} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:bertopic} has been referenced but does not exist, replaced by a fixed one
+
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (37 pages, 1458729 bytes).
+Output written on monografia.pdf (41 pages, 1643346 bytes).
 PDF statistics:
- 1338 PDF objects out of 1440 (max. 8388607)
- 1095 compressed objects within 11 object streams
- 177 named destinations out of 1000 (max. 500000)
- 54519 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1474 PDF objects out of 1728 (max. 8388607)
+ 1223 compressed objects within 13 object streams
+ 194 named destinations out of 1000 (max. 500000)
+ 56628 words of extra memory for PDF output out of 61914 (max. 10000000)
 
