@@ -83,6 +83,11 @@ ISBN 1-58113-096-1.}
 \abntrefinfo{Joachims}{JOACHIMS}{1997}
 {JOACHIMS, T. A probabilistic analysis of the rocchio algorithm with tfidf for text categorization. In:  . [S.l.: s.n.], 1997. p. 143--151.}
 
+\bibitem[Jorge \textit{et al.} 2025]{Jorge_2025}
+\abntrefinfo{Jorge \textit{et al.}}{JORGE \textit{et al.}}{2025}
+{JORGE, E. M.~F. \textit{et al.} Recuperando especialistas em energias renováveis por meio de taxonomia facetada e técnicas de processamento de linguagem natural: um experimento de mineração de dados acadêmicos aplicados por pesquisadores das universidades estaduais da bahia.
+\textbf{Informaç{\~a}o \& Informaç{\~a}o}, v.~30, n.~2, p. 242--268, 2025.}
+
 \bibitem[Jung \textit{et al.} 2024]{Jung_2024}
 \abntrefinfo{Jung \textit{et al.}}{JUNG \textit{et al.}}{2024}
 {JUNG, H.~S. \textit{et al.} Expansive data, extensive model: Investigating discussion topics around llm through unsupervised machine learning in academic papers and news.
@@ -161,6 +166,12 @@ Dispon{\'\i}vel em: \url{https://www.sciencedirect.com/science/article/pii/S0140
 \abntrefinfo{Reimers e Gurevych}{REIMERS; GUREVYCH}{2019}
 {REIMERS, N.; GUREVYCH, I. \textbf{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}. 2019.
 Dispon{\'\i}vel em: \url{https://arxiv.org/abs/1908.10084}.}
+
+\bibitem[Santos \textit{et al.} 2024]{Santos_2024}
+\abntrefinfo{Santos \textit{et al.}}{SANTOS \textit{et al.}}{2024}
+{SANTOS, M. S.~d. \textit{et al.} Solução para mapeamento e consulta das competências dos pesquisadores: uma arquitetura para extração, integração e consultas de informações acadêmicas.
+\textbf{Cadernos de Prospecção}, v.~17, n.~2, p. 671–688, abr. 2024.
+Dispon{\'\i}vel em: \url{https://periodicos.ufba.br/index.php/nit/article/view/56670}.}
 
 \bibitem[Sia, Dalmia e Mielke 2020]{Sia_2020}
 \abntrefinfo{Sia, Dalmia e Mielke}{SIA; DALMIA; MIELKE}{2020}

@@ -718,6 +718,39 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT ./caps/5.0 - Projeto de Desenvolvimento.tex
+INPUT ./caps/5.0 - Projeto de Desenvolvimento.tex
+INPUT caps/5.0 - Projeto de Desenvolvimento.tex
+INPUT ./figs/Arquitetura-simcc.png
+INPUT ./figs/Arquitetura-simcc.png
+INPUT ./figs/Arquitetura-simcc.png
+INPUT ./figs/Arquitetura-simcc.png
+INPUT ./figs/Arquitetura-simcc.png
+INPUT ./caps/5.2 - Arquitetura da solução.tex
+INPUT ./caps/5.2 - Arquitetura da solução.tex
+INPUT caps/5.2 - Arquitetura da solução.tex
+INPUT ./caps/6.0 - Resultados.tex
+INPUT ./caps/6.0 - Resultados.tex
+INPUT caps/6.0 - Resultados.tex
+INPUT ./figs/npmi_por_topico.png
+INPUT ./figs/npmi_por_topico.png
+INPUT ./figs/npmi_por_topico.png
+INPUT ./figs/npmi_por_topico.png
+INPUT ./figs/npmi_por_topico.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
+INPUT ./figs/wordcloud_topicos.png
+INPUT ./figs/wordcloud_topicos.png
+INPUT ./figs/wordcloud_topicos.png
+INPUT ./figs/wordcloud_topicos.png
+INPUT ./figs/wordcloud_topicos.png
+INPUT ./figs/wizmap_overview.png
+INPUT ./figs/wizmap_overview.png
+INPUT ./figs/wizmap_overview.png
+INPUT ./figs/wizmap_overview.png
+INPUT ./figs/wizmap_overview.png
+INPUT ./caps/7.0 - Conclusão.tex
+INPUT ./caps/7.0 - Conclusão.tex
+INPUT caps/7.0 - Conclusão.tex
 INPUT ./monografia.bbl
 INPUT ./monografia.bbl
 INPUT monografia.bbl

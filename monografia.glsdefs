@@ -978,3 +978,115 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{etl}%
+{%
+name={\acronymfont {\glsentryshort {etl}}},%
+sort={ETL},%
+type={acronym},%
+first={ETL},%
+firstplural={ETLs},%
+text={ETL},%
+plural={ETLs},%
+description={Extract, Transform and Load},%
+descriptionplural={Extract, Transform and Load},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Extract, Transform and Load},%
+longplural={Extract, Transform and Loads},%
+short={ETL},%
+shortplural={ETLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{sgbd}%
+{%
+name={\acronymfont {\glsentryshort {sgbd}}},%
+sort={DBMS},%
+type={acronym},%
+first={DBMS},%
+firstplural={DBMSs},%
+text={DBMS},%
+plural={DBMSs},%
+description={Database Management System},%
+descriptionplural={Database Management System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Database Management System},%
+longplural={Database Management Systems},%
+short={DBMS},%
+shortplural={DBMSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ascii}%
+{%
+name={\acronymfont {\glsentryshort {ascii}}},%
+sort={ASCII},%
+type={acronym},%
+first={ASCII},%
+firstplural={ASCIIs},%
+text={ASCII},%
+plural={ASCIIs},%
+description={American Standard Code for Information Interchange},%
+descriptionplural={American Standard Code for Information Interchange},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={American Standard Code for Information Interchange},%
+longplural={American Standard Code for Information Interchanges},%
+short={ASCII},%
+shortplural={ASCIIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{json}%
+{%
+name={\acronymfont {\glsentryshort {json}}},%
+sort={JSON},%
+type={acronym},%
+first={JSON},%
+firstplural={JSONs},%
+text={JSON},%
+plural={JSONs},%
+description={JavaScript Object Notation},%
+descriptionplural={JavaScript Object Notation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript Object Notation},%
+longplural={JavaScript Object Notations},%
+short={JSON},%
+shortplural={JSONs},%
+counter={page},%
+parent={},%
+%
+}%
+

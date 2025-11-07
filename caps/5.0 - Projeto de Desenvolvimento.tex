@@ -1,0 +1,68 @@
+\chapter[PROJETO DE DESENVOLVIMENTO]{PROJETO DE DESENVOLVIMENTO}
+\label{chap:projeto_desenvolvimento}
+
+O desenvolvimento do artefato proposto neste trabalho segue uma abordagem estruturada e incremental, alinhada à metodologia \gls{dsr} detalhada no Capítulo \ref{chap:metodologia}. O objetivo é construir e validar um \textit{pipeline} computacional que venha a aprimorar e complementar a análise de publicações científicas na plataforma do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}\footnote{Disponível em: \url{https://simcc.uesc.br/observatorio}}.
+
+Conforme descrito na literatura \citeonline{Santos_2024, Jorge_2025}, o Observatório já possui uma arquitetura robusta para o mapeamento de competências, integrando fontes de dados heterogêneas como a Plataforma Lattes\footnote{Disponível em: \url{http://lattes.cnpq.br/}}, a Plataforma Sucupira\footnote{Disponível em: \url{https://sucupira.capes.gov.br/}}, o OpenAlex\footnote{Disponível em: \url{https://openalex.org/}} e o \gls{jcr}\footnote{Disponível em: \url{https://clarivate.com/webofsciencegroup/solutions/journal-citation-reports/}}. Seu sistema atual utiliza um processo de \gls{etl} com Apache Hop\footnote{Disponível em: \url{https://hop.apache.org/}} para consolidar as informações em um banco de dados PostgreSQL\footnote{Disponível em: \url{https://www.postgresql.org/}} e já emprega técnicas de \gls{pln} para a recuperação de informações baseadas em termos e palavras-chave.
+
+A busca lexical existente é uma ferramenta poderosa para a recuperação de informações diretas. No entanto, como discutido na metodologia, a grande variação terminológica em domínios científicos representa um desafio para a descoberta de conexões temáticas que não são óbvias. Nesse sentido, há uma oportunidade de incrementar a plataforma com uma nova camada de análise semântica, que permita ao usuário explorar o conhecimento de forma mais intuitiva e visual.
+
+Este capítulo detalha, portanto, a construção de um \textit{pipeline} que representa uma evolução para a arquitetura do Observatório. A solução proposta não visa substituir, mas sim enriquecer a funcionalidade de busca atual, introduzindo a modelagem de tópicos moderna com o \gls{bertopic}, o refinamento de rótulos com \gls{mmr} e a visualização interativa com o \gls{wizmap}. O foco é transcender a lista de resultados tradicional, permitindo que os usuários naveguem visualmente pelas principais áreas de pesquisa, identifiquem temas emergentes e compreendam as relações entre os diferentes campos do conhecimento de maneira orgânica.
+
+\section[Tecnologias Utilizadas]{Tecnologias Utilizadas}
+\label{sec:tecnologias_utilizadas}
+
+O desenvolvimento do artefato proposto neste projeto assenta-se sobre a combinação de duas arquiteturas tecnológicas distintas: (1) a infraestrutura consolidada do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}, que serve como fonte de dados e contexto de aplicação; e (2) o \textit{pipeline} de modelagem e visualização desenvolvido, que constitui o artefato central deste estudo.
+
+\subsection[Base Tecnológica do Observatório]{Base Tecnológica do Observatório}
+\label{ssec:base_observatorio}
+
+A arquitetura do Observatório, que serve como ponto de partida para este trabalho, foi projetada para ser robusta e escalável, utilizando um conjunto de tecnologias consolidadas para a gestão de dados acadêmicos, conforme detalhado por \citeonline{Santos_2024} e \citeonline{Jorge_2025}. 
+
+Suas principais tecnologias incluem:
+
+\begin{itemize}
+    \item \textbf{Banco de Dados (PostgreSQL):} O Observatório utiliza o \gls{sgbd} PostgreSQL para armazenar e consolidar as informações. O sistema aproveita os recursos nativos de busca textual (\textit{Full-Text Search}) do PostgreSQL para a recuperação de informações baseada em termos.
+    
+    \item \textbf{Orquestração de Dados (Apache Hop):} Para o \gls{etl} dos dados de fontes diversas (Lattes, Sucupira, \gls{jcr}, etc.), o Observatório utiliza o Apache Hop. Essa ferramenta é responsável por automatizar e coordenar o fluxo de ingestão de dados, garantindo a consistência das informações.
+    
+    \item \textbf{Infraestrutura de Aplicação (Python e React):} O \textit{back-end} da plataforma é desenvolvido em Python, utilizando o \textit{framework} Flask para a \gls{api}. A interface de usuário (\textit{front-end}) é construída com a biblioteca React JS.
+\end{itemize}
+
+A Figura \ref{fig:arquitetura_observatorio} ilustra essa arquitetura existente, mostrando o fluxo de dados desde as fontes externas (como Lattes e Sucupira) até o banco de dados, que será utilizado pelo framework para exibição das informações no front-end.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/Arquitetura-simcc.png} 
+    \caption{Arquitetura Geral do Observatório (SIMCC).}
+    \label{fig:arquitetura_observatorio}
+    \legend{Fonte: \citeonline{Jorge_2025}} 
+\end{figure}
+
+\subsection[Pipeline de Modelagem e Visualização]{Pipeline de Modelagem e Visualização}
+\label{ssec:pipeline_artefato}
+
+Sobre a base conceitual do Observatório, este projeto implementa um novo \textit{pipeline} focado na descoberta e análise semântica do conhecimento. Dada a natureza deste trabalho como um estudo de caso (conforme metodologia \gls{dsr}), o \textit{pipeline} foi desenvolvido e validado em um ambiente de prototipagem computacional.
+
+As tecnologias e bibliotecas utilizadas para a construção do artefato foram:
+
+\begin{itemize}
+    \item \textbf{Ambiente de Desenvolvimento (Google Colaboratory):} Todo o processamento, desde a leitura dos dados até a geração dos resultados, foi executado na plataforma Google Colab\footnote{Disponível em: https://colab.research.google.com/drive/1IdeIJ14TeLEZuJAB176UqALWFRwFXA2p}, um ambiente interativo baseado em notebooks Jupyter que fornece acesso a recursos computacionais (CPUs e GPUs).
+
+    \item \textbf{Manipulação de Dados e Pré-processamento:} Para a ingestão do \textit{dump} do banco de dados e para as etapas de limpeza e pré-processamento textual (normalização, remoção de \textit{stopwords}, etc.), foram utilizadas bibliotecas centrais do ecossistema Python para ciência de dados, como \texttt{Pandas} para a manipulação dos dados tabulares e \texttt{NLTK} e \texttt{spaCy} para as tarefas de \gls{pln}.
+
+    \item \textbf{Modelagem de Tópicos (BERTopic):} Para a identificação dos temas latentes, a biblioteca \texttt{bertopic} foi a tecnologia central. Ela orquestra todo o fluxo de modelagem descrito no Capítulo \ref{chap:referencial_teorico}, integrando os seguintes componentes-chave:
+    \begin{itemize}
+        \item \textbf{Embeddings (Sentence-BERT):} A geração dos vetores semânticos dos documentos foi realizada pela biblioteca \texttt{sentence-transformers}.
+        \item \textbf{Redução de Dimensionalidade (UMAP):} A projeção dos \textit{embeddings} para um espaço de baixa dimensão foi executada com a biblioteca \texttt{umap-learn}.
+        \item \textbf{Clusterização (HDBSCAN):} O agrupamento dos vetores para a formação dos tópicos foi feito com a biblioteca \texttt{hdbscan}.
+    \end{itemize}
+
+    \item \textbf{Refinamento de Rótulos (MMR):} Para o refinamento e a diversificação dos rótulos dos tópicos, foi utilizada a classe \texttt{MaximalMarginalRelevance} do próprio \gls{bertopic}, que implementa o algoritmo \gls{mmr} para selecionar palavras-chave mais informativas e menos redundantes.
+
+    \item \textbf{Visualização Interativa (WizMap):} Para a apresentação final dos resultados, foi utilizada a biblioteca \texttt{wizmap}. A função desta biblioteca foi empregada para gerar o arquivo HTML final, que renderiza o mapa interativo a partir dos dados processados (coordenadas 2D, IDs de tópicos e metadados) exportados pelo \textit{pipeline}.
+    
+    \item \textbf{Hospedagem de Dados (Gist):} Para viabilizar a renderização do \gls{wizmap}, que opera no lado do cliente (navegador), os arquivos de dados em formato JSON gerados pelo \textit{pipeline} foram hospedados em um Gist (GitHub Gist)\footnote{Disponível em: https://gist.github.com/jeoaraujx/c9a610202e70139054c7e37eab937b93}, permitindo que a ferramenta de visualização os consumisse de forma pública e estática.
+\end{itemize}
+
+\input{caps/5.2 - Arquitetura da solução}
