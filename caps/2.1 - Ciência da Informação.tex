@@ -1,23 +1,23 @@
 \section{Ciência da Informação e Análise de Publicações Científicas}
 
-A explosão da produção científica global nas últimas décadas, impulsionada pela maior acessibilidade à tecnologia e pela colaboração interdisciplinar, delineia um cenário desafiador para a área da Ciência da Informação. Como destacam \citeonline{Kim_2024}, o volume crescente de publicações dificulta a atualização contínua de pesquisadores e a identificação de áreas emergentes do conhecimento. Os autores reforçam essa problemática no resumo de seu trabalho:
+O crescimento da produção científica global nas últimas décadas, impulsionado pela acessibilidade tecnológica e pela colaboração interdisciplinar, apresenta desafios para a Ciência da Informação. Conforme \citeonline{Kim_2024}, o volume de publicações dificulta a atualização dos pesquisadores e a identificação de áreas emergentes do conhecimento. Os autores reforçam essa problemática no resumo de seu trabalho:
 
 \begin{citacao}
 A produção científica global está se expandindo exponencialmente, o que, por sua vez, exige uma melhor compreensão da ciência da ciência e, especialmente, de como as fronteiras dos campos científicos se expandem através de processos de emergência. \citeonline[Traduzido, p. 1]{Kim_2024}
 \end{citacao}
 
-Nesse contexto, estratégias tradicionais de busca baseadas em palavras-chave mostram-se limitadas, uma vez que desconsideram a complexidade semântica do léxico científico. Esse fator resulta não apenas na omissão de trabalhos relevantes, mas também na dificuldade de mapear de forma consistente o progresso em determinados campos.
+Nesse contexto, estratégias tradicionais de busca baseadas em palavras-chave apresentam limitações, pois frequentemente não capturam a variação semântica do léxico científico. Esse fator pode resultar na omissão de trabalhos relevantes, e dificultar o mapeamento do progresso em determinados campos de pesquisa.
 
-Um aspecto que amplia essa complexidade é a diversidade linguística no ambiente científico. Segundo \citeonline{Xie_2020}, embora o inglês desempenhe papel predominante, uma parcela significativa da produção ocorre em outros idiomas. Metodologias convencionais de análise revelam-se insuficientes para o tratamento multilíngue, o que pode restringir a circulação global do conhecimento e reduzir a visibilidade de estudos relevantes.
+Um aspecto que amplia essa complexidade é a diversidade linguística no ambiente científico. Segundo \citeonline{Xie_2020}, embora o inglês desempenhe papel predominante, uma parcela significativa da produção científica ocorre em outros idiomas. Metodologias convencionais de análise mostram-se insuficientes para o tratamento multilíngue, o que pode restringir a circulação do conhecimento e a visibilidade de estudos regionais.
 
 \begin{citacao}
 A maioria dos estudos até hoje sobre análise de tópicos tem sido baseada em publicações em língua inglesa e tem dependido fortemente da análise de evolução de tópicos baseada em citações. [...] metodologias baseadas em citações não são adequadas para analisar relações de tópicos de pesquisa multilíngues. \citeonline[Traduzido, p. 1]{Xie_2020}
 \end{citacao}
 
-Diante desse cenário, técnicas contemporâneas de \textit{Topic Modeling}, em especial aquelas fundamentadas em \textit{embeddings}, têm sido investigadas como alternativas promissoras. De acordo com \citeonline{Galli_2024}, a utilização de representações densas derivadas de modelos como o \gls{bert} potencializa a análise de grandes volumes textuais, permitindo capturar aspectos semânticos que vão além da simples coincidência lexical.
+Diante desse cenário, técnicas de \textit{Topic Modeling}, em especial aquelas fundamentadas em \textit{embeddings}, têm sido investigadas como alternativas para a análise documental. De acordo com \citeonline{Galli_2024}, a utilização de representações densas derivadas de modelos como o \gls{bert} viabiliza a análise de grandes volumes textuais, permitindo capturar aspectos semânticos que vão além da correspondência lexical exata. Sobre os \textit{embeddings}, os autores definem:
 
 \begin{citacao}
 Um componente essencial para alcançar a compreensão semântica são os \textit{embeddings} — representações numéricas que codificam o significado de palavras ou mesmo de frases — que são fundamentais no \gls{pln} para capturar relacionamentos complexos entre palavras e frases usando arquiteturas especiais conhecidas como transformadores. \citeonline[Traduzido, p. 2]{Galli_2024}
 \end{citacao}
 
-Essa capacidade favorece a identificação de padrões temáticos em documentos que não compartilham necessariamente o mesmo vocabulário. Métodos modernos, como o \gls{bertopic}, oferecem uma estrutura metodológica para a extração de tópicos a partir dessas representações vetoriais densas. A literatura aponta que a aplicação dessas ferramentas é particularmente relevante em textos científicos heterogêneos e multilíngues, como os encontrados em grandes repositórios de publicações científicas, dada a sua robustez em capturar nuances semânticas independentemente do idioma \cite{Xie_2020}.
+Essa característica favorece a identificação de padrões temáticos em documentos que não compartilham necessariamente o mesmo vocabulário. Métodos como o \gls{bertopic}, oferecem uma estrutura metodológica para a extração de tópicos a partir dessas representações vetoriais densas. A literatura indica que a aplicação dessas ferramentas é adequada para textos científicos heterogêneos e multilíngues, devido à capacidade de processar nuances semânticas independentemente do idioma \cite{Xie_2020}.

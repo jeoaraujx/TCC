@@ -16,15 +16,12 @@
 \backcite {Galli_2024}{{16}{2.1}{section.2.1}}
 \backcite {Xie_2020}{{16}{2.1}{section.2.1}}
 \backcite {Jurafsky_2009}{{16}{2.2}{section.2.2}}
-\backcite {Manning_1999}{{16}{2.2}{section.2.2}}
-\backcite {Galli_2024}{{17}{2.2}{section.2.2}}
+\backcite {Manning_1999}{{17}{2.2}{section.2.2}}
 \backcite {Galli_2024}{{17}{2.2}{section.2.2}}
 \backcite {Mikolov_2013}{{17}{2.3.1}{subsection.2.3.1}}
 \backcite {Pennington_2014}{{17}{2.3.1}{subsection.2.3.1}}
 \backcite {Mikolov_2013}{{18}{2.3.1}{subsection.2.3.1}}
 \backcite {Xie_2020}{{18}{2.3.1}{subsection.2.3.1}}
-\backcite {Galli_2024}{{18}{2.3.1}{subsection.2.3.1}}
-\backcite {Galli_2024}{{18}{2.3.1}{subsection.2.3.1}}
 \backcite {Mikolov_2013}{{18}{2.3.1}{subsection.2.3.1}}
 \backcite {Mikolov_2013}{{18}{2.3.1}{Item.2}}
 \backcite {Mikolov_2013}{{18}{1}{figure.caption.12}}
@@ -36,10 +33,10 @@
 \backcite {Devlin_2019}{{20}{2.3.3}{subsection.2.3.3}}
 \backcite {Devlin_2019}{{20}{2.3.3}{subsection.2.3.3}}
 \backcite {Taylor_1953}{{20}{6}{Hfootnote.12}}
+\backcite {Devlin_2019}{{20}{6}{Hfootnote.12}}
 \backcite {Devlin_2019}{{21}{3}{figure.caption.14}}
 \backcite {Reimers_2019}{{21}{2.3.3}{figure.caption.14}}
 \backcite {Reimers_2019}{{21}{2.3.3}{figure.caption.14}}
-\backcite {Devlin_2019}{{21}{6}{Hfootnote.12}}
 \backcite {Reimers_2019}{{22}{4}{figure.caption.15}}
 \backcite {Reimers_2019}{{22}{2.3.3}{figure.caption.15}}
 \backcite {Deerwester_1990}{{22}{2.4}{section.2.4}}
@@ -52,8 +49,8 @@
 \backcite {Mifrah_2020}{{23}{2.4}{section.2.4}}
 \backcite {Polyzos_2022}{{23}{2.4}{section.2.4}}
 \backcite {George_2023, Xie_2020}{{23}{2.4}{section.2.4}}
-\backcite {George_2023, Xie_2020}{{24}{2.4}{section.2.4}}
-\backcite {Datchanamoorthy_2023}{{24}{2.4}{section.2.4}}
+\backcite {George_2023, Xie_2020}{{23}{2.4}{section.2.4}}
+\backcite {Datchanamoorthy_2023}{{23}{2.4}{section.2.4}}
 \backcite {Datchanamoorthy_2023}{{24}{2.4}{section.2.4}}
 \backcite {Angelov_2020}{{24}{2.5}{section.2.5}}
 \backcite {Sia_2020}{{24}{2.5}{section.2.5}}
@@ -68,80 +65,79 @@
 \backcite {McInnes_2018}{{25}{13}{Hfootnote.19}}
 \backcite {McInnes_2018}{{26}{6}{figure.caption.17}}
 \backcite {McInnes_2018}{{26}{2.5}{figure.caption.17}}
-\backcite {Grootendorst_2022}{{26}{2.5}{figure.caption.17}}
 \backcite {MacQueen_1967}{{26}{14}{Hfootnote.20}}
 \backcite {Campello_2013}{{27}{7}{figure.caption.18}}
-\backcite {Angelov_2020}{{27}{2.5}{figure.caption.18}}
-\backcite {Grootendorst_2022}{{27}{2.5}{figure.caption.18}}
-\backcite {Grootendorst_2022}{{27}{2.5}{figure.caption.18}}
-\backcite {Joachims_1997}{{27}{2.5}{figure.caption.18}}
+\backcite {Angelov_2020}{{28}{2.5}{figure.caption.18}}
+\backcite {Grootendorst_2022}{{28}{2.5}{figure.caption.18}}
+\backcite {Grootendorst_2022}{{28}{2.5}{figure.caption.18}}
+\backcite {Joachims_1997}{{28}{2.5}{figure.caption.18}}
 \backcite {Grootendorst_2022}{{28}{2.5}{equation.2.2}}
 \backcite {Grootendorst_2022}{{28}{2.5}{equation.2.2}}
 \backcite {Carbonell_1998}{{28}{2.5}{equation.2.2}}
-\backcite {Wang_2023}{{28}{2.6}{section.2.6}}
-\backcite {McInnes_2018}{{28}{2.6}{section.2.6}}
-\backcite {Maaten_2008}{{28}{2.6}{section.2.6}}
+\backcite {Wang_2023}{{29}{2.6}{section.2.6}}
+\backcite {McInnes_2018}{{29}{2.6}{section.2.6}}
+\backcite {Maaten_2008}{{29}{2.6}{section.2.6}}
 \backcite {Wang_2023}{{29}{2.6}{section.2.6}}
 \backcite {Wang_2023}{{29}{2.6}{section.2.6}}
 \backcite {Wang_2023}{{29}{2.6}{section.2.6}}
-\backcite {Wang_2023}{{29}{2.6}{section.2.6}}
-\backcite {Wang_2023}{{29}{8}{figure.caption.19}}
+\backcite {Wang_2023}{{30}{2.6}{section.2.6}}
+\backcite {Wang_2023}{{30}{8}{figure.caption.19}}
 \backcite {Wang_2023}{{30}{2.6}{figure.caption.19}}
 \backcite {Wang_2023}{{30}{2.6}{figure.caption.19}}
-\backcite {Wang_2023}{{30}{2.6}{Item.5}}
-\backcite {Wang_2023}{{30}{9}{figure.caption.20}}
-\backcite {Jung_2024}{{31}{3}{chapter.3}}
-\backcite {Jung_2024}{{31}{3}{chapter.3}}
-\backcite {Kim_2024}{{31}{3}{chapter.3}}
-\backcite {Kim_2024}{{31}{3}{chapter.3}}
-\backcite {Galli_2024}{{31}{3}{chapter.3}}
-\backcite {Galli_2024}{{31}{3}{chapter.3}}
-\backcite {Galli_2024}{{31}{3}{chapter.3}}
-\backcite {Gerasimenko_2023}{{31}{3}{chapter.3}}
-\backcite {Gerasimenko_2023}{{31}{3}{chapter.3}}
-\backcite {Wijanto_2024}{{32}{3}{chapter.3}}
-\backcite {Grootendorst_2022}{{32}{3}{chapter.3}}
-\backcite {Meng_2024}{{32}{3}{chapter.3}}
-\backcite {Meng_2024}{{32}{3}{chapter.3}}
+\backcite {Wang_2023}{{31}{2.6}{Item.8}}
+\backcite {Wang_2023}{{31}{9}{figure.caption.20}}
 \backcite {Jung_2024}{{32}{3}{chapter.3}}
-\backcite {Kim_2024, Galli_2024}{{32}{3}{chapter.3}}
-\backcite {Kim_2024, Galli_2024}{{32}{3}{chapter.3}}
-\backcite {Wijanto_2024}{{32}{3}{chapter.3}}
-\backcite {Gerasimenko_2023, Galli_2024}{{32}{3}{chapter.3}}
-\backcite {Gerasimenko_2023, Galli_2024}{{32}{3}{chapter.3}}
-\backcite {Meng_2024}{{32}{3}{chapter.3}}
-\backcite {Jung_2024}{{33}{1}{table.caption.21}}
-\backcite {Jung_2024}{{33}{1}{table.caption.21}}
-\backcite {Jung_2024}{{33}{1}{table.caption.21}}
-\backcite {Jung_2024}{{33}{1}{table.caption.21}}
-\backcite {Jung_2024}{{33}{1}{table.caption.21}}
-\backcite {Kim_2024}{{33}{1}{table.caption.21}}
-\backcite {Kim_2024}{{33}{1}{table.caption.21}}
-\backcite {Kim_2024}{{33}{1}{table.caption.21}}
-\backcite {Kim_2024}{{33}{1}{table.caption.21}}
-\backcite {Kim_2024}{{33}{1}{table.caption.21}}
-\backcite {Galli_2024}{{33}{1}{table.caption.21}}
-\backcite {Galli_2024}{{33}{1}{table.caption.21}}
-\backcite {Galli_2024}{{33}{1}{table.caption.21}}
-\backcite {Galli_2024}{{33}{1}{table.caption.21}}
-\backcite {Galli_2024}{{33}{1}{table.caption.21}}
-\backcite {Gerasimenko_2023}{{33}{1}{table.caption.21}}
-\backcite {Gerasimenko_2023}{{33}{1}{table.caption.21}}
-\backcite {Gerasimenko_2023}{{33}{1}{table.caption.21}}
-\backcite {Gerasimenko_2023}{{33}{1}{table.caption.21}}
-\backcite {Gerasimenko_2023}{{33}{1}{table.caption.21}}
-\backcite {Meng_2024}{{33}{1}{table.caption.21}}
-\backcite {Meng_2024}{{33}{1}{table.caption.21}}
-\backcite {Meng_2024}{{33}{1}{table.caption.21}}
-\backcite {Meng_2024}{{33}{1}{table.caption.21}}
-\backcite {Meng_2024}{{33}{1}{table.caption.21}}
-\backcite {Dresch_2015}{{34}{4}{chapter.4}}
-\backcite {Jung_2024}{{36}{4.3.1}{subsection.4.3.1}}
-\backcite {Grootendorst_2022}{{36}{4.3.1}{subsection.4.3.1}}
-\backcite {Jung_2024}{{36}{4.3.1}{subsection.4.3.1}}
-\backcite {Dresch_2015}{{37}{4.4}{section.4.4}}
-\backcite {Santos_2024, Jorge_2025}{{38}{5}{chapter.5}}
-\backcite {Santos_2024, Jorge_2025}{{38}{5}{chapter.5}}
-\backcite {Santos_2024}{{39}{5.1.1}{subsection.5.1.1}}
-\backcite {Jorge_2025}{{39}{5.1.1}{subsection.5.1.1}}
-\backcite {Jorge_2025}{{40}{11}{figure.caption.23}}
+\backcite {Jung_2024}{{32}{3}{chapter.3}}
+\backcite {Kim_2024}{{32}{3}{chapter.3}}
+\backcite {Kim_2024}{{32}{3}{chapter.3}}
+\backcite {Galli_2024}{{32}{3}{chapter.3}}
+\backcite {Galli_2024}{{32}{3}{chapter.3}}
+\backcite {Galli_2024}{{32}{3}{chapter.3}}
+\backcite {Gerasimenko_2023}{{32}{3}{chapter.3}}
+\backcite {Gerasimenko_2023}{{32}{3}{chapter.3}}
+\backcite {Wijanto_2024}{{33}{3}{chapter.3}}
+\backcite {Grootendorst_2022}{{33}{3}{chapter.3}}
+\backcite {Meng_2024}{{33}{3}{chapter.3}}
+\backcite {Meng_2024}{{33}{3}{chapter.3}}
+\backcite {Jung_2024}{{33}{3}{chapter.3}}
+\backcite {Kim_2024, Galli_2024}{{33}{3}{chapter.3}}
+\backcite {Kim_2024, Galli_2024}{{33}{3}{chapter.3}}
+\backcite {Wijanto_2024}{{33}{3}{chapter.3}}
+\backcite {Gerasimenko_2023, Galli_2024}{{33}{3}{chapter.3}}
+\backcite {Gerasimenko_2023, Galli_2024}{{33}{3}{chapter.3}}
+\backcite {Meng_2024}{{33}{3}{chapter.3}}
+\backcite {Jung_2024}{{34}{1}{table.caption.21}}
+\backcite {Jung_2024}{{34}{1}{table.caption.21}}
+\backcite {Jung_2024}{{34}{1}{table.caption.21}}
+\backcite {Jung_2024}{{34}{1}{table.caption.21}}
+\backcite {Jung_2024}{{34}{1}{table.caption.21}}
+\backcite {Kim_2024}{{34}{1}{table.caption.21}}
+\backcite {Kim_2024}{{34}{1}{table.caption.21}}
+\backcite {Kim_2024}{{34}{1}{table.caption.21}}
+\backcite {Kim_2024}{{34}{1}{table.caption.21}}
+\backcite {Kim_2024}{{34}{1}{table.caption.21}}
+\backcite {Galli_2024}{{34}{1}{table.caption.21}}
+\backcite {Galli_2024}{{34}{1}{table.caption.21}}
+\backcite {Galli_2024}{{34}{1}{table.caption.21}}
+\backcite {Galli_2024}{{34}{1}{table.caption.21}}
+\backcite {Galli_2024}{{34}{1}{table.caption.21}}
+\backcite {Gerasimenko_2023}{{34}{1}{table.caption.21}}
+\backcite {Gerasimenko_2023}{{34}{1}{table.caption.21}}
+\backcite {Gerasimenko_2023}{{34}{1}{table.caption.21}}
+\backcite {Gerasimenko_2023}{{34}{1}{table.caption.21}}
+\backcite {Gerasimenko_2023}{{34}{1}{table.caption.21}}
+\backcite {Meng_2024}{{34}{1}{table.caption.21}}
+\backcite {Meng_2024}{{34}{1}{table.caption.21}}
+\backcite {Meng_2024}{{34}{1}{table.caption.21}}
+\backcite {Meng_2024}{{34}{1}{table.caption.21}}
+\backcite {Meng_2024}{{34}{1}{table.caption.21}}
+\backcite {Dresch_2015}{{35}{4}{chapter.4}}
+\backcite {Jung_2024}{{37}{4.3.1}{subsection.4.3.1}}
+\backcite {Grootendorst_2022}{{37}{4.3.1}{subsection.4.3.1}}
+\backcite {Jung_2024}{{37}{4.3.1}{subsection.4.3.1}}
+\backcite {Dresch_2015}{{38}{4.4}{section.4.4}}
+\backcite {Santos_2024, Jorge_2025}{{39}{5}{chapter.5}}
+\backcite {Santos_2024, Jorge_2025}{{39}{5}{chapter.5}}
+\backcite {Santos_2024}{{40}{5.1.1}{subsection.5.1.1}}
+\backcite {Jorge_2025}{{40}{5.1.1}{subsection.5.1.1}}
+\backcite {Jorge_2025}{{41}{11}{figure.caption.23}}

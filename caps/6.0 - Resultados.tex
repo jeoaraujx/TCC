@@ -34,7 +34,7 @@ Este resultado indica a proporção de palavras-chave únicas que compõem os r�
 A Coerência de Tópicos, calculada pela métrica \gls{npmi} (\textit{Normalized Pointwise Mutual Information}), avalia a interpretabilidade de um tópico medindo a frequência com que suas palavras-chave mais representativas co-ocorrem (aparecem juntas) no \textit{corpus} de texto original. A Figura \ref{fig:npmi_por_topico} ilustra a pontuação de cada tópico individualmente.
 
 % Figura que você forneceu
-\begin{figure}[htb]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figs/npmi_por_topico.png} 
     \caption{Gráfico de Coerência NPMI por Tópico.}
@@ -128,7 +128,7 @@ O artefato final do \textit{pipeline} é um mapa de conhecimento interativo, ger
     \legend{Fonte: O Autor} 
 \end{figure}
 
-Na Figura \ref{fig:wizmap_geral}, as áreas de maior densidade representam os \textit{clusters} de publicações (tópicos). Os rótulos ilustram os temas centrais desses agrupamentos. A análise visual da projeção 2D aponta os seguintes padrões espaciais:
+Na Figura \ref{fig:wizmap_geral} , as áreas de maior densidade representam os \textit{clusters} de publicações (tópicos). Os rótulos ilustram os temas centrais desses agrupamentos. A análise visual da projeção 2D aponta os seguintes padrões espaciais:
 
 \begin{itemize}
     \item \textbf{Proximidade Espacial:} Tópicos com termos relacionados aparecem, em alguns casos, espacialmente próximos. Observa-se, por exemplo, a adjacência entre o tópico \enquote{dengue-fever-chikungunya-correlation} e o tópico \enquote{rainfall-amazonia-infection-correlation}. Esta justaposição sugere uma relação contextual nos dados entre arboviroses e fatores ambientais/regionais.
@@ -141,6 +141,9 @@ Na Figura \ref{fig:wizmap_geral}, as áreas de maior densidade representam os \t
 \end{itemize}
 
 O mapa, portanto, funciona como uma interface navegável para os dados gerados pelo \textit{pipeline}. Ele apresenta a organização dos tópicos e sua distribuição espacial, permitindo ao usuário explorar o \textit{dataset} e as relações temáticas de forma visual.
+
+Para explorar o mapa de conhecimento interativo online, clique aqui:
+\href{https://fossil-explorer.com/wizmap/?dataURL=https%3A%2F%2Fgist.githubusercontent.com%2Fjeoaraujx%2Fc9a610202e70139054c7e37eab937b93%2Fraw%2Ff615a5adfca02e09ed332d2c03bf0a01883c39f5%2Fdata_with_title_topic.ndjson&gridURL=https%3A%2F%2Fgist.githubusercontent.com%2Fjeoaraujx%2Fc9a610202e70139054c7e37eab937b93%2Fraw%2Ff615a5adfca02e09ed332d2c03bf0a01883c39f5%2Fgrid_with_title_topic.json}{Mapa interativo de conhecimento – WizMap}
 
 \section[Limitações do Estudo]{Limitações do Estudo}
 \label{sec:limitacoes}

@@ -1,15 +1,16 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Arquiteturas \gls {cbow} e \textit {Skip-gram}.}}{18}{figure.caption.12}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Arquitetura do modelo Transformador.}}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Diferenças nas arquiteturas de pré-treinamento. \gls {bert} é bidirecional, \gls {gpt} é unidirecional (da esquerda para a direita) e \gls {elmo} é uma concatenação rasa de LSTMs.}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Diferenças nas arquiteturas de pré-treinamento. \gls {bert} é bidirecional, \gls {gpt} é unidirecional (da esquerda para a direita) e \gls {elmo}.}}{21}{figure.caption.14}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura de inferência do \gls {sbert} para computar similaridade.}}{22}{figure.caption.15}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Diagrama esquemático do \textit {pipeline} BERTopic.}}{25}{figure.caption.16}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Diagrama ilustrativo do \gls {umap}, demonstrando a relação entre os hiperparâmetros \texttt {n\_neighbors} e \texttt {min\_dist} e a representação visual dos dados.}}{26}{figure.caption.17}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Figura ilustrativa de um \textit {dataset} sintético com quatro \textit {clusters} e ruído de fundo.}}{27}{figure.caption.18}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Interface da ferramenta \gls {wizmap} e seus componentes principais.}}{29}{figure.caption.19}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Estrutura de dados \textit {Quadtree} usada pelo \gls {wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf {2d}. (B) Representação em árvore.}}{30}{figure.caption.20}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Adaptação da Design Science Research para este projeto.}}{34}{figure.caption.22}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Arquitetura Geral do Observatório (SIMCC).}}{40}{figure.caption.23}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Gráfico de Coerência NPMI por Tópico.}}{50}{figure.caption.24}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Nuvens de Palavras para Tópicos Selecionados.}}{52}{figure.caption.26}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Visão Geral do Mapa de Conhecimento Interativo (WizMap).}}{53}{figure.caption.27}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Interface da ferramenta \gls {wizmap} e seus componentes principais.}}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Estrutura de dados \textit {Quadtree} usada pelo \gls {wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf {2d}. (B) Representação em árvore.}}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Adaptação da Design Science Research para este projeto.}}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Arquitetura Geral do Observatório (SIMCC).}}{41}{figure.caption.23}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Arquitetura do Pipeline de Modelagem e Visualização.}}{43}{figure.caption.24}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Gráfico de Coerência NPMI por Tópico.}}{51}{figure.caption.25}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Nuvens de Palavras para Tópicos Selecionados.}}{53}{figure.caption.27}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Visão Geral do Mapa de Conhecimento Interativo (WizMap).}}{54}{figure.caption.28}%
