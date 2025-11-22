@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Interface da ferramenta \gls {wizmap} e seus componentes principais.}}{30}{figure.caption.19}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Estrutura de dados \textit {Quadtree} usada pelo \gls {wizmap} para agregação multi-resolução. (A) Particionamento recursivo do espaço \textbf {2d}. (B) Representação em árvore.}}{31}{figure.caption.20}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Adaptação da Design Science Research para este projeto.}}{35}{figure.caption.22}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Arquitetura Geral do Observatório (SIMCC).}}{41}{figure.caption.23}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Arquitetura Geral do Observatório (SIMCC).}}{40}{figure.caption.23}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Arquitetura do Pipeline de Modelagem e Visualização.}}{43}{figure.caption.24}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Gráfico de Coerência NPMI por Tópico.}}{51}{figure.caption.25}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Nuvens de Palavras para Tópicos Selecionados.}}{53}{figure.caption.27}%

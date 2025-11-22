@@ -1,18 +1,18 @@
 \chapter[PROJETO DE DESENVOLVIMENTO]{PROJETO DE DESENVOLVIMENTO}
 \label{chap:projeto_desenvolvimento}
 
-O desenvolvimento do artefato proposto neste trabalho segue uma abordagem estruturada e incremental, alinhada à metodologia \gls{dsr} detalhada no Capítulo \ref{chap:metodologia}. O objetivo é construir e validar um \textit{pipeline} computacional que venha a aprimorar e complementar a análise de publicações científicas na plataforma do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}\footnote{Disponível em: \url{https://simcc.uesc.br/observatorio}}.
+O desenvolvimento do artefato segue a abordagem metodológica da \gls{dsr}, conforme detalhado no \ref{chap:metodologia}. O objetivo é a construção e validação de um \textit{pipeline} computacional projetado para complementar a análise de publicações científicas na plataforma do Observatório de dados públicos de ciência e tecnologia da Bahia\footnote{Disponível em: \url{https://simcc.uesc.br/observatorio}}.
 
-Conforme descrito na literatura \citeonline{Santos_2024, Jorge_2025}, o Observatório já possui uma arquitetura robusta para o mapeamento de competências, integrando fontes de dados heterogêneas como a Plataforma Lattes\footnote{Disponível em: \url{http://lattes.cnpq.br/}}, a Plataforma Sucupira\footnote{Disponível em: \url{https://sucupira.capes.gov.br/}}, o OpenAlex\footnote{Disponível em: \url{https://openalex.org/}} e o \gls{jcr}\footnote{Disponível em: \url{https://clarivate.com/webofsciencegroup/solutions/journal-citation-reports/}}. Seu sistema atual utiliza um processo de \gls{etl} com Apache Hop\footnote{Disponível em: \url{https://hop.apache.org/}} para consolidar as informações em um banco de dados PostgreSQL\footnote{Disponível em: \url{https://www.postgresql.org/}} e já emprega técnicas de \gls{pln} para a recuperação de informações baseadas em termos e palavras-chave.
+Conforme descrito por \citeonline{Santos_2024, Jorge_2025}, o Observatório possui uma arquitetura de dados que integra fontes heterogêneas, como a Plataforma Lattes\footnote{Disponível em: \url{http://lattes.cnpq.br/}}, a Plataforma Sucupira\footnote{Disponível em: \url{https://sucupira.capes.gov.br/}}, o OpenAlex\footnote{Disponível em: \url{https://openalex.org/}} e o \gls{jcr}\footnote{Disponível em: \url{https://clarivate.com/webofsciencegroup/solutions/journal-citation-reports/}}. O sistema atual utiliza um processo de \gls{etl} com a ferramenta Apache Hop\footnote{Disponível em: \url{https://hop.apache.org/}} para consolidar as informações em um banco de dados PostgreSQL\footnote{Disponível em: \url{https://www.postgresql.org/}}, empregando técnicas de recuperação de informações baseadas em termos e palavras-chave.
 
-A busca lexical existente é uma ferramenta poderosa para a recuperação de informações diretas. No entanto, como discutido na metodologia, a grande variação terminológica em domínios científicos representa um desafio para a descoberta de conexões temáticas que não são óbvias. Nesse sentido, há uma oportunidade de incrementar a plataforma com uma nova camada de análise semântica, que permita ao usuário explorar o conhecimento de forma mais intuitiva e visual.
+A busca lexical constitui o mecanismo padrão para a recuperação de informações na plataforma. No entanto, a variação terminológica em domínios científicos pode dificultar a identificação de conexões temáticas não explícitas. Nesse contexto, há uma oportunidade de incrementar a plataforma com uma nova camada de análise semântica, que permita ao usuário explorar o conhecimento de forma mais intuitiva e visual.
 
-Este capítulo detalha, portanto, a construção de um \textit{pipeline} que representa uma evolução para a arquitetura do Observatório. A solução proposta não visa substituir, mas sim enriquecer a funcionalidade de busca atual, introduzindo a modelagem de tópicos moderna com o \gls{bertopic}, o refinamento de rótulos com \gls{mmr} e a visualização interativa com o \gls{wizmap}. O foco é transcender a lista de resultados tradicional, permitindo que os usuários naveguem visualmente pelas principais áreas de pesquisa, identifiquem temas emergentes e compreendam as relações entre os diferentes campos do conhecimento de maneira orgânica.
+Este capítulo detalha, a construção de um \textit{pipeline} que representa uma evolução para a arquitetura do Observatório. A solução proposta introduz a modelagem de tópicos com o \gls{bertopic}, o refinamento de rótulos com \gls{mmr} e a visualização interativa com o \gls{wizmap}. O foco é apresentar uma alternativa à lista de resultados tradicional, permitindo a navegação visual pelas áreas de pesquisa e a identificação de relações entre diferentes campos do conhecimento.
 
 \section[Tecnologias Utilizadas]{Tecnologias Utilizadas}
 \label{sec:tecnologias_utilizadas}
 
-O desenvolvimento do artefato proposto neste projeto assenta-se sobre a combinação de duas arquiteturas tecnológicas distintas: (1) a infraestrutura consolidada do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}, que serve como fonte de dados e contexto de aplicação; e (2) o \textit{pipeline} de modelagem e visualização desenvolvido, que constitui o artefato central deste estudo.
+O desenvolvimento do artefato proposto neste projeto assenta-se sobre a combinação de duas arquiteturas tecnológicas distintas: (1) a infraestrutura consolidada do Observatório de dados públicos de ciência e tecnologia da Bahia, que serve como fonte de dados e contexto de aplicação; e (2) o \textit{pipeline} de modelagem e visualização desenvolvido, que constitui o artefato central deste trabalho.
 
 \subsection[Base Tecnológica do Observatório]{Base Tecnológica do Observatório}
 \label{ssec:base_observatorio}
@@ -29,8 +29,6 @@ Suas principais tecnologias incluem:
     \item \textbf{Infraestrutura de Aplicação (Python e React):} O \textit{back-end} da plataforma é desenvolvido em Python, utilizando o \textit{framework} Flask para a \gls{api}. A interface de usuário (\textit{front-end}) é construída com a biblioteca React JS.
 \end{itemize}
 
-A Figura \ref{fig:arquitetura_observatorio} ilustra essa arquitetura existente, mostrando o fluxo de dados desde as fontes externas (como Lattes e Sucupira) até o banco de dados, que será utilizado pelo framework para exibição das informações no front-end.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/Arquitetura-simcc.png} 
@@ -39,10 +37,12 @@ A Figura \ref{fig:arquitetura_observatorio} ilustra essa arquitetura existente, 
     \legend{Fonte: \citeonline{Jorge_2025}} 
 \end{figure}
 
+A Figura \ref{fig:arquitetura_observatorio} ilustra essa arquitetura existente, mostrando o fluxo de dados desde as fontes externas (como Lattes e Sucupira) até o banco de dados, que será utilizado pelo framework para exibição das informações no front-end.
+
 \subsection[Pipeline de Modelagem e Visualização]{Pipeline de Modelagem e Visualização}
 \label{ssec:pipeline_artefato}
 
-Sobre a base conceitual do Observatório, este projeto implementa um novo \textit{pipeline} focado na descoberta e análise semântica do conhecimento. Dada a natureza deste trabalho como um estudo de caso (conforme metodologia \gls{dsr}), o \textit{pipeline} foi desenvolvido e validado em um ambiente de prototipagem computacional.
+Sobre a base conceitual do Observatório, este projeto implementa um \textit{pipeline} voltado à descoberta e análise semântica do conhecimento. Considerando a metodologia \gls{dsr} adotada, esta etapa corresponde ao desenvolvimento e instanciação do artefato.O pipeline foi construído e validado em um ambiente de prototipagem computacional (ambiente de testes), configurado como uma Prova de Conceito para demonstrar a viabilidade técnica da solução proposta.
 
 As tecnologias e bibliotecas utilizadas para a construção do artefato foram:
 
