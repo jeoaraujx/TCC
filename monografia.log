@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  22 NOV 2025 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  23 NOV 2025 16:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1725,11 +1725,11 @@ Package pdftex.def Info: figs/Arquitetura-simcc.png  used on input line 34.
 [40 <./figs/Arquitetura-simcc.png>]
 
 [41] (./caps/5.2 - Arquitetura da solução.tex
-<figs/Arquitetura da solução.png, id=1238, 1610.015pt x 917.4275pt>
+<figs/Arquitetura da solução.png, id=1238, 2080.77374pt x 1176.395pt>
 File: figs/Arquitetura da solução.png Graphic file (type png)
 <use figs/Arquitetura da solução.png>
-Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 25.
-(pdftex.def)             Requested size: 455.0pt x 259.27174pt.
+Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 23.
+(pdftex.def)             Requested size: 455.0pt x 257.22807pt.
 
 
 [42]
@@ -1740,57 +1740,53 @@ Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 2
 
 [45]
 
-[46]
+[46])) (./caps/6.0 - Resultados.tex
 
 [47]
-
-[48])) (./caps/6.0 - Resultados.tex
-
-[49]
 Cap\'{\i }tulo 6.
 
 
-[50
+[48
 
 ]
-<figs/npmi_por_topico.png, id=1358, 992.70876pt x 592.2125pt>
+<figs/npmi_por_topico.png, id=1327, 992.70876pt x 592.2125pt>
 File: figs/npmi_por_topico.png Graphic file (type png)
 <use figs/npmi_por_topico.png>
 Package pdftex.def Info: figs/npmi_por_topico.png  used on input line 39.
 (pdftex.def)             Requested size: 455.0pt x 271.43608pt.
 
 
-[51 <./figs/npmi_por_topico.png (PNG copy)>]
+[49 <./figs/npmi_por_topico.png (PNG copy)>]
 
-[52]
-<figs/wordcloud_topicos.png, id=1391, 1438.173pt x 407.121pt>
+[50]
+<figs/wordcloud_topicos.png, id=1361, 1438.173pt x 407.121pt>
 File: figs/wordcloud_topicos.png Graphic file (type png)
 <use figs/wordcloud_topicos.png>
 Package pdftex.def Info: figs/wordcloud_topicos.png  used on input line 101.
 (pdftex.def)             Requested size: 455.0pt x 128.80289pt.
 
 
-[53 <./figs/wordcloud_topicos.png>]
-<figs/wizmap_overview.png, id=1406, 648.17157pt x 387.69844pt>
+[51 <./figs/wordcloud_topicos.png>]
+<figs/wizmap_overview.png, id=1376, 648.17157pt x 387.69844pt>
 File: figs/wizmap_overview.png Graphic file (type png)
 <use figs/wizmap_overview.png>
 Package pdftex.def Info: figs/wizmap_overview.png  used on input line 125.
 (pdftex.def)             Requested size: 455.0pt x 272.1561pt.
 
 
-[54 <./figs/wizmap_overview.png>]
+[52 <./figs/wizmap_overview.png>]
 
-[55]) (./caps/7.0 - Conclusão.tex
+[53]) (./caps/7.0 - Conclusão.tex
 
-[56]
+[54]
 Cap\'{\i }tulo 7.
 
 
-[57
+[55
 
 ]))
 
-[58] (./monografia.bbl (./monografia.brf)
+[56] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write9
 \openout9 = `monografia.brf'.
 
@@ -1798,17 +1794,17 @@ Cap\'{\i }tulo 7.
 bibitemlist
 
 
-[59
+[57
 
 
 
 ]
 
+[58]
+
+[59])
+
 [60]
-
-[61])
-
-[62]
 \tf@lof=\write10
 \openout10 = `monografia.lof'.
 
@@ -1829,18 +1825,15 @@ Package rerunfilecheck Info: File `monografia.brf' has not changed.
 (rerunfilecheck)             Checksum: 64702B9E22052B520155BC9DA70C5120;7119.
  ) 
 Here is how much of TeX's memory you used:
- 44101 strings out of 467747
- 836117 string characters out of 5431120
- 1477185 words of memory out of 5000000
- 71229 multiletter control sequences out of 15000+600000
- 744621 words of font info for 319 fonts, out of 8000000 for 9000
+ 44081 strings out of 467747
+ 835899 string characters out of 5431120
+ 1477199 words of memory out of 5000000
+ 71227 multiletter control sequences out of 15000+600000
+ 743910 words of font info for 312 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,117p,2537b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:json} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:ascii} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{glo:api} has been referenced but does not exist, replaced by a fixed one
@@ -1936,10 +1929,10 @@ pdfTeX warning (dest): name{glo:umap} has been referenced but does not exist, re
 pdfTeX warning (dest): name{glo:bertopic} has been referenced but does not exist, replaced by a fixed one
 
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (63 pages, 3655799 bytes).
+Output written on monografia.pdf (61 pages, 3761278 bytes).
 PDF statistics:
- 1928 PDF objects out of 2073 (max. 8388607)
- 1638 compressed objects within 17 object streams
- 281 named destinations out of 1000 (max. 500000)
+ 1898 PDF objects out of 2073 (max. 8388607)
+ 1610 compressed objects within 17 object streams
+ 277 named destinations out of 1000 (max. 500000)
  58885 words of extra memory for PDF output out of 61914 (max. 10000000)
 

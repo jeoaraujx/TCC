@@ -1,11 +1,9 @@
-\section[Arquitetura da Solução]{Arquitetura da Solução}
+\section[Projeto e Implementação da Solução]{Projeto e Implementação da Solução}
 \label{sec:arquitetura_solucao}
 
-Esta seção detalha a implementação prática do artefato computacional, descrevendo o fluxo de dados e as etapas de processamento que compõem o \textit{pipeline} de análise. Conforme a metodologia \gls{dsr} (Capítulo \ref{chap:metodologia}), esta é a fase de \enquote{Desenvolvimento do Artefato}, que aplica as tecnologias descritas na Seção \ref{sec:tecnologias_utilizadas}.
+Esta seção detalha a implementação prática do artefato computacional, detalhando o fluxo de dados e as etapas de processamento do \textit{pipeline}. Em conformidade com a fase do (Capítulo \ref{chap:metodologia}) da metodologia \gls{dsr}, o objetivo da implementação é processar os dados textuais do Observatório para gerar uma representação interativa do conhecimento científico.
 
-O objetivo central deste \textit{pipeline} é transformar o acervo textual bruto das publicações científicas do Observatório, em um mapa de conhecimento interativo e semanticamente navegável.
-
-Para alcançar esse objetivo, o \textit{pipeline} foi estruturado em quatro etapas macro, que serão detalhadas nas subseções seguintes:
+Para operacionalizar essa tarefa, a solução foi estruturada em quatro etapas principais, conforme ilustrado na Figura \ref{fig:pipeline_artefato}:
 
 \begin{enumerate}
     \item \textbf{Coleta e Pré-processamento dos Dados (Seção \ref{ssec:coleta_dados}):} Extração dos dados textuais (títulos e resumos) da base de dados e sua subsequente limpeza e normalização.
@@ -33,90 +31,54 @@ O fluxograma completo deste artefato, desde a ingestão da base de dados até a 
 \subsection[Coleta e Pré-processamento dos Dados]{Coleta e Pré-processamento dos Dados}
 \label{ssec:coleta_dados}
 
-O ponto de partida do \textit{pipeline} foi a coleta e a preparação do conjunto de dados textuais. Para este estudo de caso, foi utilizado um \textit{dump} estático da base de dados (representado pelo arquivo \textbf{npai\_database.csv}), contendo os metadados das publicações científicas. A coluna principal utilizada para a modelagem de tópicos foi a \textbf{title}, contendo os títulos das publicações.
+A camada de ingestão de dados foi projetada para preparar o corpus textual para as tarefas subsequentes de NLP. A implementação utilizou uma extração estática dos metadados do Observatório, selecionando o título das publicações como atributo principal para a modelagem, devido ao seu alto valor semântico e densidade informativa.
 
-O processo de preparação dos dados, executado no ambiente Google Colab, foi dividido em duas fases: a limpeza em nível de \textit{dataset} e o pré-processamento textual em nível de documento.
+O módulo de pré-processamento foi estruturado em dois estágios lógicos: saneamento (limpeza) do \textit{dataset} e normalização linguística.
 
-Na primeira fase, utilizando a biblioteca \textbf{Pandas}, foi realizada uma filtragem inicial do \textit{dataset}. Removeram-se todas as entradas onde o título era nulo ou consistia apenas em espaços em branco. Em seguida, aplicou-se a remoção de duplicatas exatas (via \textbf{drop\_duplicates}), uma etapa metodológica crucial para evitar que publicações idênticas distorcessem a frequência dos termos e biassem o modelo de tópicos.
+No estágio de saneamento, implementado via biblioteca Pandas, aplicaram-se filtros para a exclusão de registros inconsistentes, como entradas nulas ou duplicatas exatas. Essa etapa foi crítica para assegurar que a frequência de termos (TF-IDF) não fosse distorcida por redundâncias na base de dados
 
-Na segunda fase, cada título passou por um rigoroso \textit{pipeline} de pré-processamento multilíngue, projetado para normalizar e limpar o texto, preservando apenas seu núcleo semântico. Este processo seguiu, para cada documento, a seguinte sequência de operações:
+No estágio de normalização, cada documento foi submetido a um pipeline de tratamento textual multilíngue, composto pelas seguintes rotinas:
 
 \begin{enumerate}
-    \item \textbf{Detecção de Idioma:} O texto foi analisado pela biblioteca \textbf{langdetect} para identificar o idioma (primariamente português ou inglês), determinando quais ferramentas de \gls{pln} seriam aplicadas.
+    \item \textbf{Identificação do Idioma:} Classificação automática do texto via biblioteca \textit{langdetect} para direcionar o processamento específico (Português/Inglês).
 
-    \item \textbf{Normalização e Limpeza de Caracteres:} O texto foi padronizado. Primeiramente, foi convertido para minúsculas. Em seguida, aplicou-se a normalização Unicode (\textbf{NFKD}) para decompor caracteres acentuados, e a codificação para \gls{ascii} (com \textbf{ignore}) foi usada para remover todas as acentuações (ex: \textit{`educação`} $\rightarrow$ \textit{`educacao`}). Por fim, uma expressão regular (\textbf{RegEx}) removeu todos os números, pontuações e caracteres não alfabéticos.
+    \item \textbf{Normalização e Limpeza de Caracteres:} Conversão para caixa baixa e remoção de acentuação (normalização Unicode NFKD) e caracteres especiais via expressões regulares, reduzindo a dimensionalidade do vocabulário .
 
-    \item \textbf{Lematização e Tokenização (spaCy):} Com base no idioma detectado, o modelo \textbf{spaCy} correspondente (\textbf{pt\_core\_news\_sm} para português ou \textbf{en\_core\_web\_sm} para inglês) foi aplicado. Este modelo realizou a tokenização (divisão do texto em palavras) e a lematização, reduzindo cada palavra à sua forma canônica (ex: \textit{`pesquisas`} ou \textit{`pesquisando`} $\rightarrow$ \textit{`pesquisar`}).
+    \item \textbf{Lematização e Tokenização (spaCy):} Aplicação de lematização via \textit{spaCy}, convertendo termos flexionados à sua forma canônica (lema) para agrupar variações da mesma palavra.
 
-    \item \textbf{Remoção de Stopwords (NLTK):} Utilizando as listas de \textit{stopwords} (termos de parada) da biblioteca \textbf{NLTK} para ambos os idiomas, os termos semanticamente vazios (como \textit{`o`}, \textit{`para`}, \textit{`the`}, \textit{`is`}) foram removidos.
-
-    \item \textbf{Filtragem Final de Tokens:} Foram descartados todos os \textit{tokens} (lemas) resultantes com menos de três caracteres, bem como duplicatas de \textit{tokens} dentro de um mesmo documento, para criar uma representação final limpa e concisa.
+    \item \textbf{Filtragem Final de Tokens:} Remoção de \textit{stopwords} (termos funcionais sem carga semântica) e de \textit{tokens} com comprimento inferior a três caracteres
 \end{enumerate}
 
-Ao final desta etapa, as publicações que resultaram em textos vazios (ex: títulos que continham apenas \textit{stopwords} ou siglas curtas) foram removidas do conjunto final. O \textit{dataset} resultante, salvo como \textbf{npai\_processed\_texts.csv}, consistiu em uma lista de documentos processados (denominados \textbf{title\_processed}), prontos para a etapa de geração de \textit{embeddings}.
+Ao final desta etapa, as publicações que resultaram em textos vazios (ex: títulos que continham apenas \textit{stopwords} ou siglas curtas) foram removidas do conjunto final. O \textit{dataset} resultante, consistiu em uma lista de documentos processados, prontos para a etapa de geração de \textit{embeddings}.
 
 \subsection[Modelagem de Tópicos]{Modelagem de Tópicos}
 \label{ssec:modelagem_topicos}
 
-A fase de modelagem de tópicos é o cerne do \textit{pipeline}, onde os textos pré-processados são transformados em representações numéricas e agrupados em tópicos coerentes. Esta etapa segue a arquitetura do \gls{bertopic}, integrando modelos de \textit{embeddings}, técnicas de redução de dimensionalidade e algoritmos de \textit{clusterização}, conforme detalhado na Seção \ref{sec:bertopic}.
+O núcleo de processamento do artefato baseia-se na arquitetura \gls{bert}, configurada para operar como um pipeline sequencial de transformação de dados. A implementação técnica seguiu o fluxo de vetorização, redução dimensional e agrupamento.
 
 \subsubsection{Geração de Embeddings}
 \label{sssec:geracao_embeddings}
 
-Para a representação semântica dos títulos das publicações, foi utilizado o modelo pré-treinado \textbf{paraphrase-multilingual-MiniLM-L12-v2} da biblioteca \textbf{sentence-transformers}. Este modelo foi escolhido por sua capacidade de gerar \textit{embeddings} de sentenças de alta qualidade para múltiplos idiomas, incluindo português e inglês, e por sua eficiência computacional.
-
-O modelo \textbf{SentenceTransformer} transformou cada título pré-processado em um vetor numérico de 384 dimensões, capturando o significado contextual das palavras e a similaridade semântica entre os documentos. Os \textit{embeddings} resultantes foram armazenados em um arquivo binário (\textbf{npai\_embeddings.npy}) para reuso, otimizando o tempo de processamento em execuções subsequentes.
+A representação vetorial dos documentos foi realizada através do modelo pré-treinado \textit{paraphrase-multilingual-MiniLM-L12-v2} da biblioteca \textit{Sentence-Transformers}. A escolha deste modelo justifica-se pela sua arquitetura otimizada para aferir similaridade semântica em contextos multilíngues, convertendo cada título em um vetor denso de 384 dimensões.
 
 \subsubsection[Redução de Dimensionalidade (UMAP)]{Redução de Dimensionalidade (UMAP)}
 \label{sssec:reducao_dimensionalidade}
 
-Após a geração dos \textit{embeddings}, a alta dimensionalidade dos vetores (384 dimensões) foi reduzida para facilitar a \textit{clusterização} e a visualização. O emprego direto de algoritmos de \textit{clusterização} nesse espaço dimensional elevado é computacionalmente custoso e impactado pela \enquote{maldição da dimensionalidade} referida no seção \ref{sec:bertopic}. Para essa finalidade, empregou-se o algoritmo \gls{umap}, que se destaca por sua capacidade de preservar a estrutura topológica dos dados (conforme Seção \ref{sec:bertopic}) de forma performática.
-
-A instância do \gls{umap} foi configurada com os seguintes parâmetros, ajustados para otimizar a descoberta de tópicos de nicho no \textit{dataset} de teste:
-
-\begin{itemize}
-    \item \textbf{n\_neighbors=5}: Define o número de vizinhos a serem considerados. Um valor baixo como \textbf{5} foi escolhido para forçar o algoritmo a focar na \textbf{estrutura local} dos dados. Dado o volume reduzido do \textit{dataset} de teste (NPAI), esta abordagem é ideal para identificar \textit{clusters} de nicho, pequenos e coesos, em vez de tentar inferir uma macroestrutura global que exigiria mais dados.
-
-    \item \textbf{n\_components=2}: Os \textit{embeddings} foram projetados para duas dimensões. Este valor foi um \textbf{requisito direto} da ferramenta de visualização \gls{wizmap}, que necessita de coordenadas bidimensionais (x, y) para renderizar o mapa interativo.
-
-    \item \textbf{min\_dist=0.0}: Controla a distância mínima entre os pontos no espaço 2D. Um valor de \textbf{0.0} foi selecionado para permitir que os \textit{clusters} se tornassem o mais compactos possível, priorizando uma \textbf{separação visual clara} entre os tópicos no mapa, o que facilita a interpretação humana dos resultados.
-
-    \item \textbf{metric="cosine"}: Define a métrica de distância para comparar os vetores no espaço original de 384 dimensões. A métrica \textbf{\enquote{cosine}} é o padrão para dados de \gls{pln}, pois ela mede o ângulo entre os vetores (similaridade semântica) e ignora suas magnitudes, que não são relevantes para \textit{embeddings} de sentenças.
-
-    \item \textbf{random\_state=42}: Fixa a semente do gerador de números aleatórios. Como o \gls{umap} é um algoritmo estocástico (seus resultados podem variar ligeiramente a cada execução), definir um estado fixo é uma prática de rigor científico \textbf{essencial para garantir a reprodutibilidade} completa do experimento.
-\end{itemize}
-
-É fundamental ressaltar que este conjunto de parâmetros (\textbf{n\_neighbors=5}, \textbf{min\_dist=0.0}) foi ajustado para a natureza exploratória e o volume reduzido do \textit{dataset} de teste. Em uma futura implementação sobre a base de dados completa do Observatório, que é ordens de magnitude maior, esses parâmetros (especialmente o \textbf{n\_neighbors}) deveriam ser reavaliados e aumentados, a fim de capturar uma estrutura global mais significativa do conhecimento.
+A configuração do \gls{umap} priorizou a preservação da estrutura local dos dados em detrimento da estrutura global, visando a identificação de micro-tópicos. Os hiperparâmetros foram ajustados experimentalmente para projetar os vetores em um espaço bidimensional (\textit{n\_components=2}), requisito necessário para a compatibilidade com a camada de visualização WizMap. A métrica de distância cosseno foi adotada para capturar a orientação semântica dos vetores.
 
 \subsubsection[Clusterização (HDBSCAN)]{Clusterização (HDBSCAN)}
 \label{sssec:clusterizacao}
 
-Com os \textit{embeddings} já projetados em um espaço bidimensional pelo \gls{umap}, a etapa seguinte consistiu em identificar os agrupamentos densos de documentos, que efetivamente formam os tópicos. Para esta tarefa, foi utilizado o algoritmo \gls{hdbscan}.
+A definição dos tópicos foi executada pelo algoritmo \gls{hdbscan}. A opção por um método baseado em densidade, em oposição a métodos particionais como o \textit{K-Means}, deve-se à natureza não uniforme dos dados textuais científicos.
 
-A escolha pelo \gls{hdbscan} (conforme fundamentado na Seção \ref{sec:bertopic}) é metodologicamente superior a alternativas como o K-Means, pois não exige a definição prévia do número de tópicos (K). Além disso, sua natureza baseada em densidade permite identificar \textit{clusters} de formas e densidades variadas, e sua capacidade intrínseca de classificar pontos como ruído (\textit{outliers}) é ideal para dados textuais, onde nem toda publicação pertence a um tópico bem definido.
-
-Os parâmetros do modelo \gls{hdbscan} foram ajustados para a natureza exploratória deste estudo de caso:
-
-\begin{itemize}
-    \item \textbf{min\_cluster\_size=4}: Define o número mínimo de documentos que podem constituir um tópico. Dado que o \textit{pipeline} foi executado sobre um \textit{dataset} de teste de volume reduzido, um valor baixo como \textbf{4} foi \textbf{essencial para permitir a descoberta} de tópicos de nicho ou temas emergentes, que possuem poucas publicações. Um valor maior poderia resultar na não identificação de nenhum tópico.
-
-    \item \textbf{min\_samples=2}: Controla o quão \enquote{denso} um grupo de pontos precisa ser para ser considerado um \textit{cluster} central (influenciando diretamente o que é classificado como ruído). Um valor baixo como \textbf{2} torna o algoritmo mais permissivo, \textbf{reduzindo a agressividade na classificação de ruído} e permitindo que \textit{clusters} em áreas de menor densidade (temas menos frequentes) possam ser formados.
-
-    \item \textbf{metric="euclidean"}: Define a métrica de distância para calcular a proximidade entre os pontos. Uma vez que o \gls{umap} já havia processado a similaridade semântica (com a métrica \textbf{\enquote{cosine}}) e projetado os dados para um espaço 2D, a métrica \textbf{\enquote{euclidean}} (distância geométrica padrão) é a \textbf{mais adequada e computacionalmente eficiente} para medir a proximidade neste novo espaço bidimensional.
-
-    \item \textbf{cluster\_selection\_method="eom"}: O \gls{hdbscan} é um algoritmo hierárquico; este parâmetro define como \enquote{cortar} a árvore de \textit{clusters}. O método \textbf{\enquote{eom}} (Excess of Mass) é o padrão e o mais robusto, pois seleciona os \textit{clusters} que demonstram a \textbf{maior estabilidade e persistência} ao longo da hierarquia de densidade, permitindo que a própria estrutura dos dados defina os tópicos mais significativos.
-
-    \item \textbf{prediction\_data=True}: Este é um \textbf{requisito técnico} do \gls{bertopic}. Ao ser definido como \textbf{True}, o \gls{hdbscan} armazena informações adicionais que permitem ao modelo (posteriormente) classificar novos documentos em tópicos já existentes, garantindo que o artefato seja não apenas descritivo, mas também preditivo.
-\end{itemize}
-
-A integração destes componentes na classe \textbf{BERTopic}, juntamente com o modelo de \textit{embedding} e os parâmetros do \gls{umap}, permitiu a execução do método \textbf{fit\_transform}. Este método orquestrou o fluxo completo, culminando na atribuição de um ID de tópico (ou -1 para ruído) para cada publicação do \textit{dataset}.
+O algoritmo foi parametrizado para detectar agrupamentos de densidade variável e para isolar documentos desconexos como ruído (\textit{outliers}). Definiu-se um tamanho mínimo de \textit{cluster} (\textit{min\_cluster\_size=4}) reduzido, permitindo a emergência de temas de nicho ou incipientes na base de dados analisada.
 
 \subsubsection{Configuração Final do BERTopic}
 \label{sssec:configuracao_bertopic}
 
-A instância final do modelo foi configurada para utilizar o \textbf{SentenceTransformer} como \textbf{embedding\_model}, as instâncias customizadas de \textbf{UMAP} e \textbf{HDBSCAN} e, de forma notável, o \textbf{MaximalMarginalRelevance} (\gls{mmr}) como \textbf{representation\_model} para o refinamento dos rótulos de tópicos, que será detalhado na Seção \ref{ssec:refinamento_rotulos}. O parâmetro \textbf{language="multilingual"} foi especificado, alinhando-se ao pré-processamento bilíngue.
+A instância final do modelo foi configurada para utilizar o \textbf{SentenceTransformer} como \textit{embedding\_model}, as instâncias customizadas de \textbf{UMAP} e \textbf{HDBSCAN} e, de forma notável, o \textbf{MaximalMarginalRelevance} (\gls{mmr}) como \textit{representation\_model} para o refinamento dos rótulos de tópicos, que será detalhado na Seção \ref{ssec:refinamento_rotulos}. O parâmetro \textbf{language="multilingual"} foi especificado, alinhando-se ao pré-processamento bilíngue.
 
-Após a configuração, o modelo foi treinado com os textos processados e seus respectivos \textit{embeddings} pré-gerados (\textbf{topic\_model.fit\_transform(processed\_texts, embeddings=embeddings\_array)}). Os resultados, incluindo os IDs dos tópicos para cada documento e suas probabilidades, foram então obtidos. O modelo treinado foi salvo persistentemente (\textbf{npai\_bertopic\_model}) para facilitar sua reutilização.
+Após a configuração, o modelo foi treinado com os textos processados e seus respectivos \textit{embeddings} pré-gerados. Os resultados, incluindo os IDs dos tópicos para cada documento e suas probabilidades, foram então obtidos. O modelo treinado foi salvo persistentemente para facilitar sua reutilização.
 
 \subsection[Refinamento e Representação dos Tópicos (MMR)]{Refinamento e Representação dos Tópicos (MMR)}
 \label{ssec:refinamento_rotulos}
@@ -142,7 +104,7 @@ A aplicação do \gls{mmr} como \texttt{representation\_model} (passado diretame
 \subsection[Geração e Exportação para Visualização (WizMap)]{Geração e Exportação para Visualização (WizMap)}
 \label{ssec:exportacao_wizmap}
 
-A etapa final do \textit{pipeline} consistiu na geração do artefato de visualização. Esta fase foi focada em consolidar os diversos resultados da modelagem e exportá-los para o formato de dados específico exigido pela ferramenta \gls{wizmap}.
+A camada final da arquitetura é responsável pela interface com o usuário. A implementação utilizou a biblioteca wizmap para processar os artefatos gerados pelo núcleo (coordenadas UMAP, metadados e rótulos refinados) e gerar os arquivos de visualização.
 
 Primeiramente, foi construída uma estrutura de dados unificada. As coordenadas bidimensionais (x, y) de cada publicação, que foram calculadas pelo \gls{umap} (Seção \ref{sssec:reducao_dimensionalidade}), foram consolidadas. A elas, foram associados os metadados originais (como o título da publicação) e os resultados da modelagem (o ID do tópico atribuído e o rótulo textual refinado pelo \gls{mmr}).
 
