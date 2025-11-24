@@ -1,11 +1,9 @@
 \chapter[RESULTADOS E DISCUSSÃO]{RESULTADOS E DISCUSSÃO}
 \label{chap:resultados}
 
-Este capítulo apresenta a avaliação do artefato computacional desenvolvido, conforme a metodologia \gls{dsr} detalhada no Capítulo \ref{chap:metodologia}. Após a descrição da arquitetura e implementação do \textit{pipeline} no Capítulo \ref{chap:projeto_desenvolvimento}, esta seção tem como objetivo central executar a etapa de \enquote{Avaliação e Validação} .
+Este capítulo apresenta a avaliação do artefato computacional desenvolvido, conforme a metodologia \gls{dsr} detalhada no Capítulo \ref{chap:metodologia}. Conforme definido na metodologia, a validação do artefato visa verificar se a integração do BERTopic com a ferramenta WizMap permite a identificação coerente de temas e a exploração estruturada do conhecimento, utilizando como base de teste os dados extraídos do Observatório.
 
-A avaliação visa responder às conjecturas teóricas e ao problema de pesquisa: a integração do \gls{bertopic} com uma ferramenta de visualização interativa (\gls{wizmap}) de fato melhora a exploração e a descoberta de temas emergentes no acervo de publicações?
-
-Para conduzir esta análise, o capítulo está estruturado da seguinte forma:
+A análise dos resultados está estruturada em três dimensões:
 \begin{itemize}    
     \item \textbf{Validação Quantitativa (Seção 6.1):} Apresenta as métricas objetivas de qualidade dos tópicos gerados, conforme planejado na Seção \ref{sec:validacao_quantitativa}, com foco na Coerência (NPMI) e Diversidade dos tópicos.
     
@@ -22,19 +20,17 @@ Conforme definido na metodologia (Seção \ref{sec:validacao_quantitativa}), a p
 \subsection[Diversidade de Tópicos]{Diversidade de Tópicos}
 \label{ssec:diversidade_topicos}
 
-A diversidade de tópicos mede o quão distintos os tópicos são entre si, calculando a porcentagem de palavras únicas entre os 10 termos mais representativos de todos os tópicos gerados. Esta métrica é utilizada para avaliar se o modelo está produzindo agrupamentos redundantes.
+A métrica de diversidade mede o quão distintos os tópicos são entre si, calculando a porcentagem de palavras únicas entre os 10 termos mais representativos de todos os tópicos gerados. Esta métrica é utilizada para avaliar se o modelo está produzindo agrupamentos redundantes.
 
-No experimento, o modelo alcançou um índice de Diversidade de Tópicos de \textbf{0.9214} (ou 92,14\%).
-
-Este resultado indica a proporção de palavras-chave únicas que compõem os rótulos dos tópicos. Um índice nesta magnitude sugere uma baixa sobreposição lexical entre as representações textuais de cada tópico. Tal fato indica que a combinação de parâmetros do \gls{bertopic} (Seção \ref{ssec:modelagem_topicos}) resultou em \textit{clusters} com representações de palavras-chave distintas entre si.
+No experimento, o modelo alcançou um índice de Diversidade de Tópicos de \textbf{0.9214} (ou 92,14\%). Este resultado indica uma baixa sobreposição de vocabulário entre os tópicos gerados. O alto índice sugere que a configuração do \textit{BERTopic}, aliada ao refinamento por \textit{MMR}, foi eficaz na segregação dos documentos em \textit{clusters} temáticos linguisticamente distintos, minimizando a redundância.
 
 \subsection[Coerência de Tópicos (NPMI)]{Coerência de Tópicos (NPMI)}
 \label{ssec:coerencia_topicos}
 
-A Coerência de Tópicos, calculada pela métrica \gls{npmi} (\textit{Normalized Pointwise Mutual Information}), avalia a interpretabilidade de um tópico medindo a frequência com que suas palavras-chave mais representativas co-ocorrem (aparecem juntas) no \textit{corpus} de texto original. A Figura \ref{fig:npmi_por_topico} ilustra a pontuação de cada tópico individualmente.
+A Coerência de Tópicos foi avaliada através da \gls{npmi} (\textit{Normalized Pointwise Mutual Information}), que mede a frequência de coocorrência das palavras-chave de um tópico no corpus original. O experimento resultou em uma pontuação média de NPMI de \textbf{-0.2095}. A distribuição das pontuações individuais por tópico pode ser observada na Figura \ref{fig:npmi_por_topico}.
 
 % Figura que você forneceu
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=1.0\textwidth]{figs/npmi_por_topico.png} 
     \caption{Gráfico de Coerência NPMI por Tópico.}
@@ -42,19 +38,18 @@ A Coerência de Tópicos, calculada pela métrica \gls{npmi} (\textit{Normalized
     \legend{Fonte: O Autor} 
 \end{figure}
 
-A pontuação média de \gls{npmi} em todos os tópicos foi de \textbf{-0.2095}.
 
-Um escore de \gls{npmi} negativo, como o obtido, indica que as palavras-chave que definem os tópicos raramente co-ocorrem nos documentos originais. Este resultado é \textbf{metodologicamente esperado} e deve ser interpretado à luz de três fatores contextuais deste projeto:
+Um escore NPMI negativo indica que as palavras-chave que definem os tópicos raramente aparecem juntas no mesmo documento. Embora métricas baixas de coerência possam, em contextos tradicionais (como LDA), sinalizar tópicos de baixa qualidade, neste trabalho o resultado deve ser interpretado considerando três fatores técnicos determinantes:
 
 \begin{enumerate}
-    \item \textbf{Natureza dos Dados (Textos Curtos):} O \textit{pipeline} foi treinado exclusivamente em \textbf{títulos} de publicações. Títulos são, por natureza, textos muito curtos (baixa co-ocorrência). A métrica \gls{npmi} foi projetada para documentos longos (resumos ou textos completos), onde palavras de um mesmo conceito (ex: \enquote{rede} e \enquote{neural}) têm espaço para aparecer juntas.
+    \item \textbf{Natureza dos Dados (Textos Curtos):} O modelo foi treinado exclusivamente com \textbf{títulos} de publicações. Títulos são textos curtos e sintéticos, o que reduz drasticamente a probabilidade estatística de coocorrência de termos, penalizando métricas baseadas em contagem como o NPMI. A métrica \gls{npmi} foi projetada para documentos longos (resumos ou textos completos), onde palavras de um mesmo conceito (ex: \enquote{rede} e \enquote{neural}) têm espaço para aparecer juntas.
     
-    \item \textbf{Volume dos Dados (Dataset de Teste):} O modelo foi treinado em um \textit{dataset} de teste (NPAI) de volume reduzido. Métricas de coerência estatística como a \gls{npmi} necessitam de um \textit{corpus} massivo para encontrar padrões de co-ocorrência significativos.
+    \item \textbf{Paradigma de Modelagem:} O \textit{ BERTopic} opera via agrupamento semântico (\textit{embeddings}), diferentemente dos modelos probabilísticos clássicos (como \textit{LDA}) que priorizam a coocorrência estatística de palavras. A literatura indica que modelos baseados em embeddings frequentemente apresentam escores NPMI inferiores, mesmo gerando tópicos humanamente interpretáveis. Isso ocorre porque a métrica NPMI penaliza termos que não aparecem juntos no mesmo documento (baixa coocorrência), mesmo que sejam sinônimos ou semanticamente próximos. Como o \textit{BERTopic} agrupa palavras pelo contexto e significado, e não apenas pela contagem conjunta, há um descompasso natural entre o objetivo do modelo (semântica) e o critério de avaliação da métrica (estatística exata).
     
-    \item \textbf{Metodologia (BERTopic vs. LDA):} O \gls{bertopic} é um modelo que agrupa por \textbf{similaridade semântica} (via \textit{embeddings}) e não por co-ocorrência estatística de palavras (como o \gls{lda}). É documentado na literatura (Seção \ref{chap:trabalhos_correlatos}) que modelos baseados em \textit{embeddings} frequentemente apresentam escores \gls{npmi} mais baixos que o \gls{lda}, mesmo que seus tópicos sejam qualitativamente mais lógicos e úteis para a interpretação humana.
+    \item \textbf{Volume de Dados (Dataset de teste):} A validação ocorreu em um subconjunto de dados (dataset de teste), volume que pode ser insuficiente para estabilizar métricas estatísticas de coocorrência.
 \end{enumerate}
 
-Considerando o contexto deste estudo de caso, o índice de diversidade de 92,14\% indica uma baixa sobreposição de palavras entre os tópicos. Por outro lado, o escore de coerência \gls{npmi} negativo (-0.2095) sugere que as palavras-chave de um mesmo tópico raramente co-ocorrem nos textos originais (títulos). A literatura aponta que a métrica \gls{npmi} é dependente de co-ocorrência, um padrão menos frequente em textos curtos e em modelos baseados em similaridade semântica (como o \gls{bertopic}), em oposição a modelos estatísticos (como o \gls{lda}). Diante disso, a avaliação do artefato prossegue com a Validação Qualitativa, que se concentra na análise da interpretabilidade e na utilidade prática dos tópicos gerados.
+Diante disso, a métrica quantitativa isolada não reflete a totalidade da qualidade do modelo, tornando a validação qualitativa indispensável para aferir a utilidade da solução.
 
 \section[Validação Qualitativa]{Validação Qualitativa}
 \label{sec:resultado_validacao_qualitativa}
@@ -64,9 +59,7 @@ A validação qualitativa do artefato é crucial para complementar as métricas 
 \subsection[Análise dos Tópicos Identificados]{Análise dos Tópicos Identificados}
 \label{ssec:analise_topicos}
 
-A inspeção manual dos tópicos, utilizando as palavras-chave mais representativas geradas pelo \gls{mmr} (Seção \ref{ssec:refinamento_rotulos}), revelou a formação de agrupamentos temáticos distintos. O modelo identificou um total de \textbf{42 tópicos} no \textit{dataset} de teste do NPAI (excluindo o tópico -1, que representa ruído).
-
-A Tabela \ref{tab:topicos_principais} apresenta os 10 maiores tópicos identificados, ordenados pela quantidade de documentos, junto com suas 5 palavras-chave mais representativas.
+O pipeline identificou um total de 42 tópicos no dataset de teste (excluindo-se o ruído). A Tabela \ref{tab:topicos_principais} apresenta os 10 maiores tópicos identificados, ordenados pela quantidade de documentos, junto com suas 5 palavras-chave mais representativas, refinadas pelo algoritmo MMR.
 
 % --- TABELA (Seu texto está ótimo) ---
 \begin{table}[H]
@@ -92,7 +85,7 @@ A Tabela \ref{tab:topicos_principais} apresenta os 10 maiores tópicos identific
     \legend{Fonte: O Autor}
 \end{table}
 
-A análise da Tabela \ref{tab:topicos_principais} e da Figura \ref{fig:nuvens_palavras} (que ilustra as nuvens de palavras para os tópicos mais relevantes) permite observar a capacidade do \gls{bertopic} em extrair temas emergentes e bem definidos, mesmo em um \textit{corpus} desafiador de títulos curtos.
+A análise da Tabela \ref{tab:topicos_principais} e da Figura \ref{fig:nuvens_palavras} (que ilustra as nuvens de palavras para os tópicos mais relevantes), demonstra a capacidade do modelo em capturar temas específicos e contextualizados, superando a barreira da baixa coocorrência estatística.
 
 % --- NUVENS DE PALAVRAS (Caminho da figura corrigido) ---
 \begin{figure}[H]
@@ -104,14 +97,15 @@ A análise da Tabela \ref{tab:topicos_principais} e da Figura \ref{fig:nuvens_pa
     \legend{Fonte: O Autor} 
 \end{figure}
 
-Observa-se, por exemplo:
+Observam-se agrupamentos coesos em domínios distintos:
 \begin{itemize}
     \item \textbf{Tópico 0 (Fibromialgia e Dor Crônica):} Definido por termos médicos, indicando uma área de pesquisa focada em saúde e condições crônicas.
-    \item \textbf{Tópico 1 (Arquitetura e Educação):} Agrupa pesquisas sobre o ensino e o ambiente acadêmico, sugerindo um nicho de estudos pedagógicos na área.
+    \item \textbf{Tópico 1 (Arquitetura e Educação):} Este agrupamento revela uma natureza interdisciplinar, conectando termos das áreas de Arquitetura e Pedagogia, como \enquote{arquitetura}, \enquote{educação}, \enquote{professor} e \enquote{fundamental}. A coesão semântica sugere que o modelo identificou uma linha de pesquisa voltada à Arquitetura de da Informação, abordando provavelmente a influência do espaço físico e da infraestrutura no ambiente acadêmico do ensino fundamental.
     \item \textbf{Tópico 2 (Robótica Educacional):} Evidencia um subcampo de aplicação da robótica voltado para o contexto escolar e infantil.
     \item \textbf{Tópico 4 (Dengue e Arboviroses):} Um tópico de saúde pública, indicando pesquisas sobre doenças transmitidas por vetores. Nota-se a presença de termos relacionados como \enquote{dengue}, \enquote{febre}, \enquote{chikungunya} e \enquote{infecção}.
 \end{itemize}
-Esses exemplos ilustram que, apesar do escore \gls{npmi} médio negativo (discutido na Seção \ref{ssec:coerencia_topicos}), os rótulos gerados com o auxílio do \gls{mmr} apresentam coerência qualitativa. A aplicação do \gls{mmr} busca reduzir a redundância, apresentando palavras-chave que cobrem diferentes aspectos de um mesmo tópico.
+
+Esses exemplos ilustram que, apesar do escore \gls{npmi} médio negativo (discutido na Seção \ref{ssec:coerencia_topicos}), os rótulos gerados com o auxílio do \gls{mmr} apresentam coerência qualitativa. Nota-se a ausência de repetições excessivas (sinônimos ou variações morfológicas no mesmo rótulo), o que contribui para a clareza da representação textual.
 
 \subsection[Discussão do Mapa de Conhecimento Interativo]{Discussão do Mapa de Conhecimento Interativo}
 \label{ssec:mapa_conhecimento}
@@ -128,7 +122,7 @@ O artefato final do \textit{pipeline} é um mapa de conhecimento interativo, ger
     \legend{Fonte: O Autor} 
 \end{figure}
 
-Na Figura \ref{fig:wizmap_geral} , as áreas de maior densidade representam os \textit{clusters} de publicações (tópicos). Os rótulos ilustram os temas centrais desses agrupamentos. A análise visual da projeção 2D aponta os seguintes padrões espaciais:
+Na Figura \ref{fig:wizmap_geral}, as áreas de maior densidade representam os \textit{clusters} de publicações (tópicos). Os rótulos ilustram os temas centrais desses agrupamentos. A análise visual da projeção 2D aponta os seguintes padrões espaciais:
 
 \begin{itemize}
     \item \textbf{Proximidade Espacial:} Tópicos com termos relacionados aparecem, em alguns casos, espacialmente próximos. Observa-se, por exemplo, a adjacência entre o tópico \enquote{dengue-fever-chikungunya-correlation} e o tópico \enquote{rainfall-amazonia-infection-correlation}. Esta justaposição sugere uma relação contextual nos dados entre arboviroses e fatores ambientais/regionais.
@@ -142,22 +136,21 @@ Na Figura \ref{fig:wizmap_geral} , as áreas de maior densidade representam os \
 
 O mapa, portanto, funciona como uma interface navegável para os dados gerados pelo \textit{pipeline}. Ele apresenta a organização dos tópicos e sua distribuição espacial, permitindo ao usuário explorar o \textit{dataset} e as relações temáticas de forma visual.
 
-Para explorar o mapa de conhecimento interativo online, clique aqui:
-\href{https://fossil-explorer.com/wizmap/?dataURL=https%3A%2F%2Fgist.githubusercontent.com%2Fjeoaraujx%2Fc9a610202e70139054c7e37eab937b93%2Fraw%2Ff615a5adfca02e09ed332d2c03bf0a01883c39f5%2Fdata_with_title_topic.ndjson&gridURL=https%3A%2F%2Fgist.githubusercontent.com%2Fjeoaraujx%2Fc9a610202e70139054c7e37eab937b93%2Fraw%2Ff615a5adfca02e09ed332d2c03bf0a01883c39f5%2Fgrid_with_title_topic.json}{Mapa interativo de conhecimento – WizMap}
-
 \section[Limitações do Estudo]{Limitações do Estudo}
 \label{sec:limitacoes}
 
-A validade e a generalização dos resultados apresentados neste capítulo devem ser consideradas no contexto de limitações metodológicas específicas, inerentes à natureza deste estudo de caso como um experimento de \gls{dsr}.
+A interpretação dos resultados deve considerar as limitações inerentes ao escopo experimental e à natureza dos dados utilizados.
 
 \begin{itemize}
     \item \textbf{Conjunto de Dados (Prototipagem vs. Produção):} A principal limitação deste estudo é a fonte dos dados. O \textit{pipeline} foi desenvolvido e validado sobre um \textit{dataset} de teste estático (um \textit{dump} do NPAI) e não sobre o acervo de dados completo e dinâmico do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}. Embora este \textit{dataset} tenha sido suficiente para a validação do protótipo (o artefato), os resultados aqui apresentados (como a quantidade e a natureza dos tópicos) não são representativos do acervo real do Observatório.
 
-    \item \textbf{Dependência dos Hiperparâmetros:} A configuração do \textit{pipeline}, especialmente os hiperparâmetros de modelagem (Seções \ref{sssec:reducao_dimensionalidade} e \ref{sssec:clusterizacao}), foi diretamente influenciada pelo volume reduzido do \textit{dataset} de teste. Parâmetros como \texttt{n\_neighbors=5} (UMAP) e \texttt{min\_cluster\_size=4} (HDBSCAN) foram ajustados para permitir a descoberta de tópicos de nicho em um \textit{corpus} pequeno. Estes parâmetros não seriam diretamente transferíveis para o acervo completo do Observatório, que, sendo ordens de magnitude maior, exigiria uma nova etapa de \textit{tuning} (ajuste fino).
+    \item \textbf{Dependência dos Hiperparâmetros:} A configuração do \textit{pipeline}, especialmente os hiperparâmetros de modelagem (Seções \ref{sssec:reducao_dimensionalidade} e \ref{sssec:clusterizacao}), foi diretamente influenciada pelo volume reduzido do \textit{dataset} de teste. Parâmetros como \texttt{n\_neighbors} (UMAP) e \texttt{min\_cluster\_size} (HDBSCAN) foram ajustados para permitir a descoberta de tópicos de nicho em um \textit{corpus} pequeno. Estes parâmetros não seriam diretamente transferíveis para o acervo completo do Observatório, que, sendo ordens de magnitude maior, exigiria uma nova etapa de \textit{tuning} (ajuste fino).
 
     \item \textbf{Natureza do Texto de Entrada:} O \textit{pipeline} foi treinado utilizando exclusivamente os \textbf{títulos} das publicações. Textos curtos, por definição, oferecem baixa co-ocorrência de palavras. Este fator contextual é a explicação técnica mais provável para o escore negativo da métrica \gls{npmi} (Seção \ref{ssec:coerencia_topicos}), que é uma métrica estatística dependente de co-ocorrência. Os resultados de coerência poderiam ser diferentes se o modelo fosse treinado em textos mais longos, como os resumos (\textit{abstracts}).
 
     \item \textbf{Limitação da Métrica de Coerência:} Conforme discutido na Seção \ref{ssec:coerencia_topicos}, a própria métrica \gls{npmi} apresenta uma limitação contextual. Ela foi projetada para avaliar modelos estatísticos (como o \gls{lda}) e pode não ser a ferramenta de avaliação quantitativa ideal para modelos baseados em similaridade semântica (como o \gls{bertopic}). A validação qualitativa (Seção \ref{sec:validacao_qualitativa}) foi, portanto, necessária para avaliar a interpretabilidade dos tópicos.
 
-    \item \textbf{Natureza do Artefato (DSR):} O artefato desenvolvido é um \textbf{protótipo} executado em um ambiente de desenvolvimento (Google Colab). Ele não está integrado ao \textit{pipeline} de produção, ao banco de dados dinâmico ou à interface de usuário existente do Observatório (descritos na Seção \ref{ssec:base_observatorio}). A sua função neste estudo é demonstrar a \textit{viabilidade} da metodologia, e não apresentar uma solução de \textit{software} em produção.
+    \item \textbf{Natureza do Artefato (DSR):} O artefato desenvolvido é um \textbf{protótipo} executado em um ambiente de desenvolvimento (Google Colab). Ele não está integrado ao \textit{pipeline} de produção, ao banco de dados dinâmico ou à interface de usuário existente do Observatório (descritos na Seção \ref{ssec:base_observatorio}). A sua função neste experimento é demonstrar a \textit{viabilidade} da metodologia, e não apresentar uma solução de \textit{software} em produção.
+   
+    \item \textbf{Rigidez na Hierarquia de Visualização (WizMap):} Embora a ferramenta WizMap seja eficiente para a renderização escalável de embeddings, observou-se uma limitação na integração de seus mecanismos de resumo automático com os tópicos pré-calculados pelo BERTopic. O WizMap utiliza algoritmos internos baseados em frequência de termos para gerar os rótulos dinâmicos nos níveis de zoom mais afastados (visão macro). Esse comportamento pode sobrepor a classificação semântica refinada do BERTopic, resultando, por vezes, na exibição de termos de alta frequência mas baixa relevância semântica (como nomes de autores ou termos institucionais comuns no corpus) em detrimento dos descritores temáticos. Essa característica exigiria uma etapa adicional de limpeza agressiva dos metadados de entrada especificamente para a visualização, ou o desenvolvimento de uma camada de visualização customizada que respeitasse estritamente os rótulos do c-TF-IDF em todas as escalas de resolução.
 \end{itemize}
