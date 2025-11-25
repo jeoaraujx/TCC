@@ -585,7 +585,7 @@ INPUT ./editar/siglas.tex
 INPUT ./editar/siglas.tex
 INPUT ./editar/siglas.tex
 INPUT ./editar/siglas.tex
-INPUT ./editar/siglas.tex
+INPUT editar/siglas.tex
 OUTPUT monografia.glsdefs
 INPUT ./monografia.toc
 INPUT ./monografia.toc
@@ -699,6 +699,9 @@ INPUT ./figs/Wizmap_quadtree.png
 INPUT ./figs/Wizmap_quadtree.png
 INPUT ./figs/Wizmap_quadtree.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT ./caps/2.7 - Consideracoes finais.tex
+INPUT ./caps/2.7 - Consideracoes finais.tex
+INPUT caps/2.7 - Consideracoes finais.tex
 INPUT ./caps/3.0 - Trabalhos Correlatos.tex
 INPUT ./caps/3.0 - Trabalhos Correlatos.tex
 INPUT caps/3.0 - Trabalhos Correlatos.tex
