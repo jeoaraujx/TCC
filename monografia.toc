@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Experimento Comparativo de Representação (c-TF-IDF vs. MMR)}{53}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Análise dos Tópicos Identificados}{55}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Discussão do Mapa de Conhecimento Interativo}{57}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Comparativo Qualitativo: Busca Lexical e Exploração Semântica}{58}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.4}Comparativo Qualitativo: Busca Lexical e Exploração Semântica}{59}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Limitações do Estudo}{60}{section.6.3}%
 \contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{CONCLUSÃO}}{62}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Trabalhos Futuros}{63}{section.7.1}%

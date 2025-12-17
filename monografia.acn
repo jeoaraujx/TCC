@@ -142,6 +142,7 @@
 \glossaryentry{BERTopic?\glossentry{bertopic}|setentrycounter[]{page}"\glsnumberformat}{34}
 \glossaryentry{BERTopic?\glossentry{bertopic}|setentrycounter[]{page}"\glsnumberformat}{35}
 \glossaryentry{c-TF-IDF?\glossentry{c-tf-idf}|setentrycounter[]{page}"\glsnumberformat}{35}
+\glossaryentry{DSR?\glossentry{dsr}|setentrycounter[]{page}"\glsnumberformat}{36}
 \glossaryentry{DSR?\glossentry{dsr}|setentrycounter[]{page}"\glsnumberformat}{37}
 \glossaryentry{DSR?\glossentry{dsr}|setentrycounter[]{page}"\glsnumberformat}{37}
 \glossaryentry{BERTopic?\glossentry{bertopic}|setentrycounter[]{page}"\glsnumberformat}{37}
@@ -216,13 +217,11 @@
 \glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{53}
 \glossaryentry{MMR?\glossentry{mmr}|setentrycounter[]{page}"\glsnumberformat}{53}
 \glossaryentry{WizMap?\glossentry{wizmap}|setentrycounter[]{page}"\glsnumberformat}{53}
-\glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{57}
-\glossaryentry{MMR?\glossentry{mmr}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{WizMap?\glossentry{wizmap}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{UMAP?\glossentry{umap}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{WizMap?\glossentry{wizmap}|setentrycounter[]{page}"\glsnumberformat}{58}
-\glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{LDA?\glossentry{lda}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{BERTopic?\glossentry{bertopic}|setentrycounter[]{page}"\glsnumberformat}{60}
+\glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{61}
+\glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{61}
+\glossaryentry{LDA?\glossentry{lda}|setentrycounter[]{page}"\glsnumberformat}{61}
+\glossaryentry{BERTopic?\glossentry{bertopic}|setentrycounter[]{page}"\glsnumberformat}{61}
 \glossaryentry{NPMI?\glossentry{npmi}|setentrycounter[]{page}"\glsnumberformat}{63}

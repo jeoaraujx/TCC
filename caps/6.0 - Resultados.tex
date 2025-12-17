@@ -128,9 +128,7 @@ Enquanto a abordagem c-TF-IDF priorizou termos abstratos como \enquote{market}, 
 \subsection[Análise dos Tópicos Identificados]{Análise dos Tópicos Identificados}
 \label{ssec:analise_topicos}
 
-O pipeline identificou um total de 42 tópicos no dataset de teste (excluindo-se o ruído). A Tabela \ref{tab:topicos_principais} apresenta os 10 maiores tópicos identificados, ordenados pela quantidade de documentos, junto com suas 5 palavras-chave mais representativas, refinadas pelo algoritmo MMR.
-
-% --- TABELA (Seu texto está ótimo) ---
+Para superar a limitação de uma análise puramente descritiva, foi conduzida uma auditoria qualitativa nos tópicos identificados pelo pipeline. Os resultados principais, contendo os tópicos mais populosos e suas palavras-chave representativas, estão sumarizados na Tabela 2. Adicionalmente, a Figura 14 apresenta as nuvens de palavras dos agrupamentos selecionados, permitindo a inspeção visual da coesão semântica.
 \begin{table}[H]
     \centering
     \caption{Tópicos Mais Populosos e suas Palavras-Chave Representativas.}
@@ -139,24 +137,21 @@ O pipeline identificou um total de 42 tópicos no dataset de teste (excluindo-se
         \toprule
         \textbf{ID Tópico} & \textbf{Palavras-Chave} & \textbf{Nº Documentos} \\
         \midrule
-        \textbf{0} & fibromialgia, dor, cronico, postural, afetivo & 22 \\
-        \textbf{1} & arquitetura, academico, educacao, professor, fundamental & 13 \\
-        \textbf{2} & robotica, educacional, escolar, robotico, crianca & 12 \\
-        \textbf{3} & design, inovador, criativo, processo, empreendedor & 12 \\
-        \textbf{4} & dengue, febre, chikungunya, zika, infeccao & 12 \\
-        \textbf{5} & software, programacao, sistema, desenvolvimento, gestao & 11 \\
-        \textbf{6} & amazonia, floresta, chuva, infeccao, ambiental & 10 \\
-        \textbf{7} & wavelet, fractal, condutor, dimensao, sinal & 9 \\
-        \textbf{8} & cancer, imune, social, colaborativo, saude & 9 \\
-        \textbf{9} & ontologia, framework, desenvolvimento, sistemas, arquitetura & 9 \\
+        \textbf{0} & brazil, market, ethanol, gasoline, rate & 31 \\
+        \textbf{1} & inovacao, empreendedorismo, pesquisa, aplicacoes, intelectual & 30 \\
+        \textbf{2} & soil, fractal, oil, microrrelieve, detection & 27 \\
+        \textbf{3} & aprendizagem, virtual, blind, inteligencia, artificial & 26 \\
+        \textbf{4} & conhecimento, academico, validacao, gerencia, decision & 26 \\
+        \textbf{5} & computador, sistema, computacao, conhecimento, organizacoes & 24 \\
+        \textbf{6} & network, synchronization, semantic, sincronizacao, protein & 17 \\
+        \textbf{7} & robotica, escola, makers, facial, protetor & 16 \\
+        \textbf{8} & pain, chronic, fibromyalgia, postural, vibration & 13 \\
+        \textbf{9} & dengue, fever, correlation, chikungunya, transport & 12 \\
         \bottomrule
     \end{tabularx}
     \legend{Fonte: O Autor}
 \end{table}
 
-A análise da Tabela \ref{tab:topicos_principais} e da Figura \ref{fig:nuvens_palavras} (que ilustra as nuvens de palavras para os tópicos mais relevantes), demonstra a capacidade do modelo em capturar temas específicos e contextualizados, superando a barreira da baixa coocorrência estatística.
-
-% --- NUVENS DE PALAVRAS (Caminho da figura corrigido) ---
 \begin{figure}[H]
     \centering
     % Use a imagem da wordcloud_topicos.jpg
@@ -166,15 +161,24 @@ A análise da Tabela \ref{tab:topicos_principais} e da Figura \ref{fig:nuvens_pa
     \legend{Fonte: O Autor} 
 \end{figure}
 
-Observam-se agrupamentos coesos em domínios distintos:
+Como critério de validação externa, os tópicos gerados foram confrontados com as Grandes Áreas do Conhecimento do CNPq. A análise revelou que os agrupamentos semânticos refletem espontaneamente as divisões disciplinares formais, conforme a distribuição observada na amostra auditada:
 \begin{itemize}
-    \item \textbf{Tópico 0 (Fibromialgia e Dor Crônica):} Definido por termos médicos, indicando uma área de pesquisa focada em saúde e condições crônicas.
-    \item \textbf{Tópico 1 (Arquitetura e Educação):} Este agrupamento revela uma natureza interdisciplinar, conectando termos das áreas de Arquitetura e Pedagogia, como \enquote{arquitetura}, \enquote{educação}, \enquote{professor} e \enquote{fundamental}. A coesão semântica sugere que o modelo identificou uma linha de pesquisa voltada à Arquitetura de da Informação, abordando provavelmente a influência do espaço físico e da infraestrutura no ambiente acadêmico do ensino fundamental.
-    \item \textbf{Tópico 2 (Robótica Educacional):} Evidencia um subcampo de aplicação da robótica voltado para o contexto escolar e infantil.
-    \item \textbf{Tópico 4 (Dengue e Arboviroses):} Um tópico de saúde pública, indicando pesquisas sobre doenças transmitidas por vetores. Nota-se a presença de termos relacionados como \enquote{dengue}, \enquote{febre}, \enquote{chikungunya} e \enquote{infecção}.
+    \item \textbf{Ciências da Saúde:} Representada por tópicos de alta coesão como o Tópico 8 (Dor/Fibromialgia), Tópico 9 (Arboviroses/Dengue) e Tópico 16 (Pandemia/COVID-19), que alinham-se diretamente com as subáreas da Medicina e Saúde Coletiva.
+    \item \textbf{Ciências Exatas e da Terra:} Identificou-se forte presença de temas de Física e Engenharias, exemplificados pelo Tópico 0 (Energia/Combustíveis), Tópico 12 (Engenharia de Software) e Tópico 13 (Física/Fractais e Wavelets).
+    \item \textbf{Ciências Humanas e Sociais:} A modelagem capturou nuances de áreas como Educação (Tópico 3 - Aprendizagem/IA), Sociologia Política (Tópico 18 - Fake News/Participação) e Turismo (Tópico 17 - Mobilidade Urbana e Turismo).
 \end{itemize}
 
-Esses exemplos ilustram que, apesar do escore \gls{npmi} médio negativo (discutido na Seção \ref{ssec:coerencia_topicos}), os rótulos gerados com o auxílio do \gls{mmr} apresentam coerência qualitativa. Nota-se a ausência de repetições excessivas (sinônimos ou variações morfológicas no mesmo rótulo), o que contribui para a clareza da representação textual.
+Este alinhamento entre os clusters matemáticos e a taxonomia oficial sugere que o modelo foi capaz de capturar a estrutura disciplinar subjacente ao acervo sem supervisão prévia.
+
+Para aferir a consistência global, os tópicos foram classificados quanto à sua qualidade interpretativa. Na amostra dos tópicos mais representativos, estima-se que acima de 85\% apresentaram Alta Especificidade, definindo um tema central claro e sem ambiguidade.
+
+No entanto, é necessário reportar a existência de agrupamentos de menor qualidade, que constituem uma limitação do ajuste não supervisionado:
+\begin{enumerate}
+    \item \textbf{Tópicos Genéricos/Mistos:} O Tópico 10, por exemplo, apresentou uma mistura de termos metodológicos (\enquote{bibliografico}, \enquote{colaborativo}) com temas desconexos (\enquote{cancer}, \enquote{dengue}). Isso indica um agrupamento baseado mais na estrutura de escrita científica (termos comuns em resumos) do que em um domínio de conhecimento específico.
+    \item \textbf{Ruído (Outliers):} O grupo de ruído (Tópico -1), gerado nativamente pelo algoritmo HDBSCAN, conteve documentos que misturavam termos sem relação semântica aparente, como \enquote{espiritualidade}, \enquote{chagas} e \enquote{judicial}. A segregação eficaz desses documentos neste cluster de descarte valida a capacidade do modelo de limpar os tópicos principais, evitando que documentos desconexos contaminem os clusters de alta qualidade.
+\end{enumerate}
+
+Essa auditoria confirma que, embora o modelo tenha sucesso em identificar os grandes domínios científicos, a presença residual de tópicos genéricos (como o Tópico 10) reforça a necessidade de curadoria humana ou refinamento de stopwords para a aplicação bibliométrica definitiva.
 
 \subsection[Discussão do Mapa de Conhecimento Interativo]{Discussão do Mapa de Conhecimento Interativo}
 \label{ssec:mapa_conhecimento}

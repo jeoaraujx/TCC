@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  16 DEC 2025 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  16 DEC 2025 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1686,7 +1686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
 
 ]
 Cap\'{\i }tulo 4.
-<figs/DSR.png, id=1271, 1513.655pt x 629.35126pt>
+<figs/DSR.png, id=1274, 1513.655pt x 629.35126pt>
 File: figs/DSR.png Graphic file (type png)
 <use figs/DSR.png>
 Package pdftex.def Info: figs/DSR.png  used on input line 13.
@@ -1708,7 +1708,7 @@ Cap\'{\i }tulo 5.
 [41
 
 ]
-<figs/Arquitetura-simcc.png, id=1378, 453.19313pt x 215.30438pt>
+<figs/Arquitetura-simcc.png, id=1381, 453.19313pt x 215.30438pt>
 File: figs/Arquitetura-simcc.png Graphic file (type png)
 <use figs/Arquitetura-simcc.png>
 Package pdftex.def Info: figs/Arquitetura-simcc.png  used on input line 34.
@@ -1718,7 +1718,7 @@ Package pdftex.def Info: figs/Arquitetura-simcc.png  used on input line 34.
 [42 <./figs/Arquitetura-simcc.png>]
 
 [43] (./caps/5.2 - Arquitetura da solução.tex
-<figs/Arquitetura da solução.png, id=1416, 2080.77374pt x 1176.395pt>
+<figs/Arquitetura da solução.png, id=1419, 2080.77374pt x 1176.395pt>
 File: figs/Arquitetura da solução.png Graphic file (type png)
 <use figs/Arquitetura da solução.png>
 Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 23.
@@ -1737,7 +1737,7 @@ Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 2
 
 [49]
 Cap\'{\i }tulo 6.
-<figs/Analise_hiperparametro.png, id=1479, 1193.45876pt x 592.2125pt>
+<figs/Analise_hiperparametro.png, id=1482, 1193.45876pt x 592.2125pt>
 File: figs/Analise_hiperparametro.png Graphic file (type png)
 <use figs/Analise_hiperparametro.png>
 Package pdftex.def Info: figs/Analise_hiperparametro.png  used on input line 27.
@@ -1751,7 +1751,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 
 [51 <./figs/Analise_hiperparametro.png (PNG copy)>]
-<figs/Npmi_modelos.png, id=1492, 713.66624pt x 529.98pt>
+<figs/Npmi_modelos.png, id=1495, 713.66624pt x 529.98pt>
 File: figs/Npmi_modelos.png Graphic file (type png)
 <use figs/Npmi_modelos.png>
 Package pdftex.def Info: figs/Npmi_modelos.png  used on input line 60.
@@ -1759,7 +1759,7 @@ Package pdftex.def Info: figs/Npmi_modelos.png  used on input line 60.
 
 
 [52 <./figs/Npmi_modelos.png (PNG copy)>]
-<figs/Topico9_saude.png, id=1503, 1193.45876pt x 478.78876pt>
+<figs/Topico9_saude.png, id=1506, 1193.45876pt x 478.78876pt>
 File: figs/Topico9_saude.png Graphic file (type png)
 <use figs/Topico9_saude.png>
 Package pdftex.def Info: figs/Topico9_saude.png  used on input line 95.
@@ -1767,7 +1767,7 @@ Package pdftex.def Info: figs/Topico9_saude.png  used on input line 95.
 
 
 [53]
-<figs/Topico3_educacao.png, id=1510, 1193.45876pt x 478.78876pt>
+<figs/Topico3_educacao.png, id=1513, 1193.45876pt x 478.78876pt>
 File: figs/Topico3_educacao.png Graphic file (type png)
 <use figs/Topico3_educacao.png>
 Package pdftex.def Info: figs/Topico3_educacao.png  used on input line 107.
@@ -1775,7 +1775,7 @@ Package pdftex.def Info: figs/Topico3_educacao.png  used on input line 107.
 
 
 [54 <./figs/Topico9_saude.png (PNG copy)> <./figs/Topico3_educacao.png (PNG copy)>]
-<figs/Topico0_energia.png, id=1517, 1193.45876pt x 478.78876pt>
+<figs/Topico0_energia.png, id=1520, 1193.45876pt x 478.78876pt>
 File: figs/Topico0_energia.png Graphic file (type png)
 <use figs/Topico0_energia.png>
 Package pdftex.def Info: figs/Topico0_energia.png  used on input line 120.
@@ -1783,40 +1783,39 @@ Package pdftex.def Info: figs/Topico0_energia.png  used on input line 120.
 
 
 [55 <./figs/Topico0_energia.png (PNG copy)>]
-<figs/wordcloud_topicos.png, id=1525, 1438.173pt x 407.121pt>
+<figs/wordcloud_topicos.png, id=1525, 1997.4625pt x 468.75125pt>
 File: figs/wordcloud_topicos.png Graphic file (type png)
 <use figs/wordcloud_topicos.png>
-Package pdftex.def Info: figs/wordcloud_topicos.png  used on input line 163.
-(pdftex.def)             Requested size: 455.0pt x 128.80289pt.
+Package pdftex.def Info: figs/wordcloud_topicos.png  used on input line 158.
+(pdftex.def)             Requested size: 455.0pt x 106.77339pt.
 
 
-[56 <./figs/wordcloud_topicos.png>]
-<figs/wizmap_overview.png, id=1539, 648.17157pt x 387.69844pt>
+[56 <./figs/wordcloud_topicos.png (PNG copy)>]
+<figs/wizmap_overview.png, id=1535, 648.17157pt x 387.69844pt>
 File: figs/wizmap_overview.png Graphic file (type png)
 <use figs/wizmap_overview.png>
-Package pdftex.def Info: figs/wizmap_overview.png  used on input line 188.
+Package pdftex.def Info: figs/wizmap_overview.png  used on input line 192.
 (pdftex.def)             Requested size: 455.0pt x 272.1561pt.
 
 
-[57 <./figs/wizmap_overview.png>]
-<figs/Observatorio_busca_lexical.png, id=1548, 1130.72438pt x 504.38437pt>
+[57]
+
+[58 <./figs/wizmap_overview.png>]
+<figs/Observatorio_busca_lexical.png, id=1550, 1130.72438pt x 504.38437pt>
 File: figs/Observatorio_busca_lexical.png Graphic file (type png)
 <use figs/Observatorio_busca_lexical.png>
-Package pdftex.def Info: figs/Observatorio_busca_lexical.png  used on input line 216.
+Package pdftex.def Info: figs/Observatorio_busca_lexical.png  used on input line 220.
 (pdftex.def)             Requested size: 318.49861pt x 142.07324pt.
-
-
-[58]
-<figs/Cluster_wizmap.png, id=1554, 330.48468pt x 229.60782pt>
+<figs/Cluster_wizmap.png, id=1552, 330.48468pt x 229.60782pt>
 File: figs/Cluster_wizmap.png Graphic file (type png)
 <use figs/Cluster_wizmap.png>
-Package pdftex.def Info: figs/Cluster_wizmap.png  used on input line 229.
+Package pdftex.def Info: figs/Cluster_wizmap.png  used on input line 233.
 (pdftex.def)             Requested size: 318.49861pt x 221.28987pt.
 
 
-[59 <./figs/Observatorio_busca_lexical.png> <./figs/Cluster_wizmap.png>]
+[59 <./figs/Observatorio_busca_lexical.png>]
 
-[60]) (./caps/7.0 - Conclusão.tex
+[60 <./figs/Cluster_wizmap.png>]) (./caps/7.0 - Conclusão.tex
 
 [61]
 Cap\'{\i }tulo 7.
@@ -1862,21 +1861,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 648CFAA86A00FA69571CB4904A89CA98;7162.
+(rerunfilecheck)             Checksum: 60A202CB19379A01B040BAE71422D8FE;7209.
  ) 
 Here is how much of TeX's memory you used:
- 44184 strings out of 467747
- 838512 string characters out of 5431120
+ 44186 strings out of 467747
+ 838526 string characters out of 5431120
  1481002 words of memory out of 5000000
  71304 multiletter control sequences out of 15000+600000
  747621 words of font info for 315 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,117p,2545b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (68 pages, 4630721 bytes).
+Output written on monografia.pdf (68 pages, 3336431 bytes).
 PDF statistics:
  2073 PDF objects out of 2073 (max. 8388607)
- 1773 compressed objects within 18 object streams
- 300 named destinations out of 1000 (max. 500000)
+ 1774 compressed objects within 18 object streams
+ 302 named destinations out of 1000 (max. 500000)
  61003 words of extra memory for PDF output out of 61914 (max. 10000000)
 
