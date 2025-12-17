@@ -34,7 +34,7 @@ A fim de consolidar a análise da literatura e posicionar de forma clara o estad
 \toprule
 \textbf{Referência} & \textbf{Objetivo Principal} & \textbf{Pipeline/Método Utilizado} & \textbf{Modelo de Embedding} & \textbf{Relação com o Estado da Arte} \\
 \midrule
-\citeonline{Jung_2024} & Comparar o desempenho de modelos de tópicos (LDA, NMF, BERTopic) em textos acadêmicos e de notícias sobre LLMs \cite{Jung_2024}. & Análise comparativa de métricas de coerência e diversidade dos tópicos gerados \cite{Jung_2024}. & SBERT (implícito no BERTopic) \cite{Jung_2024}. & Estabelece o BERTopic como uma ferramenta superior aos métodos tradicionais (LDA, NMF) para a análise de textos acadêmicos \cite{Jung_2024}. \\
+\citeonline{Jung_2024} & Comparar o desempenho de modelos de tópicos (LDA, NMF, BERTopic) em textos acadêmicos e de notícias sobre LLMs \cite{Jung_2024}. & Análise comparativa de métricas de coerência e diversidade dos tópicos gerados \cite{Jung_2024}. & SBERT (implícito no BERTopic) \cite{Jung_2024}. & Reporta desempenho superior do BERTopic frente a baselines tradicionais (LDA, NMF) especificamente na análise de resumos (abstracts) e textos noticiosos, validando a arquitetura para documentos com contexto semântico rico. \\
 \addlinespace
 \citeonline{Kim_2024} & Identificar a emergência de ciência interdisciplinar em metadados de publicações científicas \cite{Kim_2024}. & Combinação de análise de redes de coocorrência (Etapa 1) e modelagem de tópicos com BERTopic (Etapa 2) \cite{Kim_2024}. & BERT (usado para \textit{embedding vectorization}) \cite{Kim_2024}. & Valida o BERTopic como ferramenta superior às abordagens baseadas em frequência, por usar \enquote{conhecimento contextual}, para analisar publicações científicas \cite{Kim_2024}. \\
 \addlinespace
@@ -48,3 +48,7 @@ A fim de consolidar a análise da literatura e posicionar de forma clara o estad
 }
 \end{table}
 \end{landscape}
+
+\section{Considerações Finais}
+
+A análise comparativa realizada por \citeonline{Jung_2024}, fundamenta a escolha teórica do BERTopic para este trabalho, ao demonstrar que a arquitetura baseada em embeddings supera abordagens probabilísticas (como LDA) na captura de nuances semânticas em textos estruturados. No entanto, é crucial destacar uma distinção de escopo: enquanto \citeonline{Jung_2024} validaram a superioridade do modelo em corpora de textos longos (resumos e notícias), este estudo aplica a técnica em um cenário de maior desafio: a modelagem de títulos curtos. Neste contexto de alta esparsidade informacional, a literatura indica que métricas de coocorrência (como o NPMI utilizado por Jung) tendem a divergir, exigindo uma validação focada na coerência interpretativa ($C_v$) e na capacidade de agrupamento semântico, e não apenas na replicação direta dos indicadores estatísticos observados em textos longos.

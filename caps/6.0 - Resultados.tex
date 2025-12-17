@@ -17,6 +17,28 @@ A análise dos resultados está estruturada em três dimensões:
 
 Conforme definido na metodologia (Seção \ref{sec:validacao_quantitativa}), a primeira etapa da avaliação do artefato consistiu na medição objetiva da qualidade dos tópicos gerados. Para isso, o \textit{pipeline} foi avaliado em duas métricas centrais: Diversidade de Tópicos e Coerência de Tópicos (NPMI).
 
+\subsection[Análise de Sensibilidade e Definição de Tópicos]{Análise de Sensibilidade e Definição de Tópicos}
+\label{ssec:analise_sensibilidade}
+
+A validação quantitativa dos hiperparâmetros, conforme metodologia descrita na Seção \ref{sssec:clusterizacao}, resultou nos indicadores apresentados na Figura \ref{fig:analise_hiperparametro}. O gráfico relaciona o Escore de Coerência (eixo esquerdo, linha azul) e o Número de Tópicos Gerados (eixo direito, linha vermelha) em função do tamanho do cluster.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/Analise_hiperparametro.png} 
+    \caption{Análise de Hiperparâmetros: Coerência ($C_v$) vs. Granularidade.}
+    \label{fig:analise_hiperparametro}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+A análise dos dados demonstra que o valor 8 para o \textit{min\_cluster\_size} apresentou o desempenho superior no conjunto de testes. Observam-se os seguintes comportamentos:
+\begin{itemize}    
+    \item \textbf{Maximização da Coerência:} A curva de coerência apresenta uma trajetória ascendente a partir do valor 4, atingindo seu pico máximo ($C_v \approx 0,429$) em 8. Nota-se uma degradação acentuada da métrica a partir do valor 10, indicando que a imposição de agrupamentos maiores forçou a fusão de temas semanticamente distintos, reduzindo a qualidade interna dos tópicos.
+    \item \textbf{Controle de Ruído:} O aumento do parâmetro de 6 para 8 resultou em uma redução na taxa de \textit{outliers} de 13,7\% para 8,75\%. Isso indica que o modelo conseguiu agregar documentos anteriormente dispersos em tópicos consistentes, diminuindo a perda de informação.
+    \item \textbf{Granularidade:} A configuração selecionada resultou na identificação de 19 tópicos. Essa granularidade mostrou-se adequada para a análise, evitando a fragmentação excessiva observada nos valores menores (32 tópicos em tamanho 4) e a generalização excessiva dos valores maiores.
+\end{itemize}
+
+Com base nesses resultados, o modelo final foi instanciado com \textit{min\_cluster\_size=8}, garantindo robustez semântica e cobertura de dados.
+
 \subsection[Diversidade de Tópicos]{Diversidade de Tópicos}
 \label{ssec:diversidade_topicos}
 
@@ -24,37 +46,84 @@ A métrica de diversidade mede o quão distintos os tópicos são entre si, calc
 
 No experimento, o modelo alcançou um índice de Diversidade de Tópicos de \textbf{0.9214} (ou 92,14\%). Este resultado indica uma baixa sobreposição de vocabulário entre os tópicos gerados. O alto índice sugere que a configuração do \textit{BERTopic}, aliada ao refinamento por \textit{MMR}, foi eficaz na segregação dos documentos em \textit{clusters} temáticos linguisticamente distintos, minimizando a redundância.
 
-\subsection[Coerência de Tópicos (NPMI)]{Coerência de Tópicos (NPMI)}
+\subsection[Avaliação de Coerência e Trade-off Semântico]{Avaliação de Coerência e Trade-off Semântico}
 \label{ssec:coerencia_topicos}
 
-A Coerência de Tópicos foi avaliada através da \gls{npmi} (\textit{Normalized Pointwise Mutual Information}), que mede a frequência de coocorrência das palavras-chave de um tópico no corpus original. O experimento resultou em uma pontuação média de NPMI de \textbf{-0.2095}. A distribuição das pontuações individuais por tópico pode ser observada na Figura \ref{fig:npmi_por_topico}.
+Para a validação quantitativa da qualidade dos tópicos, foram empregadas duas métricas com objetivos distintos: a Coerência $C_v$, focada na estabilidade estrutural, e o \gls{npmi}, focado na coocorrência léxica.
 
-% Figura que você forneceu
+A métrica $C_v$ foi estabelecida como o indicador principal durante a otimização de hiperparâmetros (conforme Seção \ref{ssec:analise_sensibilidade}). O modelo atingiu seu ponto ótimo ($C_v \approx 0.43$) com clusters de tamanho 8, evidenciando que os agrupamentos formados possuem forte consistência interna.
+
+Posteriormente, para avaliar o impacto da estratégia de diversificação de rótulos, comparou-se o desempenho do modelo Padrão (\textit{Standard c-TF-IDF}) contra o modelo com refinamento \gls{mmr} utilizando a métrica \gls{npmi}. A Figura \ref{fig:npmi_modelos} ilustra os resultados obtidos.
+
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1.0\textwidth]{figs/npmi_por_topico.png} 
-    \caption{Gráfico de Coerência NPMI por Tópico.}
-    \label{fig:npmi_por_topico}
+    \includegraphics[width=0.8\textwidth]{figs/Npmi_modelos.png} 
+    \caption{Comparativo de Coerência Semântica (NPMI) entre os modelos.}
+    \label{fig:npmi_modelos}
     \legend{Fonte: O Autor} 
 \end{figure}
 
+A análise dos dados revela que o Modelo Padrão obteve um índice \gls{npmi} superior ($-0.0864$) em comparação ao Modelo com \gls{mmr} ($-0.2639$). Embora métricas de coerência mais altas sejam usualmente preferíveis, neste cenário específico, a divergência corrobora a eficácia do algoritmo MMR em sua função de diversificação semântica.
 
-Um escore NPMI negativo indica que as palavras-chave que definem os tópicos raramente aparecem juntas no mesmo documento. Embora métricas baixas de coerência possam, em contextos tradicionais (como LDA), sinalizar tópicos de baixa qualidade, neste trabalho o resultado deve ser interpretado considerando três fatores técnicos determinantes:
+O Modelo Padrão tende a maximizar o \gls{npmi} ao selecionar termos de alta coocorrência imediata, frequentemente resultando em pares redundantes ou sinônimos (ex: \enquote{doença} e \enquote{vírus}). Em contrapartida, o algoritmo \gls{mmr} penaliza intencionalmente essa redundância para introduzir termos distintos (ex: \enquote{doença} e \enquote{transporte}). Como a probabilidade estatística de um termo diverso aparecer no mesmo contexto curto é menor do que a de um sinônimo, a redução no índice NPMI é um reflexo natural da maior variabilidade vocabular.
+
+Portanto, a variação no NPMI representa um \textit{trade-off} metodológico: o modelo prioriza a informatividade e a cobertura temática em detrimento da redundância estatística.
+
+Adicionalmente, deve-se observar que a magnitude negativa dos valores em ambos os cenários é influenciada por fatores intrínsecos ao corpus utilizado:
 
 \begin{enumerate}
-    \item \textbf{Natureza dos Dados (Textos Curtos):} O modelo foi treinado exclusivamente com \textbf{títulos} de publicações. Títulos são textos curtos e sintéticos, o que reduz drasticamente a probabilidade estatística de coocorrência de termos, penalizando métricas baseadas em contagem como o NPMI. A métrica \gls{npmi} foi projetada para documentos longos (resumos ou textos completos), onde palavras de um mesmo conceito (ex: \enquote{rede} e \enquote{neural}) têm espaço para aparecer juntas.
-    
-    \item \textbf{Paradigma de Modelagem:} O \textit{ BERTopic} opera via agrupamento semântico (\textit{embeddings}), diferentemente dos modelos probabilísticos clássicos (como \textit{LDA}) que priorizam a coocorrência estatística de palavras. A literatura indica que modelos baseados em embeddings frequentemente apresentam escores NPMI inferiores, mesmo gerando tópicos humanamente interpretáveis. Isso ocorre porque a métrica NPMI penaliza termos que não aparecem juntos no mesmo documento (baixa coocorrência), mesmo que sejam sinônimos ou semanticamente próximos. Como o \textit{BERTopic} agrupa palavras pelo contexto e significado, e não apenas pela contagem conjunta, há um descompasso natural entre o objetivo do modelo (semântica) e o critério de avaliação da métrica (estatística exata).
-    
-    \item \textbf{Volume de Dados (Dataset de teste):} A validação ocorreu em um subconjunto de dados (dataset de teste), volume que pode ser insuficiente para estabilizar métricas estatísticas de coocorrência.
+    \item \textbf{Natureza dos Dados (Textos Curtos):} O modelo foi treinado exclusivamente com \textbf{títulos} de publicações. A brevidade dos títulos reduz a probabilidade de coocorrência de termos correlatos, penalizando métricas baseadas em contagem estrita como o NPMI, que foi originalmente projetada para documentos longos.
+    \item \textbf{Volume de Dados:} A validação ocorreu em um subconjunto de dados de teste, cujo volume reduzido pode limitar a estabilização de métricas estatísticas globais de coocorrência.
 \end{enumerate}
 
-Diante disso, a métrica quantitativa isolada não reflete a totalidade da qualidade do modelo, tornando a validação qualitativa indispensável para aferir a utilidade da solução.
+Diante dessas limitações quantitativas intrínsecas, a validação qualitativa, apresentada a seguir, torna-se indispensável para aferir a utilidade real e a interpretabilidade dos tópicos gerados.
 
 \section[Validação Qualitativa]{Validação Qualitativa}
 \label{sec:resultado_validacao_qualitativa}
 
 A validação qualitativa do artefato é crucial para complementar as métricas quantitativas (Capítulo \ref{sec:validacao_quantitativa}), focando na interpretabilidade e na utilidade prática dos tópicos identificados. Esta seção avalia a capacidade do \textit{pipeline} em gerar agrupamentos temáticos coerentes e semanticamente ricos e discute como a visualização interativa (\gls{wizmap}) contribui para a exploração do conhecimento.
+
+\subsection[Experimento Comparativo de Representação (c-TF-IDF vs. MMR)]{Experimento Comparativo de Representação (c-TF-IDF vs. MMR)}
+\label{ssec:experimento_comparativo_representacao}
+
+A avaliação da qualidade dos rótulos baseou-se na inspeção qualitativa de Nuvens de Palavras (\textit{WordClouds}) pareadas, observando-se critérios de especificidade semântica e redução de redundância.
+
+Inicialmente, a análise do Tópico 9 (Arboviroses e Saúde Pública), apresentada na Figura \ref{fig:nuvens_palavras_topico9}, ilustra o impacto do refinamento na contextualização do tema. No modelo padrão (à esquerda), a representação é dominada por termos de alta ocorrência como \enquote{dengue}, \enquote{case} (caso) e \enquote{fever} (febre), centrando a descrição apenas na doença principal e seus sintomas.
+\begin{figure}[H]
+    \centering
+    % Use a imagem da wordcloud_topicos.jpg
+    \includegraphics[width=0.8\textwidth]{figs/Topico9_saude.png} 
+    \caption{Nuvens de Palavras para Arboviroses e Saúde Pública}
+    \label{fig:nuvens_palavras_topico9}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+Ao aplicar o MMR (à direita), observa-se que o modelo penalizou a redundância de termos genéricos, permitindo a emergência de vetores correlatos como \enquote{chikungunya} e \enquote{zika}, além de fatores ambientais e sociais como \enquote{outbreak} (surto), \enquote{transport} e \enquote{sanitation} (saneamento). O uso da diversidade transformou uma descrição genérica em uma representação que abarca o ecossistema das arboviroses.
+
+De forma análoga, a análise do Tópico 3 (Figura \ref{fig:nuvens_palavras_topico3}) demonstra a capacidade do MMR em revelar nichos específicos que, no modelo padrão, apareciam diluídos em um tema amplo de tecnologia educacional (com termos como \enquote{aprendizagem} e \enquote{ensino}).
+\begin{figure}[H]
+    \centering
+    % Use a imagem da wordcloud_topicos.jpg
+    \includegraphics[width=0.8\textwidth]{figs/Topico3_educacao.png} 
+    \caption{Nuvens de Palavras para tecnologia educacional}
+    \label{fig:nuvens_palavras_topico3}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+O refinamento evidenciou que o foco real deste agrupamento recai sobre aplicações para especificidades cognitivas. Termos como \enquote{schizophrenia} (esquizofrenia), \enquote{hyperactivity} (hiperatividade) e \enquote{brain} (cérebro) ganharam relevância sobre os termos genéricos, permitindo identificar a intersecção entre inteligência artificial e neurodiversidade que não estava clara na representação baseada apenas em frequência.
+
+Por fim, o Tópico 0 (Figura \ref{fig:nuvens_palavras_topico0}) ilustra a distinção entre conceitos macroeconômicos e componentes físicos.
+
+\begin{figure}[H]
+    \centering
+    % Use a imagem da wordcloud_topicos.jpg
+    \includegraphics[width=0.8\textwidth]{figs/Topico0_energia.png} 
+    \caption{Nuvens de Palavras para conceitos macroeconômicos e componentes físicos}
+    \label{fig:nuvens_palavras_topico0}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+Enquanto a abordagem c-TF-IDF priorizou termos abstratos como \enquote{market}, \enquote{price} e \enquote{fluctuation}, o MMR diversificou a representação para incluir os componentes específicos da matriz energética analisada: \enquote{ethanol}, \enquote{gasoline} e \enquote{hydrogen}. A representação diversificada oferece, portanto, uma descrição mais concreta e imediata do objeto de estudo das publicações agrupadas.
 
 \subsection[Análise dos Tópicos Identificados]{Análise dos Tópicos Identificados}
 \label{ssec:analise_topicos}
@@ -135,6 +204,35 @@ Na Figura \ref{fig:wizmap_geral}, as áreas de maior densidade representam os \t
 \end{itemize}
 
 O mapa, portanto, funciona como uma interface navegável para os dados gerados pelo \textit{pipeline}. Ele apresenta a organização dos tópicos e sua distribuição espacial, permitindo ao usuário explorar o \textit{dataset} e as relações temáticas de forma visual.
+
+\subsection[Comparativo Qualitativo: Busca Lexical e Exploração Semântica]{Comparativo Qualitativo: Busca Lexical e Exploração Semântica}
+\label{ssec:busca_lexical_exploracao}
+
+Para estabelecer uma linha de base de comparação, foi realizado um procedimento de recuperação de informação no sistema atual do Observatório utilizando o descritor \enquote{Dengue}. A Figura \ref{fig:busca_lexical} apresenta o resultado retornado pela plataforma.
+
+\begin{figure}[H]
+    \centering
+    % Use a imagem do WizMap que você forneceu (image_2f68cf.png)
+    \includegraphics[width=0.7\textwidth]{figs/Observatorio_busca_lexical.png} 
+    \caption{Resultado da busca lexical pelo termo \enquote{Dengue} no Observatório.}
+    \label{fig:busca_lexical}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+Conforme observado na Figura \ref{fig:busca_lexical}, o mecanismo de busca opera sob um paradigma estritamente lexical. O algoritmo filtra e exibe apenas os registros em que a cadeia de caracteres \enquote{Dengue} (ou variações morfológicas próximas) consta explicitamente no título da publicação. Nota-se que a dependência da correspondência exata do termo pode, inclusive, gerar ruído na recuperação, trazendo resultados semanticamente distintos do objetivo da pesquisa, como observado no terceiro item da lista, recuperado devido à similaridade gráfica com o termo de busca.
+
+Essa restrição terminológica resulta em um problema de recuperação conhecido como \enquote{silêncio} ou falsos negativos. Publicações relevantes que abordam o domínio das arboviroses, controle vetorial ou vetores (ex: \enquote{Aedes aegypti}, \enquote{Zika}, \enquote{Chikungunya}) mas que não contêm o token específico \enquote{Dengue} no título, são excluídas da lista de resultados.
+
+\begin{figure}[H]
+    \centering
+    % Use a imagem do WizMap que você forneceu (image_2f68cf.png)
+    \includegraphics[width=0.7\textwidth]{figs/Cluster_wizmap.png} 
+    \caption{Cluster de correlação de termos relacionados a arboviroses no mapa de conhecimento interativo.}
+    \label{fig:cluster_arboviroses}
+    \legend{Fonte: O Autor} 
+\end{figure}
+
+Em contraste, ao analisar o Tópico 4 gerado pelo pipeline proposto (conforme Tabela 2) e a figura \ref{fig:cluster_arboviroses}, verifica-se o agrupamento de termos como \enquote{febre} e \enquote{chikungunya} no mesmo cluster de \enquote{dengue}. Isso indica que o modelo vetorial foi capaz de conectar documentos pelo contexto semântico compartilhado e mitigar o silêncio na recuperação identificado no sistema atual.
 
 \section[Limitações do Estudo]{Limitações do Estudo}
 \label{sec:limitacoes}

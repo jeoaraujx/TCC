@@ -66,12 +66,19 @@ A representação vetorial dos documentos foi realizada através do modelo pré-
 
 A configuração do \gls{umap} priorizou a preservação da estrutura local dos dados em detrimento da estrutura global, visando a identificação de micro-tópicos. Os hiperparâmetros foram ajustados experimentalmente para projetar os vetores em um espaço bidimensional (\textit{n\_components=2}), requisito necessário para a compatibilidade com a camada de visualização WizMap. A métrica de distância cosseno foi adotada para capturar a orientação semântica dos vetores.
 
-\subsubsection[Clusterização (HDBSCAN)]{Clusterização (HDBSCAN)}
+\subsubsection[Clusterização (HDBSCAN) e Otimização de Hiperparâmetros]{Clusterização (HDBSCAN) e Otimização de Hiperparâmetros}
 \label{sssec:clusterizacao}
 
-A definição dos tópicos foi executada pelo algoritmo \gls{hdbscan}. A opção por um método baseado em densidade, em oposição a métodos particionais como o \textit{K-Means}, deve-se à natureza não uniforme dos dados textuais científicos.
+A definição dos agrupamentos foi executada pelo algoritmo \gls{hdbscan}. Para determinar o valor ideal do hiperparâmetro \textit{min\_cluster\_size}, que controla o tamanho mínimo para a formação de um tópico, foi conduzida uma análise de sensibilidade quantitativa.
 
-O algoritmo foi parametrizado para detectar agrupamentos de densidade variável e para isolar documentos desconexos como ruído (\textit{outliers}). Definiu-se um tamanho mínimo de \textit{cluster} (\textit{min\_cluster\_size=4}) reduzido, permitindo a emergência de temas de nicho ou incipientes na base de dados analisada.
+O experimento consistiu no treinamento iterativo do modelo variando o parâmetro \textit{min\_cluster\_size} em um intervalo de 4 a 25. Para cada iteração, foram coletadas duas métricas de desempenho:
+
+\begin{enumerate}
+    \item \textbf{Coerência Semântica ($C_v$):} Utilizando a medida $c\_v$ (baseada em janelas deslizantes) para avaliar o grau de associação semântica entre as palavras principais de cada tópico.
+    \item \textbf{Taxa de Ruído (\textit{Outliers}):} Percentual de documentos classificados como -1 (sem tópico atribuído) pelo algoritmo.
+\end{enumerate}
+
+O critério de seleção adotado buscou o ponto de equilíbrio que maximizasse a coerência dos tópicos gerados, mantendo a taxa de descarte de documentos (perda de dados) abaixo de 10\%.
 
 \subsubsection{Configuração Final do BERTopic}
 \label{sssec:configuracao_bertopic}
@@ -83,18 +90,19 @@ Após a configuração, o modelo foi treinado com os textos processados e seus r
 \subsection[Refinamento e Representação dos Tópicos (MMR)]{Refinamento e Representação dos Tópicos (MMR)}
 \label{ssec:refinamento_rotulos}
 
-Após a etapa de \textit{clusterização} (Seção \ref{sssec:clusterizacao}), o \textit{pipeline} produziu um conjunto de tópicos, cada um consistindo em um grupo de documentos. No entanto, esses tópicos eram apenas agrupamentos numéricos; para que tivessem valor analítico, precisavam de uma representação textual interpretável.
+Para avaliar a qualidade semântica e a interpretabilidade dos tópicos gerados, conduziu-se um experimento comparativo focado na etapa de representação de palavras-chave do pipeline. O objetivo foi contrastar a abordagem padrão baseada em frequência (\gls{c-tf-idf}) com a abordagem baseada em diversidade (Maximal Marginal Relevance - MMR).
 
-O \gls{bertopic} realiza essa tarefa através do \gls{c-tf-idf} (Class-based Term Frequency-Inverse Document Frequency), um algoritmo que, conforme descrito na Seção \ref{sec:bertopic}, trata todos os documentos de um tópico como um único documento grande e, em seguida, calcula as pontuações \gls{tf-idf} para extrair as palavras-chave mais representativas.
+Para garantir a validade interna da comparação, as etapas antecedentes à representação foram mantidas constantes em ambos os cenários de teste:
 
-Embora eficaz, uma limitação conhecida da abordagem \gls{c-tf-idf} pura é a \textbf{redundância semântica}. Como o método se baseia unicamente na pontuação de relevância, ele frequentemente retorna termos que são variações uns dos outros (ex: \textit{\enquote{pesquisa}, \enquote{pesquisas}, \enquote{pesquisador}}) ou sinônimos próximos (ex: \textit{\enquote{modelo}, \enquote{modelagem}}). Isso polui a representação do tópico e compromete a sua interpretabilidade imediata, forçando o analista a inferir o conceito central a partir de palavras redundantes.
+\begin{itemize}
+    \item \textbf{Embeddings:} Utilizou-se o modelo pré-treinado \textit{paraphrase-multilingual-MiniLM-L12-v2}.
+    \item \textbf{Redução e Clusterização:} O algoritmo UMAP foi configurado com 5 vizinhos e 2 componentes. O algoritmo HDBSCAN foi fixado com \textit{min\_cluster\_size=8}, valor determinado previamente na análise de sensibilidade (Seção 6.1) por apresentar o maior índice de coerência ($C_v \approx 0.43$) e taxa de outliers reduzida (< 9\%).
+\end{itemize}
 
-Para mitigar este problema e criar rótulos de tópicos mais claros e informativos, este artefato substituiu o modelo de representação padrão pelo \gls{mmr} (Maximal Marginal Relevance). O \gls{mmr} é um algoritmo de diversificação (fundamentado na Seção \ref{sec:bertopic}) que refina a lista de palavras-chave gerada pelo \gls{c-tf-idf}.
-
-Conforme definido no código de treinamento, o modelo foi instanciado com o parâmetro \texttt{MaximalMarginalRelevance(diversity=0.3)}. O \gls{mmr} opera balanceando duas métricas:
+Foram estabelecidos dois cenários de representação:
 \begin{enumerate}
-    \item \textbf{Relevância:} A pontuação original da palavra (seu \textit{score} \gls{c-tf-idf}).
-    \item \textbf{Diversidade:} A dissimilaridade (distância de cosseno) entre uma palavra candidata e as palavras já selecionadas para o rótulo.
+    \item \textbf{Cenário de Controle (Padrão):} Utilização exclusiva do c-TF-IDF. Este método prioriza palavras frequentes dentro de um cluster específico, mas raras no restante do \textit{corpus}. A hipótese é que este método gere rótulos fiéis estatisticamente, porém com tendência à redundância morfológica.
+    \item \textbf{Cenário Experimental (MMR):} Aplicação do MMR sobre os resultados do c-TF-IDF, com fator de diversidade ($\lambda$) configurado em \textit{0.3}. A hipótese é que o reranqueamento reduza a sinonímia e revele subtemas latentes ofuscados por termos genéricos de alta frequência.
 \end{enumerate}
 
 O hiperparâmetro \texttt{diversity=0.3} instrui o algoritmo a priorizar fortemente a relevância (70\% de peso), ao mesmo tempo em que introduz um fator moderado de diversidade (30\% de peso). Na prática, isso permite que o modelo selecione a palavra mais relevante (ex: \textit{\enquote{pesquisa}}), mas penalize termos semanticamente muito próximos (como \textit{\enquote{pesquisas}}), favorecendo a escolha de uma palavra subsequente que, embora ainda relevante, cubra uma faceta diferente do tópico.

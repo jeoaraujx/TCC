@@ -37,14 +37,15 @@
 \usepackage{lmodern}			% Usa a fonte Latin Modern			
 %\usepackage{times}
 
-\usepackage[brazil]{babel}
-\usepackage{csquotes}
+% \usepackage[brazil]{babel}
+
 %\addto{\captionsbrazil}{%
 %  \renewcommand{\bibname}{REFER\^{E}NCIAS}
 %}
 \usepackage{float}
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{csquotes}
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
@@ -66,7 +67,6 @@
 %   \setlength{\parskip}{0pt}
 %   \setlength{\itemsep}{0pt plus 0.3ex}
 % }
-
 \usepackage{url}
 \usepackage{hyperref}
 \def\UrlBreaks{\do\/\do-}
@@ -106,7 +106,9 @@
   {\textcolor{yellow}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon} 
 
 \usepackage[acronym]{glossaries}
+\input{./editar/siglas}
 \makeglossaries
+
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
@@ -205,9 +207,7 @@
 \addto\captionsbrazil{
 %% ajusta nomes padroes do babel
 \renewcommand{\bibname}{REFER\^ENCIAS}
-%\renewcommand{\indexname}{\'INDICE}
-%\renewcommand{\contentsname}{SUM\'ARIO}
-%\renewcommand{\listfigurename}{LISTA DE ILUSTRA\c C\~OES}
+\renewcommand{\listadesiglasname}{LISTA DE ABREVIATURAS E SIGLAS}
 %\renewcommand{\listtablename}{LISTA DE TABELAS}
 %\renewcommand{\agradecimentosname}{AGRADECIMENTOS}
 %\renewcommand{\anu_orientadorname}{ANU_ORIENTADOR}
@@ -234,6 +234,7 @@
 \imprimirfolhaderosto
 
 \input{./nao_editar/anu_orientador}
+\cleardoublepage
 
 %\input{pre/__errata} %se houver, descomente essa linha
 \input{./editar/aprovacao}
@@ -266,19 +267,22 @@
 % ---
 % inserir lista de quadros
 % ---
-\ifquadros
-	\pdfbookmark[0]{\listofquadrosname}{loq}
-	\listofquadros*
-	\cleardoublepage
-\fi
+% \ifquadros
+% 	\pdfbookmark[0]{\listofquadrosname}{loq}
+% 	\listofquadros*
+% 	\cleardoublepage
+% \fi
 % ---
 
 
 
 %Siglas
-\input{editar/siglas}
-\printglossary[type=\acronymtype, title={LISTA DE ABREVIATURAS E SIGLAS}]
-\cleardoublepage
+
+\ifsiglas
+ \printglossary[type=\acronymtype, title={LISTA DE ABREVIATURAS E SIGLAS}]
+ \cleardoublepage
+\fi
+
 
 %Símbolos
 \ifsimbolos

@@ -132,14 +132,6 @@ INPUT ./nao_editar/config/cchetex.sty
 INPUT ./nao_editar/config/cchetex.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
-INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
@@ -150,6 +142,14 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lastpage/lastpage2e.sty
@@ -413,6 +413,11 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/supertabular/supertabular.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+INPUT ./editar/siglas.tex
+INPUT ./editar/siglas.tex
+INPUT ./editar/siglas.tex
+INPUT ./editar/siglas.tex
+INPUT ./editar/siglas.tex
 OUTPUT monografia.glo
 OUTPUT monografia.acn
 INPUT ./editar/dados.tex
@@ -578,15 +583,13 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT ./monografia.lot
 INPUT ./monografia.lot
 INPUT monografia.lot
-INPUT ./editar/siglas.tex
-INPUT ./editar/siglas.tex
-INPUT ./editar/siglas.tex
-INPUT ./editar/siglas.tex
-INPUT editar/siglas.tex
-OUTPUT monografia.glsdefs
+INPUT ./monografia.acr
+INPUT ./monografia.acr
+INPUT monografia.acr
 INPUT ./monografia.toc
 INPUT ./monografia.toc
 INPUT monografia.toc
@@ -619,7 +622,6 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT ./caps/2.0 - Referencal teorico.tex
 INPUT ./caps/2.0 - Referencal teorico.tex
 INPUT caps/2.0 - Referencal teorico.tex
@@ -737,14 +739,40 @@ INPUT ./figs/Arquitetura da solução.png
 INPUT ./figs/Arquitetura da solução.png
 INPUT ./figs/Arquitetura da solução.png
 INPUT ./figs/Arquitetura da solução.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT ./caps/6.0 - Resultados.tex
 INPUT ./caps/6.0 - Resultados.tex
 INPUT caps/6.0 - Resultados.tex
-INPUT ./figs/npmi_por_topico.png
-INPUT ./figs/npmi_por_topico.png
-INPUT ./figs/npmi_por_topico.png
-INPUT ./figs/npmi_por_topico.png
-INPUT ./figs/npmi_por_topico.png
+INPUT ./figs/Analise_hiperparametro.png
+INPUT ./figs/Analise_hiperparametro.png
+INPUT ./figs/Analise_hiperparametro.png
+INPUT ./figs/Analise_hiperparametro.png
+INPUT ./figs/Analise_hiperparametro.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./figs/Npmi_modelos.png
+INPUT ./figs/Npmi_modelos.png
+INPUT ./figs/Npmi_modelos.png
+INPUT ./figs/Npmi_modelos.png
+INPUT ./figs/Npmi_modelos.png
+INPUT ./figs/Topico9_saude.png
+INPUT ./figs/Topico9_saude.png
+INPUT ./figs/Topico9_saude.png
+INPUT ./figs/Topico9_saude.png
+INPUT ./figs/Topico9_saude.png
+INPUT ./figs/Topico3_educacao.png
+INPUT ./figs/Topico3_educacao.png
+INPUT ./figs/Topico3_educacao.png
+INPUT ./figs/Topico3_educacao.png
+INPUT ./figs/Topico3_educacao.png
+INPUT ./figs/Topico0_energia.png
+INPUT ./figs/Topico0_energia.png
+INPUT ./figs/Topico0_energia.png
+INPUT ./figs/Topico0_energia.png
+INPUT ./figs/Topico0_energia.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
 INPUT ./figs/wordcloud_topicos.png
 INPUT ./figs/wordcloud_topicos.png
@@ -756,6 +784,16 @@ INPUT ./figs/wizmap_overview.png
 INPUT ./figs/wizmap_overview.png
 INPUT ./figs/wizmap_overview.png
 INPUT ./figs/wizmap_overview.png
+INPUT ./figs/Observatorio_busca_lexical.png
+INPUT ./figs/Observatorio_busca_lexical.png
+INPUT ./figs/Observatorio_busca_lexical.png
+INPUT ./figs/Observatorio_busca_lexical.png
+INPUT ./figs/Observatorio_busca_lexical.png
+INPUT ./figs/Cluster_wizmap.png
+INPUT ./figs/Cluster_wizmap.png
+INPUT ./figs/Cluster_wizmap.png
+INPUT ./figs/Cluster_wizmap.png
+INPUT ./figs/Cluster_wizmap.png
 INPUT ./caps/7.0 - Conclusão.tex
 INPUT ./caps/7.0 - Conclusão.tex
 INPUT caps/7.0 - Conclusão.tex
@@ -768,7 +806,6 @@ INPUT monografia.brf
 INPUT ./monografia.brf
 INPUT ./monografia.brf
 OUTPUT monografia.brf
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 OUTPUT monografia.lof
 OUTPUT monografia.lot
 OUTPUT monografia.toc
