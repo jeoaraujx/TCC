@@ -5,14 +5,14 @@ Este capítulo apresenta a avaliação do artefato computacional desenvolvido, c
 
 A análise dos resultados está estruturada em três dimensões:
 \begin{itemize}    
-    \item \textbf{Validação Quantitativa (Seção 6.1):} Apresenta as métricas objetivas de qualidade dos tópicos gerados, conforme planejado na Seção \ref{sec:validacao_quantitativa}, com foco na Coerência (NPMI) e Diversidade dos tópicos.
+    \item \textbf{Resultados da Avaliação de Desempenho (Seção 6.1):} Apresenta as métricas objetivas de qualidade dos tópicos gerados, conforme planejado na Seção \ref{sec:validacao_quantitativa}, com foco na Coerência (NPMI) e Diversidade dos tópicos.
     
-    \item \textbf{Validação Qualitativa (Seção 6.2):} Realiza a análise semântica e interpretativa dos resultados, conforme a Seção \ref{sec:validacao_qualitativa}. Esta seção analisa os principais tópicos identificados, avalia a eficácia do refinamento de rótulos com \gls{mmr} e discute a validade do mapa de conhecimento gerado.
+    \item \textbf{Validação Semântica e Discussão (Seção 6.2):} Realiza a análise semântica e interpretativa dos resultados, conforme a Seção \ref{sec:validacao_qualitativa}. Esta seção analisa os principais tópicos identificados, avalia a eficácia do refinamento de rótulos com \gls{mmr} e discute a validade do mapa de conhecimento gerado.
     
     \item \textbf{Limitações do Estudo (Seção 6.3):} Discute as limitações inerentes ao uso de um \textit{dataset} de teste (NPAI) e a natureza de protótipo do artefato, indicando caminhos para a aplicação futura no acervo completo do Observatório.
 \end{itemize}
 
-\section[Validação Quantitativa]{Validação Quantitativa}
+\section[Resultados da Avaliação de Desempenho]{Resultados da Avaliação de Desempenho}
 \label{sec:resultado_validacao_quantitativa}
 
 Conforme definido na metodologia (Seção \ref{sec:validacao_quantitativa}), a primeira etapa da avaliação do artefato consistiu na medição objetiva da qualidade dos tópicos gerados. Para isso, o \textit{pipeline} foi avaliado em duas métricas centrais: Diversidade de Tópicos e Coerência de Tópicos (NPMI).
@@ -20,7 +20,7 @@ Conforme definido na metodologia (Seção \ref{sec:validacao_quantitativa}), a p
 \subsection[Análise de Sensibilidade e Definição de Tópicos]{Análise de Sensibilidade e Definição de Tópicos}
 \label{ssec:analise_sensibilidade}
 
-A validação quantitativa dos hiperparâmetros, conforme metodologia descrita na Seção \ref{sssec:clusterizacao}, resultou nos indicadores apresentados na Figura \ref{fig:analise_hiperparametro}. O gráfico relaciona o Escore de Coerência (eixo esquerdo, linha azul) e o Número de Tópicos Gerados (eixo direito, linha vermelha) em função do tamanho do cluster.
+A avaliação de desempenho dos hiperparâmetros, conforme metodologia descrita na Seção \ref{sssec:clusterizacao}, resultou nos indicadores apresentados na Figura \ref{fig:analise_hiperparametro}. O gráfico relaciona o Escore de Coerência (eixo esquerdo, linha azul) e o Número de Tópicos Gerados (eixo direito, linha vermelha) em função do tamanho do cluster.
 
 \begin{figure}[htb]
     \centering
@@ -49,7 +49,7 @@ No experimento, o modelo alcançou um índice de Diversidade de Tópicos de \tex
 \subsection[Avaliação de Coerência e Trade-off Semântico]{Avaliação de Coerência e Trade-off Semântico}
 \label{ssec:coerencia_topicos}
 
-Para a validação quantitativa da qualidade dos tópicos, foram empregadas duas métricas com objetivos distintos: a Coerência $C_v$, focada na estabilidade estrutural, e o \gls{npmi}, focado na coocorrência léxica.
+Para a avaliação de coerência dos tópicos, foram empregadas duas métricas com objetivos distintos: a Coerência $C_v$, focada na estabilidade estrutural, e o \gls{npmi}, focado na coocorrência léxica.
 
 A métrica $C_v$ foi estabelecida como o indicador principal durante a otimização de hiperparâmetros (conforme Seção \ref{ssec:analise_sensibilidade}). O modelo atingiu seu ponto ótimo ($C_v \approx 0.43$) com clusters de tamanho 8, evidenciando que os agrupamentos formados possuem forte consistência interna.
 
@@ -76,17 +76,17 @@ Adicionalmente, deve-se observar que a magnitude negativa dos valores em ambos o
     \item \textbf{Volume de Dados:} A validação ocorreu em um subconjunto de dados de teste, cujo volume reduzido pode limitar a estabilização de métricas estatísticas globais de coocorrência.
 \end{enumerate}
 
-Diante dessas limitações quantitativas intrínsecas, a validação qualitativa, apresentada a seguir, torna-se indispensável para aferir a utilidade real e a interpretabilidade dos tópicos gerados.
+Diante dessas limitações de desempenho intrínsecas, a validação semântica e discussão, apresentada a seguir, torna-se indispensável para aferir a utilidade real e a interpretabilidade dos tópicos gerados.
 
-\section[Validação Qualitativa]{Validação Qualitativa}
+\section[Validação Semântica e Discussão]{Validação Semântica e Discussão}
 \label{sec:resultado_validacao_qualitativa}
 
-A validação qualitativa do artefato é crucial para complementar as métricas quantitativas (Capítulo \ref{sec:validacao_quantitativa}), focando na interpretabilidade e na utilidade prática dos tópicos identificados. Esta seção avalia a capacidade do \textit{pipeline} em gerar agrupamentos temáticos coerentes e semanticamente ricos e discute como a visualização interativa (\gls{wizmap}) contribui para a exploração do conhecimento.
+A validação semântica do artefato é crucial para complementar as métricas de desempenho (Seção \ref{sec:validacao_quantitativa}), focando na interpretabilidade e na utilidade prática dos tópicos identificados. Esta seção avalia a capacidade do \textit{pipeline} em gerar agrupamentos temáticos coerentes e semanticamente ricos e discute como a visualização interativa (\gls{wizmap}) contribui para a exploração do conhecimento.
 
 \subsection[Experimento Comparativo de Representação (c-TF-IDF vs. MMR)]{Experimento Comparativo de Representação (c-TF-IDF vs. MMR)}
 \label{ssec:experimento_comparativo_representacao}
 
-A avaliação da qualidade dos rótulos baseou-se na inspeção qualitativa de Nuvens de Palavras (\textit{WordClouds}) pareadas, observando-se critérios de especificidade semântica e redução de redundância.
+A avaliação da qualidade dos rótulos baseou-se na inspeção semântica de Nuvens de Palavras (\textit{WordClouds}) pareadas, observando-se critérios de especificidade semântica e redução de redundância.
 
 Inicialmente, a análise do Tópico 9 (Arboviroses e Saúde Pública), apresentada na Figura \ref{fig:nuvens_palavras_topico9}, ilustra o impacto do refinamento na contextualização do tema. No modelo padrão (à esquerda), a representação é dominada por termos de alta ocorrência como \enquote{dengue}, \enquote{case} (caso) e \enquote{fever} (febre), centrando a descrição apenas na doença principal e seus sintomas.
 \begin{figure}[H]
@@ -183,7 +183,7 @@ Essa auditoria confirma que, embora o modelo tenha sucesso em identificar os gra
 \subsection[Discussão do Mapa de Conhecimento Interativo]{Discussão do Mapa de Conhecimento Interativo}
 \label{ssec:mapa_conhecimento}
 
-O artefato final do \textit{pipeline} é um mapa de conhecimento interativo, gerado pela ferramenta \gls{wizmap} (Figura \ref{fig:wizmap_geral}). Esta visualização posiciona cada publicação (representada por um ponto) no espaço bidimensional calculado pelo \gls{umap} (Seção \ref{sssec:reducao_dimensionalidade}).
+O artefato final, visualizado através da ferramenta WizMap na Figura \ref{fig:wizmap_geral}, atua como uma interface de navegação sobre o espaço semântico calculado. Embora não constitua uma ontologia formal, a projeção atua funcionalmente como um mapa de conhecimento ao permitir que o pesquisador identifique visualmente as fronteiras e intersecções entre os domínios científicos. As áreas de maior densidade (\textit{clusters}) representam a consolidação de tópicos, enquanto a distância euclidiana entre os pontos serve como proxy para a dissimilariedade temática.
 
 % --- IMAGEM DO WIZMAP ---
 \begin{figure}[H]
@@ -238,19 +238,21 @@ Essa restrição terminológica resulta em um problema de recuperação conhecid
 
 Em contraste, ao analisar o Tópico 4 gerado pelo pipeline proposto (conforme Tabela 2) e a figura \ref{fig:cluster_arboviroses}, verifica-se o agrupamento de termos como \enquote{febre} e \enquote{chikungunya} no mesmo cluster de \enquote{dengue}. Isso indica que o modelo vetorial foi capaz de conectar documentos pelo contexto semântico compartilhado e mitigar o silêncio na recuperação identificado no sistema atual.
 
+No que tange à validação do objetivo central de \enquote{melhorar a capacidade de exploração}, os resultados da inspeção visual (demonstrados na Seção \ref{ssec:analise_topicos}) demonstram que o artefato é eficaz em agrupar documentos por afinidade semântica, uma funcionalidade inexistente na busca lexical atual (demonstrada na Seção \ref{ssec:busca_lexical_exploracao}). A validação por especialista confirma que os agrupamentos (clusters) correspondem a domínios reais de conhecimento. Portanto, considera-se que o artefato resolve o problema da ausência de ferramentas de navegação semântica, validando sua utilidade estrutural como um complemento à busca tradicional, embora a mensuração de ganhos de eficiência (tempo de busca por usuário final) permaneça como uma proposta para trabalhos futuros.
+
 \section[Limitações do Estudo]{Limitações do Estudo}
 \label{sec:limitacoes}
 
 A interpretação dos resultados deve considerar as limitações inerentes ao escopo experimental e à natureza dos dados utilizados.
 
 \begin{itemize}
-    \item \textbf{Conjunto de Dados (Prototipagem vs. Produção):} A principal limitação deste estudo é a fonte dos dados. O \textit{pipeline} foi desenvolvido e validado sobre um \textit{dataset} de teste estático (um \textit{dump} do NPAI) e não sobre o acervo de dados completo e dinâmico do \textbf{Observatório de dados públicos de ciência e tecnologia da Bahia}. Embora este \textit{dataset} tenha sido suficiente para a validação do protótipo (o artefato), os resultados aqui apresentados (como a quantidade e a natureza dos tópicos) não são representativos do acervo real do Observatório.
+    \item \textbf{Conjunto de Dados (Prototipagem vs. Produção):} Uma característica deste ciclo de pesquisa foi a utilização de um subconjunto de dados estático (NPAI) em detrimento da conexão direta com o acervo completo do Observatório. Embora isso impeça a generalização estatística dos tópicos encontrados para toda a ciência baiana (validade externa bibliométrica), essa restrição foi necessária para viabilizar a validação técnica do artefato (validade interna). O uso de um ambiente controlado permitiu o ajuste fino dos algoritmos sem as latências e restrições de segurança inerentes ao acesso a bancos de dados de produção governamentais. Portanto, os resultados validam a tecnologia desenvolvida, cumprindo o objetivo de engenharia proposto, deixando a aplicação em larga escala como uma etapa subsequente de implantação.
 
     \item \textbf{Dependência dos Hiperparâmetros:} A configuração do \textit{pipeline}, especialmente os hiperparâmetros de modelagem (Seções \ref{sssec:reducao_dimensionalidade} e \ref{sssec:clusterizacao}), foi diretamente influenciada pelo volume reduzido do \textit{dataset} de teste. Parâmetros como \texttt{n\_neighbors} (UMAP) e \texttt{min\_cluster\_size} (HDBSCAN) foram ajustados para permitir a descoberta de tópicos de nicho em um \textit{corpus} pequeno. Estes parâmetros não seriam diretamente transferíveis para o acervo completo do Observatório, que, sendo ordens de magnitude maior, exigiria uma nova etapa de \textit{tuning} (ajuste fino).
 
     \item \textbf{Natureza do Texto de Entrada:} O \textit{pipeline} foi treinado utilizando exclusivamente os \textbf{títulos} das publicações. Textos curtos, por definição, oferecem baixa co-ocorrência de palavras. Este fator contextual é a explicação técnica mais provável para o escore negativo da métrica \gls{npmi} (Seção \ref{ssec:coerencia_topicos}), que é uma métrica estatística dependente de co-ocorrência. Os resultados de coerência poderiam ser diferentes se o modelo fosse treinado em textos mais longos, como os resumos (\textit{abstracts}).
 
-    \item \textbf{Limitação da Métrica de Coerência:} Conforme discutido na Seção \ref{ssec:coerencia_topicos}, a própria métrica \gls{npmi} apresenta uma limitação contextual. Ela foi projetada para avaliar modelos estatísticos (como o \gls{lda}) e pode não ser a ferramenta de avaliação quantitativa ideal para modelos baseados em similaridade semântica (como o \gls{bertopic}). A validação qualitativa (Seção \ref{sec:validacao_qualitativa}) foi, portanto, necessária para avaliar a interpretabilidade dos tópicos.
+    \item \textbf{Limitação da Métrica de Coerência:} Conforme discutido na Seção \ref{ssec:coerencia_topicos}, a própria métrica \gls{npmi} apresenta uma limitação contextual. Ela foi projetada para avaliar modelos estatísticos (como o \gls{lda}) e pode não ser a ferramenta de avaliação de desempenho ideal para modelos baseados em similaridade semântica (como o \gls{bertopic}). A Validação Semântica e Discussão (Seção \ref{sec:validacao_qualitativa}) foi, portanto, necessária para avaliar a interpretabilidade dos tópicos.
 
     \item \textbf{Natureza do Artefato (DSR):} O artefato desenvolvido é um \textbf{protótipo} executado em um ambiente de desenvolvimento (Google Colab). Ele não está integrado ao \textit{pipeline} de produção, ao banco de dados dinâmico ou à interface de usuário existente do Observatório (descritos na Seção \ref{ssec:base_observatorio}). A sua função neste experimento é demonstrar a \textit{viabilidade} da metodologia, e não apresentar uma solução de \textit{software} em produção.
    

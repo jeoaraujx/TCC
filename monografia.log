@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  16 DEC 2025 23:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  17 DEC 2025 23:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,110 +1508,114 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 1.
 [15]
+
+[16]
 Cap\'{\i }tulo 2.
 (./caps/2.1 - Ciência da Informação.tex
 
-[16
+[17
 
 ]) (./caps/2.2 - Processamento de Linguagem.tex
 
-[17]) (./caps/2.3 - Representação vetorial.tex
+[18]) (./caps/2.3 - Representação vetorial.tex
 
-[18]
-<figs/Cbow_skipgram.png, id=619, 407.121pt x 236.082pt>
+[19]
+<figs/Cbow_skipgram.png, id=628, 407.121pt x 236.082pt>
 File: figs/Cbow_skipgram.png Graphic file (type png)
 <use figs/Cbow_skipgram.png>
 Package pdftex.def Info: figs/Cbow_skipgram.png  used on input line 22.
 (pdftex.def)             Requested size: 318.49861pt x 184.70155pt.
 
 
-[19{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./figs/Cbow_skipgram.png>]
-<figs/Transformadores.png, id=644, 435.6275pt x 575.14874pt>
+[20{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./figs/Cbow_skipgram.png>]
+<figs/Transformadores.png, id=653, 435.6275pt x 575.14874pt>
 File: figs/Transformadores.png Graphic file (type png)
 <use figs/Transformadores.png>
 Package pdftex.def Info: figs/Transformadores.png  used on input line 38.
 (pdftex.def)             Requested size: 181.99722pt x 240.27951pt.
 
 
-[20 <./figs/Transformadores.png>]
-<figs/Bert_vs_gpt.png, id=677, 461.92575pt x 112.62074pt>
+[21 <./figs/Transformadores.png>]
+<figs/Bert_vs_gpt.png, id=686, 461.92575pt x 112.62074pt>
 File: figs/Bert_vs_gpt.png Graphic file (type png)
 <use figs/Bert_vs_gpt.png>
 Package pdftex.def Info: figs/Bert_vs_gpt.png  used on input line 62.
 (pdftex.def)             Requested size: 318.49861pt x 77.6551pt.
 
 
-[21]
-<figs/Sbert_arch.png, id=712, 520.19344pt x 235.63031pt>
+[22]
+<figs/Sbert_arch.png, id=721, 520.19344pt x 235.63031pt>
 File: figs/Sbert_arch.png Graphic file (type png)
 <use figs/Sbert_arch.png>
 Package pdftex.def Info: figs/Sbert_arch.png  used on input line 76.
 (pdftex.def)             Requested size: 318.49861pt x 144.26999pt.
 
 
-[22 <./figs/Bert_vs_gpt.png>]) (./caps/2.4 - Abordagem tradicional.tex
+[23 <./figs/Bert_vs_gpt.png>]) (./caps/2.4 - Abordagem tradicional.tex
 
-[23 <./figs/Sbert_arch.png>]
+[24 <./figs/Sbert_arch.png>]
 
-[24{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]) (./caps/2.5 - Bertopic.tex
-<figs/Bertopic_arch.png, id=822, 429.10312pt x 429.85594pt>
+[25{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]) (./caps/2.5 - Bertopic.tex
+<figs/Bertopic_arch.png, id=831, 429.10312pt x 429.85594pt>
 File: figs/Bertopic_arch.png Graphic file (type png)
 <use figs/Bertopic_arch.png>
 Package pdftex.def Info: figs/Bertopic_arch.png  used on input line 14.
 (pdftex.def)             Requested size: 181.99722pt x 182.31577pt.
 
 
-[25]
-<figs/UMAP.png, id=853, 464.73625pt x 467.7475pt>
+[26]
+<figs/UMAP.png, id=862, 464.73625pt x 467.7475pt>
 File: figs/UMAP.png Graphic file (type png)
 <use figs/UMAP.png>
 Package pdftex.def Info: figs/UMAP.png  used on input line 30.
 (pdftex.def)             Requested size: 318.49861pt x 320.56924pt.
 
 
-[26 <./figs/Bertopic_arch.png>]
+[27 <./figs/Bertopic_arch.png>]
 
-[27 <./figs/UMAP.png>]
+[28 <./figs/UMAP.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 51.
  (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figs/HDBSCAN.png, id=888, 585.18625pt x 448.67625pt>
+<figs/HDBSCAN.png, id=897, 585.18625pt x 448.67625pt>
 File: figs/HDBSCAN.png Graphic file (type png)
 <use figs/HDBSCAN.png>
 Package pdftex.def Info: figs/HDBSCAN.png  used on input line 61.
 (pdftex.def)             Requested size: 181.99722pt x 139.54005pt.
 
 
-[28{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figs/HDBSCAN.png>]
+[29{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./figs/HDBSCAN.png>]
 
-[29]) (./caps/2.6 - Visualização de dados.tex
+[30]) (./caps/2.6 - Visualização de dados.tex
 
-[30]
-<figs/Wizmap_interface.png, id=956, 581.17125pt x 335.00156pt>
+[31]
+<figs/Wizmap_interface.png, id=965, 581.17125pt x 335.00156pt>
 File: figs/Wizmap_interface.png Graphic file (type png)
 <use figs/Wizmap_interface.png>
 Package pdftex.def Info: figs/Wizmap_interface.png  used on input line 17.
 (pdftex.def)             Requested size: 318.49861pt x 183.59201pt.
 
 
-[31 <./figs/Wizmap_interface.png>]
-<figs/Wizmap_quadtree.png, id=991, 281.55188pt x 128.73094pt>
+[32 <./figs/Wizmap_interface.png>]
+<figs/Wizmap_quadtree.png, id=1000, 281.55188pt x 128.73094pt>
 File: figs/Wizmap_quadtree.png Graphic file (type png)
 <use figs/Wizmap_quadtree.png>
 Package pdftex.def Info: figs/Wizmap_quadtree.png  used on input line 37.
 (pdftex.def)             Requested size: 227.5pt x 104.01808pt.
 ) (./caps/2.7 - Consideracoes finais.tex)) (./caps/3.0 - Trabalhos Correlatos.tex
 
-[32 <./figs/Wizmap_quadtree.png>]
+[33 <./figs/Wizmap_quadtree.png>]
+
+[34]
 Cap\'{\i }tulo 3.
 
 
-[33
+[35
 
 ]
 
-[34]
+[36]
 Underfull \hbox (badness 1394) in paragraph at lines 48--48
 []|\T1/lmr/m/n/9 (+20) BERT (usado para
  []
@@ -1678,66 +1682,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
 
 
 
-[35
+[37
 
 ]) (./caps/4.0 - Metodologia.tex
 
-[36
+[38
 
 ]
 Cap\'{\i }tulo 4.
-<figs/DSR.png, id=1274, 1513.655pt x 629.35126pt>
+<figs/DSR.png, id=1289, 1513.655pt x 629.35126pt>
 File: figs/DSR.png Graphic file (type png)
 <use figs/DSR.png>
 Package pdftex.def Info: figs/DSR.png  used on input line 13.
 (pdftex.def)             Requested size: 318.49861pt x 132.42694pt.
 
 
-[37
+[39
 
  <./figs/DSR.png>]
 
-[38]
-
-[39]) (./caps/5.0 - Projeto de Desenvolvimento.tex
-
 [40]
+
+[41]
+
+[42]) (./caps/5.0 - Projeto de Desenvolvimento.tex
+
+[43]
 Cap\'{\i }tulo 5.
 
 
-[41
+[44
 
 ]
-<figs/Arquitetura-simcc.png, id=1381, 453.19313pt x 215.30438pt>
+<figs/Arquitetura-simcc.png, id=1401, 453.19313pt x 215.30438pt>
 File: figs/Arquitetura-simcc.png Graphic file (type png)
 <use figs/Arquitetura-simcc.png>
 Package pdftex.def Info: figs/Arquitetura-simcc.png  used on input line 34.
 (pdftex.def)             Requested size: 318.49861pt x 151.31323pt.
 
 
-[42 <./figs/Arquitetura-simcc.png>]
+[45 <./figs/Arquitetura-simcc.png>]
 
-[43] (./caps/5.2 - Arquitetura da solução.tex
-<figs/Arquitetura da solução.png, id=1419, 2080.77374pt x 1176.395pt>
+[46] (./caps/5.2 - Arquitetura da solução.tex
+<figs/Arquitetura da solução.png, id=1439, 2080.77374pt x 1176.395pt>
 File: figs/Arquitetura da solução.png Graphic file (type png)
 <use figs/Arquitetura da solução.png>
 Package pdftex.def Info: figs/Arquitetura da solução.png  used on input line 23.
 (pdftex.def)             Requested size: 455.0pt x 257.22807pt.
 
 
-[44]
-
-[45 <./figs/Arquitetura da solução.png>]
-
-[46]
-
 [47]
 
-[48])) (./caps/6.0 - Resultados.tex
+[48 <./figs/Arquitetura da solução.png>]
 
 [49]
+
+[50]
+
+[51]
+
+[52])) (./caps/6.0 - Resultados.tex
+
+[53]
 Cap\'{\i }tulo 6.
-<figs/Analise_hiperparametro.png, id=1482, 1193.45876pt x 592.2125pt>
+<figs/Analise_hiperparametro.png, id=1510, 1193.45876pt x 592.2125pt>
 File: figs/Analise_hiperparametro.png Graphic file (type png)
 <use figs/Analise_hiperparametro.png>
 Package pdftex.def Info: figs/Analise_hiperparametro.png  used on input line 27.
@@ -1746,86 +1754,88 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 28.
 
 
-[50
+[54
 
 ]
 
-[51 <./figs/Analise_hiperparametro.png (PNG copy)>]
-<figs/Npmi_modelos.png, id=1495, 713.66624pt x 529.98pt>
+[55 <./figs/Analise_hiperparametro.png (PNG copy)>]
+<figs/Npmi_modelos.png, id=1524, 713.66624pt x 529.98pt>
 File: figs/Npmi_modelos.png Graphic file (type png)
 <use figs/Npmi_modelos.png>
 Package pdftex.def Info: figs/Npmi_modelos.png  used on input line 60.
 (pdftex.def)             Requested size: 364.00139pt x 270.31047pt.
 
 
-[52 <./figs/Npmi_modelos.png (PNG copy)>]
-<figs/Topico9_saude.png, id=1506, 1193.45876pt x 478.78876pt>
+[56 <./figs/Npmi_modelos.png (PNG copy)>]
+<figs/Topico9_saude.png, id=1537, 1193.45876pt x 478.78876pt>
 File: figs/Topico9_saude.png Graphic file (type png)
 <use figs/Topico9_saude.png>
 Package pdftex.def Info: figs/Topico9_saude.png  used on input line 95.
 (pdftex.def)             Requested size: 364.00139pt x 146.0267pt.
 
 
-[53]
-<figs/Topico3_educacao.png, id=1513, 1193.45876pt x 478.78876pt>
+[57]
+<figs/Topico3_educacao.png, id=1544, 1193.45876pt x 478.78876pt>
 File: figs/Topico3_educacao.png Graphic file (type png)
 <use figs/Topico3_educacao.png>
 Package pdftex.def Info: figs/Topico3_educacao.png  used on input line 107.
 (pdftex.def)             Requested size: 364.00139pt x 146.0267pt.
 
 
-[54 <./figs/Topico9_saude.png (PNG copy)> <./figs/Topico3_educacao.png (PNG copy)>]
-<figs/Topico0_energia.png, id=1520, 1193.45876pt x 478.78876pt>
+[58 <./figs/Topico9_saude.png (PNG copy)> <./figs/Topico3_educacao.png (PNG copy)>]
+<figs/Topico0_energia.png, id=1550, 1193.45876pt x 478.78876pt>
 File: figs/Topico0_energia.png Graphic file (type png)
 <use figs/Topico0_energia.png>
 Package pdftex.def Info: figs/Topico0_energia.png  used on input line 120.
 (pdftex.def)             Requested size: 364.00139pt x 146.0267pt.
 
 
-[55 <./figs/Topico0_energia.png (PNG copy)>]
-<figs/wordcloud_topicos.png, id=1525, 1997.4625pt x 468.75125pt>
+[59 <./figs/Topico0_energia.png (PNG copy)>]
+<figs/wordcloud_topicos.png, id=1555, 1997.4625pt x 468.75125pt>
 File: figs/wordcloud_topicos.png Graphic file (type png)
 <use figs/wordcloud_topicos.png>
 Package pdftex.def Info: figs/wordcloud_topicos.png  used on input line 158.
 (pdftex.def)             Requested size: 455.0pt x 106.77339pt.
 
 
-[56 <./figs/wordcloud_topicos.png (PNG copy)>]
-<figs/wizmap_overview.png, id=1535, 648.17157pt x 387.69844pt>
+[60 <./figs/wordcloud_topicos.png (PNG copy)>]
+<figs/wizmap_overview.png, id=1563, 648.17157pt x 387.69844pt>
 File: figs/wizmap_overview.png Graphic file (type png)
 <use figs/wizmap_overview.png>
 Package pdftex.def Info: figs/wizmap_overview.png  used on input line 192.
 (pdftex.def)             Requested size: 455.0pt x 272.1561pt.
 
 
-[57]
+[61]
 
-[58 <./figs/wizmap_overview.png>]
-<figs/Observatorio_busca_lexical.png, id=1550, 1130.72438pt x 504.38437pt>
+[62 <./figs/wizmap_overview.png>]
+<figs/Observatorio_busca_lexical.png, id=1579, 1130.72438pt x 504.38437pt>
 File: figs/Observatorio_busca_lexical.png Graphic file (type png)
 <use figs/Observatorio_busca_lexical.png>
 Package pdftex.def Info: figs/Observatorio_busca_lexical.png  used on input line 220.
 (pdftex.def)             Requested size: 318.49861pt x 142.07324pt.
-<figs/Cluster_wizmap.png, id=1552, 330.48468pt x 229.60782pt>
+<figs/Cluster_wizmap.png, id=1581, 330.48468pt x 229.60782pt>
 File: figs/Cluster_wizmap.png Graphic file (type png)
 <use figs/Cluster_wizmap.png>
 Package pdftex.def Info: figs/Cluster_wizmap.png  used on input line 233.
 (pdftex.def)             Requested size: 318.49861pt x 221.28987pt.
 
 
-[59 <./figs/Observatorio_busca_lexical.png>]
+[63 <./figs/Observatorio_busca_lexical.png>]
 
-[60 <./figs/Cluster_wizmap.png>]) (./caps/7.0 - Conclusão.tex
+[64 <./figs/Cluster_wizmap.png>]
 
-[61]
+[65]) (./caps/7.0 - Conclusão.tex
+
+[66]
 Cap\'{\i }tulo 7.
 
 
-[62
+[67
 
 ]))
 
-[63] (./monografia.bbl (./monografia.brf)
+[68] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write8
 \openout8 = `monografia.brf'.
 
@@ -1833,17 +1843,17 @@ Cap\'{\i }tulo 7.
 bibitemlist
 
 
-[64
+[69
 
 
 
 ]
 
-[65]
+[70]
 
-[66])
+[71])
 
-[67]
+[72]
 \tf@lof=\write9
 \openout9 = `monografia.lof'.
 
@@ -1861,21 +1871,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 60A202CB19379A01B040BAE71422D8FE;7209.
+(rerunfilecheck)             Checksum: 4DBBA0028956BE35EEF61D5B18E56DFB;7214.
  ) 
 Here is how much of TeX's memory you used:
- 44186 strings out of 467747
- 838526 string characters out of 5431120
- 1481002 words of memory out of 5000000
- 71304 multiletter control sequences out of 15000+600000
- 747621 words of font info for 315 fonts, out of 8000000 for 9000
+ 44215 strings out of 467747
+ 838880 string characters out of 5431120
+ 1481323 words of memory out of 5000000
+ 71318 multiletter control sequences out of 15000+600000
+ 747524 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,117p,2545b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (68 pages, 3336431 bytes).
+Output written on monografia.pdf (73 pages, 3347979 bytes).
 PDF statistics:
- 2073 PDF objects out of 2073 (max. 8388607)
- 1774 compressed objects within 18 object streams
- 302 named destinations out of 1000 (max. 500000)
- 61003 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2129 PDF objects out of 2487 (max. 8388607)
+ 1824 compressed objects within 19 object streams
+ 319 named destinations out of 1000 (max. 500000)
+ 61035 words of extra memory for PDF output out of 61914 (max. 10000000)
 

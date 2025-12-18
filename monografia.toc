@@ -3,56 +3,60 @@
 \cftinsert {APP}
 \babel@toc {brazil}{}\relax 
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{INTRODUÇÃO}}{14}{chapter.1}%
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{REFERENCIAL TEÓRICO}}{16}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Ciência da Informação e Análise de Publicações Científicas}{16}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Processamento de Linguagem Natural (PLN)}{17}{section.2.2}%
-\contentsline {section}{\numberline {2.3}A Evolução das Representações Vetoriais em PLN}{18}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Embeddings Estáticos: Limitações do Bag-of-Words}{18}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}A Revolução dos Transformadores e o Mecanismo de Atenção}{20}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Embeddings Contextuais: BERT e SBERT}{21}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Abordagens Tradicionais de Modelagem de Tópicos}{23}{section.2.4}%
-\contentsline {section}{\numberline {2.5}BERTopic: Uma Abordagem Moderna}{25}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Visualização de Dados para Análise Científica}{30}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Síntese do Referencial Teórico}{32}{section.2.7}%
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{TRABALHOS CORRELATOS}}{33}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Síntese Comparativa dos Trabalhos Correlatos}{34}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Considerações Finais}{36}{section.3.2}%
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{METODOLOGIA}}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Identificação do Problema e Definição de Objetivos}{37}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Desenvolvimento do Artefato}{38}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Avaliação e Validação}{38}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Validação Quantitativa}{39}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Validação Qualitativa}{40}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Apresentação dos Resultados e Comunicação}{40}{section.4.4}%
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{PROJETO DE DESENVOLVIMENTO}}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Tecnologias Utilizadas}{41}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Base Tecnológica do Observatório}{42}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Pipeline de Modelagem e Visualização}{43}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Projeto e Implementação da Solução}{44}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Coleta e Pré-processamento dos Dados}{45}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Modelagem de Tópicos}{46}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Geração de Embeddings}{46}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Redução de Dimensionalidade (UMAP)}{46}{subsubsection.5.2.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.3}Clusterização (HDBSCAN) e Otimização de Hiperparâmetros}{46}{subsubsection.5.2.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.2.4}Configuração Final do BERTopic}{47}{subsubsection.5.2.2.4}%
-\contentsline {subsection}{\numberline {5.2.3}Refinamento e Representação dos Tópicos (MMR)}{47}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Geração e Exportação para Visualização (WizMap)}{48}{subsection.5.2.4}%
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{RESULTADOS E DISCUSSÃO}}{50}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Validação Quantitativa}{50}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Análise de Sensibilidade e Definição de Tópicos}{50}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Diversidade de Tópicos}{51}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Avaliação de Coerência e Trade-off Semântico}{52}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Validação Qualitativa}{53}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Experimento Comparativo de Representação (c-TF-IDF vs. MMR)}{53}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Análise dos Tópicos Identificados}{55}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Discussão do Mapa de Conhecimento Interativo}{57}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Comparativo Qualitativo: Busca Lexical e Exploração Semântica}{59}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Limitações do Estudo}{60}{section.6.3}%
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{CONCLUSÃO}}{62}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Trabalhos Futuros}{63}{section.7.1}%
+\contentsline {section}{\numberline {1.1}Contribuições do Trabalho}{15}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Organização do Trabalho}{16}{section.1.2}%
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{REFERENCIAL TEÓRICO}}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Ciência da Informação e Análise de Publicações Científicas}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Processamento de Linguagem Natural (PLN)}{18}{section.2.2}%
+\contentsline {section}{\numberline {2.3}A Evolução das Representações Vetoriais em PLN}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Embeddings Estáticos: Limitações do Bag-of-Words}{19}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}A Revolução dos Transformadores e o Mecanismo de Atenção}{21}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Embeddings Contextuais: BERT e SBERT}{22}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Abordagens Tradicionais de Modelagem de Tópicos}{24}{section.2.4}%
+\contentsline {section}{\numberline {2.5}BERTopic: Uma Abordagem Moderna}{26}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Visualização de Dados para Análise Científica}{31}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Síntese do Referencial Teórico}{33}{section.2.7}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{TRABALHOS CORRELATOS}}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Síntese Comparativa dos Trabalhos Correlatos}{36}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Considerações Finais}{38}{section.3.2}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{METODOLOGIA}}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Identificação do Problema e Definição de Objetivos}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Desenvolvimento do Artefato}{40}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Estratégia de Avaliação do Artefato}{41}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Avaliação de Desempenho (Métricas)}{41}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Validação Semântica (Inspeção por Especialista)}{42}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Apresentação dos Resultados e Comunicação}{42}{section.4.4}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{PROJETO DE DESENVOLVIMENTO}}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tecnologias Utilizadas}{44}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Base Tecnológica do Observatório}{45}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Pipeline de Modelagem e Visualização}{46}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Projeto e Implementação da Solução}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Coleta e Pré-processamento dos Dados}{48}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Caracterização do Corpus de Teste}{48}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Etapas de Pré-processamento}{49}{subsubsection.5.2.1.2}%
+\contentsline {subsection}{\numberline {5.2.2}Modelagem de Tópicos}{50}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Geração de Embeddings}{50}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Redução de Dimensionalidade (UMAP)}{50}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Clusterização (HDBSCAN) e Otimização de Hiperparâmetros}{50}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Configuração Final do BERTopic}{51}{subsubsection.5.2.2.4}%
+\contentsline {subsection}{\numberline {5.2.3}Refinamento e Representação dos Tópicos (MMR)}{51}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Geração e Exportação para Visualização (WizMap)}{52}{subsection.5.2.4}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{RESULTADOS E DISCUSSÃO}}{54}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Resultados da Avaliação de Desempenho}{54}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Análise de Sensibilidade e Definição de Tópicos}{54}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Diversidade de Tópicos}{55}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Avaliação de Coerência e Trade-off Semântico}{56}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Validação Semântica e Discussão}{57}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Experimento Comparativo de Representação (c-TF-IDF vs. MMR)}{57}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Análise dos Tópicos Identificados}{59}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Discussão do Mapa de Conhecimento Interativo}{61}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Comparativo Qualitativo: Busca Lexical e Exploração Semântica}{63}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Limitações do Estudo}{64}{section.6.3}%
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{CONCLUSÃO}}{67}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Trabalhos Futuros}{68}{section.7.1}%
 \cftinsert {POS}
 \vspace {\cftbeforepartskip }
 \vspace {\cftbeforepartskip }
 \vspace {-38pt}
-\contentsline {chapter}{REFER\^ENCIAS}{64}{chapter*.41}%
+\contentsline {chapter}{REFER\^ENCIAS}{69}{chapter*.41}%
 \vspace {\cftbeforepartskip }

@@ -24,37 +24,43 @@ O fluxograma completo deste artefato, desde a ingestão da base de dados até a 
     \caption{Arquitetura do Pipeline de Modelagem e Visualização.}
     \label{fig:pipeline_artefato}
     \legend{Fonte: O Autor}
-    % Lembre-se de salvar a imagem 'image_dff87f.png' na sua pasta 'figuras/' 
-    % com um nome como 'arquitetura_pipeline_completo.png'
 \end{figure}
 
 \subsection[Coleta e Pré-processamento dos Dados]{Coleta e Pré-processamento dos Dados}
 \label{ssec:coleta_dados}
 
-A camada de ingestão de dados foi projetada para preparar o corpus textual para as tarefas subsequentes de NLP. A implementação utilizou uma extração estática dos metadados do Observatório, selecionando o título das publicações como atributo principal para a modelagem, devido ao seu alto valor semântico e densidade informativa.
+A camada de ingestão de dados foi projetada utilizando uma extração estática (dump) dos metadados do Núcleo de Pesquisa Aplicada e Inovação (NPAI). A opção por um dataset estático e isolado do ambiente de produção foi uma decisão metodológica para garantir a integridade e a reprodutibilidade dos experimentos de otimização de hiperparâmetros. O uso do banco completo e dinâmico nesta fase de desenvolvimento introduziria variáveis de instabilidade e custo computacional desnecessários para a validação da prova de conceito (PoC) da arquitetura proposta.
+
+\subsubsection{Caracterização do Corpus de Teste}
+\label{sssec:caracterizacao_corpus}
+
+Para a validação técnica do pipeline, utilizou-se um corpus de teste extraído do repositório do NPAI. Este conjunto de dados consiste em uma amostra de \textit{343 registros}, selecionados a partir dos critérios de relevância bibliográfica: publicações em livros, capítulos de livros e artigos completos. A utilização deste volume reduzido foi intencional para viabilizar a execução iterativa dos testes de otimização de hiperparâmetros em ambiente de desenvolvimento, sem comprometer a estabilidade do sistema de produção.
+
+A amostra compreende um intervalo temporal de \textit{26 anos}, com publicações registradas entre \textit{1998 e 2024}. Quanto à distribuição linguística, o corpus é predominantemente bilíngue, composto por \textit{62,39\%} de títulos em Português e \textit{35,28\%} em Inglês, contendo ainda uma fração de \textit{2,33\%} em Espanhol. Essa heterogeneidade linguística foi fundamental para testar a capacidade do modelo \textit{paraphrase-multilingual-MiniLM-L12-v2} em agrupar semanticamente documentos de mesmo tema, independentemente do idioma de origem. Para fins de transparência e reprodutibilidade, o dataset completo encontra-se disponibilizado no repositório GitHub\footnote{Disponível em: https://github.com/jeoaraujx/TCC} referenciado na nota de rodapé deste capítulo.
+
+\subsubsection{Etapas de Pré-processamento}
 
 O módulo de pré-processamento foi estruturado em dois estágios lógicos: saneamento (limpeza) do \textit{dataset} e normalização linguística.
 
-No estágio de saneamento, implementado via biblioteca Pandas, aplicaram-se filtros para a exclusão de registros inconsistentes, como entradas nulas ou duplicatas exatas. Essa etapa foi crítica para assegurar que a frequência de termos (TF-IDF) não fosse distorcida por redundâncias na base de dados
+No estágio de saneamento, implementado via biblioteca Pandas, aplicaram-se filtros para a exclusão de registros inconsistentes, como entradas nulas ou duplicatas exatas. Essa etapa foi crítica para assegurar que a frequência de termos (TF-IDF) não fosse distorcida por redundâncias na base de dados.
 
 No estágio de normalização, cada documento foi submetido a um pipeline de tratamento textual multilíngue, composto pelas seguintes rotinas:
 
 \begin{enumerate}
     \item \textbf{Identificação do Idioma:} Classificação automática do texto via biblioteca \textit{langdetect} para direcionar o processamento específico (Português/Inglês).
 
-    \item \textbf{Normalização e Limpeza de Caracteres:} Conversão para caixa baixa e remoção de acentuação (normalização Unicode NFKD) e caracteres especiais via expressões regulares, reduzindo a dimensionalidade do vocabulário .
+    \item \textbf{Normalização e Limpeza de Caracteres:} Conversão para caixa baixa e remoção de acentuação (normalização Unicode NFKD) e caracteres especiais via expressões regulares, reduzindo a dimensionalidade do vocabulário.
 
     \item \textbf{Lematização e Tokenização (spaCy):} Aplicação de lematização via \textit{spaCy}, convertendo termos flexionados à sua forma canônica (lema) para agrupar variações da mesma palavra.
 
-    \item \textbf{Filtragem Final de Tokens:} Remoção de \textit{stopwords} (termos funcionais sem carga semântica) e de \textit{tokens} com comprimento inferior a três caracteres
+    \item \textbf{Filtragem Final de Tokens:} Remoção de \textit{stopwords} (termos funcionais sem carga semântica) e de \textit{tokens} com comprimento inferior a três caracteres.
 \end{enumerate}
 
 Ao final desta etapa, as publicações que resultaram em textos vazios (ex: títulos que continham apenas \textit{stopwords} ou siglas curtas) foram removidas do conjunto final. O \textit{dataset} resultante, consistiu em uma lista de documentos processados, prontos para a etapa de geração de \textit{embeddings}.
-
 \subsection[Modelagem de Tópicos]{Modelagem de Tópicos}
 \label{ssec:modelagem_topicos}
 
-O núcleo de processamento do artefato baseia-se na arquitetura \gls{bert}, configurada para operar como um pipeline sequencial de transformação de dados. A implementação técnica seguiu o fluxo de vetorização, redução dimensional e agrupamento.
+A arquitetura do pipeline foi concebida de forma modular, seguindo o padrão de injeção de dependências permitido pela biblioteca BERTopic. Conforme ilustrado na \ref{fig:pipeline_artefato}, o \enquote{Núcleo BERTopic} não atua como um monólito rígido, mas sim como um orquestrador do fluxo de dados. As etapas de Redução de Dimensionalidade e Clusterização são executadas por instâncias customizadas dos algoritmos UMAP e HDBSCAN, respectivamente, que são configuradas externamente (com hiperparâmetros ajustados para o cenário de textos curtos) e injetadas no pipeline principal. Essa abordagem garante a reprodutibilidade e o controle fino sobre cada etapa do processamento, permitindo que o BERTopic gerencie a integração entre os embeddings gerados e os clusters resultantes.
 
 \subsubsection{Geração de Embeddings}
 \label{sssec:geracao_embeddings}
@@ -83,7 +89,7 @@ O critério de seleção adotado buscou o ponto de equilíbrio que maximizasse a
 \subsubsection{Configuração Final do BERTopic}
 \label{sssec:configuracao_bertopic}
 
-A instância final do modelo foi configurada para utilizar o \textbf{SentenceTransformer} como \textit{embedding\_model}, as instâncias customizadas de \textbf{UMAP} e \textbf{HDBSCAN} e, de forma notável, o \textbf{MaximalMarginalRelevance} (\gls{mmr}) como \textit{representation\_model} para o refinamento dos rótulos de tópicos, que será detalhado na Seção \ref{ssec:refinamento_rotulos}. O parâmetro \textbf{language="multilingual"} foi especificado, alinhando-se ao pré-processamento bilíngue.
+A instância final do modelo foi configurada para utilizar o \textit{SentenceTransformer} como \textit{embedding\_model}, as instâncias customizadas de \textit{UMAP} e \textit{HDBSCAN} e, de forma notável, o \textit{MaximalMarginalRelevance} (\gls{mmr}) como \textit{representation\_model} para o refinamento dos rótulos de tópicos, que será detalhado na Seção \ref{ssec:refinamento_rotulos}. O parâmetro \textit{language="multilingual"} foi especificado, alinhando-se ao pré-processamento bilíngue.
 
 Após a configuração, o modelo foi treinado com os textos processados e seus respectivos \textit{embeddings} pré-gerados. Os resultados, incluindo os IDs dos tópicos para cada documento e suas probabilidades, foram então obtidos. O modelo treinado foi salvo persistentemente para facilitar sua reutilização.
 

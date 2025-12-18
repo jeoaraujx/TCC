@@ -1,11 +1,11 @@
 \chapter[METODOLOGIA]{METODOLOGIA}
 \label{chap:metodologia}
 
-Este estudo adota a \textit{Design Science Research} (\gls{dsr})  como sua principal estrutura metodológica para o desenvolvimento e a validação de um artefato tecnológico. A \gls{dsr} é particularmente utilizada para esta pesquisa, pois seu foco reside na criação de soluções com caráter de inovação para problemas práticos, alinhando rigor científico com relevância aplicada \cite{Dresch_2015}.
+Este estudo adota a \textit{Design Science Research} (\gls{dsr}) como sua principal estrutura metodológica para o desenvolvimento e a validação de um artefato tecnológico. A \gls{dsr} é particularmente utilizada para esta pesquisa, pois seu foco reside na criação de soluções com caráter de inovação para problemas práticos, alinhando rigor científico com relevância aplicada \cite{Dresch_2015}.
 
 O objetivo é construir um \textit{pipeline} computacional para o mapeamento interativo de publicações científicas do Observatório de dados públicos de ciência e tecnologia da Bahia, combinando a modelagem de tópicos do \gls{bertopic} com a visualização interativa do \gls{wizmap}.
 
-O processo de \gls{dsr} orienta o projeto de forma iterativa, desde a concepção do problema até a comunicação dos resultados, conforme ilustrado no fluxograma da Figura \ref{fig:dsr_adaptada}. Este capítulo está estruturado para detalhar cada etapa desse processo: inicia-se pela \textbf{Identificação do Problema e Definição de Objetivos} (Seção 4.1), descreve o \textbf{Desenvolvimento do Artefato} (Seção 4.2), detalha os procedimentos de \textbf{Avaliação e Validação} (Seção 4.3) e conclui com a \textbf{Apresentação dos Resultados e Comunicação} (Seção 4.4). A seguir, cada etapa do DSR é detalhada e contextualizada no escopo deste trabalho.
+O processo de \gls{dsr} orienta o projeto de forma iterativa, desde a concepção do problema até a comunicação dos resultados, conforme ilustrado no fluxograma da Figura \ref{fig:dsr_adaptada}. Este capítulo está estruturado para detalhar cada etapa desse processo: inicia-se pela \textit{Identificação do Problema e Definição de Objetivos} (Seção 4.1), descreve o \textit{Desenvolvimento do Artefato} (Seção 4.2), detalha os procedimentos de \textit{Avaliação e Validação} (Seção 4.3) e conclui com a \textit{Apresentação dos Resultados e Comunicação} (Seção 4.4). A seguir, cada etapa do DSR é detalhada e contextualizada no escopo deste trabalho.
 
 \begin{figure}[H]
     \centering
@@ -24,6 +24,10 @@ Essa limitação evidencia a necessidade de uma solução que vá além da busca
 
 A partir disso, formulam-se as \textit{Conjecturas Teóricas}: a integração do \gls{bertopic} com uma interface de mapa interativo (como o \gls{wizmap}) tem o potencial de melhorar significativamente a identificação, classificação e exploração de temas, oferecendo uma compreensão mais profunda dos dados por meio de visualizações interativas.
 
+Para fins de escopo deste trabalho, adota-se uma definição operacional de Mapa de Conhecimento como: uma interface visual interativa que projeta um espaço vetorial de alta dimensionalidade em um plano 2D, onde a posição relativa dos documentos codifica sua afinidade semântica. O artefato não visa estabelecer relações formais (como \enquote{A é causa de B}), mas sim revelar a topologia do acervo (quais temas são vizinhos, quais são isolados), facilitando a exploração exploratória em detrimento da busca exata.
+
+É importante delimitar que o foco desta pesquisa reside na validação da arquitetura do software e na eficácia dos algoritmos de \gls{pln} propostos. Portanto, o problema não abrange, nesta etapa do ciclo de Design Science Research, a integração em tempo real com o banco de dados de produção do Observatório, nem a realização de um estudo bibliométrico exaustivo de todo o ecossistema científico da Bahia. O problema restringe-se à prototipagem e validação do pipeline em um ambiente controlado de dados.
+
 \section{Desenvolvimento do Artefato}
 \label{sec:desenvolvimento_artefato}
 
@@ -38,15 +42,15 @@ Este \textit{pipeline} é projetado para executar as seguintes funções-chave:
 
 A construção deste artefato se apoia no Estado da Técnica, detalhado no Capítulo \ref{chap:referencial_teorico}. O \textit{pipeline} integra os conceitos de Modelagem de Tópicos (\gls{bertopic}), Embeddings Contextuais (\gls{sbert}), Redução de Dimensionalidade (\gls{umap}), Algoritmos de Clusterização (\gls{hdbscan}) e Visualização de Dados Interativa (\gls{wizmap}).
 
-\section{Avaliação e Validação}
+\section{Estratégia de Avaliação do Artefato}
 \label{sec:avaliacao_validacao}
 
-O ciclo de \gls{dsr} exige uma avaliação com o caráter mais rigoroso, representada no diagrama pelas Avaliações 1, 2 e 3. Para garantir o rigor científico e a validade do artefato desenvolvido, será empregada uma abordagem de validação mista, combinando métricas quantitativas e análises qualitativas. Esta etapa é fundamental para aferir se os resultados gerados são consistentes, coerentes e se resolvem o problema de exploração de conhecimento identificado.
+Para aferir a qualidade e a utilidade do artefato desenvolvido, adota-se uma estratégia mista, alinhada aos conceitos de Avaliação e Validação em DSR. Neste trabalho, define-se Avaliação (\textit{Evaluation}) como a mensuração objetiva do desempenho do modelo computacional através de métricas de referência. Por sua vez, a Validação é entendida como a verificação qualitativa da coerência semântica e da aplicabilidade do artefato em representar corretamente os domínios de conhecimento, realizada através da inspeção por especialista.
 
-\subsection{Validação Quantitativa}
+\subsection{Avaliação de Desempenho (Métricas)}
 \label{sec:validacao_quantitativa}
 
-A validação quantitativa foca em avaliar objetivamente a qualidade dos tópicos gerados pelo \textit{pipeline} do \gls{bertopic}. Serão utilizadas métricas consolidadas na literatura de \gls{pln} para mensurar tanto a consistência interna quanto a distinção entre os grupos:
+A avaliação de desempenho (Métricas) foca em avaliar objetivamente a qualidade dos tópicos gerados pelo \textit{pipeline} do \gls{bertopic}. Serão utilizadas métricas consolidadas na literatura de \gls{pln} para mensurar tanto a consistência interna quanto a distinção entre os grupos:
 
 \begin{itemize}
     \item \textbf{Coerência de Tópicos (\textit{Topic Coherence}):} 
@@ -60,22 +64,25 @@ A validação quantitativa foca em avaliar objetivamente a qualidade dos tópico
     A diversidade é utilizada para garantir que o modelo não está gerando tópicos redundantes, ou seja, \textit{clusters} diferentes descritos pelas mesmas palavras-chave. Um modelo ideal deve apresentar tópicos que sejam, ao mesmo tempo, coerentes (alta pontuação de coerência) e distintos entre si (alta diversidade). Conforme \cite[p. 5, Traduzido]{Grootendorst_2022}, a métrica é calculada como a porcentagem de palavras únicas em todos os tópicos e é definida pela fórmula $M / (N \times k)$, onde $M$ é o número de palavras únicas extraídas nos $k$ termos principais de todos os $N$ tópicos \cite[p. 5]{Jung_2024}. O resultado varia de 0 (todos os tópicos são idênticos) a 1 (todos os termos em todos os tópicos são únicos).
 \end{itemize}
 
-\subsection{Validação Qualitativa}
+\subsection{Validação Semântica (Inspeção por Especialista)}
 \label{sec:validacao_qualitativa}
 
-A validação qualitativa é essencial para confirmar se os resultados quantitativos se traduzem em valor prático e interpretabilidade. Esta etapa responde diretamente à Avaliação 2 (O problema foi resolvido?), verificando se o artefato de fato soluciona o problema da exploração de conhecimento identificado. Esta validação será focada em dois componentes e conduzida por um especialista da área:
+Dada a natureza não supervisionada da modelagem de tópicos, métricas quantitativas nem sempre refletem a intelegibilidade humana. Portanto, a validação foi complementada por uma análise qualitativa conduzida pelos pesquisadores responsáveis (autor e orientador), atuando como especialistas do domínio técnico.
 
-\begin{itemize}
-    \item \textbf{Análise de Rótulos (Interpretabilidade):} Para validar a eficácia da etapa de refinamento (Seção \ref{sec:desenvolvimento_artefato}, item 2), será conduzida uma comparação direta. Para uma amostra de tópicos, será apresentado ao especialista o rótulo de linha de base (ex: as 3 palavras-chave do \gls{c-tf-idf} puro) e o rótulo refinado (as 3 palavras-chave selecionadas pelo \gls{mmr}). O especialista avaliará qual dos dois rótulos é mais informativo, menos redundante e mais preciso, permitindo aferir a melhoria na interpretabilidade.
+O protocolo de inspeção adotou uma abordagem heurística baseada na verificação de \textit{Coerência Intratópico}. Foram selecionados aleatoriamente 20\% dos tópicos gerados (amostragem estratificada por densidade) para a verificação manual de dois critérios fundamentais:
 
-    \item \textbf{Inspeção Visual dos \textit{Clusters} (Validade Semântica):} Para validar se os \textit{clusters} possuem coerência semântica interna (i.e., se estão bem formados) e se o mapa reflete uma estrutura de conhecimento válida, o especialista inspecionará o \gls{wizmap}. A validação consistirá em selecionar alguns \textit{clusters} e analisar os documentos que os compõem (através dos \textit{tooltips} de cada \textit{datapoint}). Se os documentos dentro de um mesmo \textit{cluster} forem coesos e pertencerem ao tema descrito pelo rótulo, o artefato será considerado válido para resolver o problema da exploração semântica.
-\end{itemize}
+\begin{enumerate}
+    \item \textbf{Alinhamento de Rótulos:} Verificar se as palavras-chave geradas pelo algoritmo (c-TF-IDF/MMR) descrevem adequadamente o conteúdo dos títulos dos documentos agrupados naquele \textit{cluster}.
+    \item \textbf{Detecção de Intrusos:} Identificar a presença de documentos semanticamente desconexos dentro de um agrupamento (ex: um artigo de 'Química' classificado erroneamente em um tópico de 'Direito').
+\end{enumerate}
+
+Essa etapa visa assegurar a \textit{validade interna} do artefato, garantindo que o \enquote{mapa} gerado possua lógica semântica antes de ser submetido a futuros testes de usabilidade com público externo. Adicionalmente, será conduzida uma comparação direta entre os rótulos gerados pelo método padrão (\gls{c-tf-idf}) e os refinados pelo \gls{mmr}, para aferir o ganho na interpretabilidade humana.
 
 \section{Apresentação dos Resultados e Comunicação}
 \label{sec:comunicacao}
 
 A etapa final do ciclo \gls{dsr}, conforme o \textit{framework} de \citeonline{Dresch_2015}, é a Comunicação. Esta fase é dedicada à documentação e disseminação dos achados obtidos durante o desenvolvimento e a avaliação do artefato.
 
-Os resultados da aplicação do \textit{pipeline} e de sua validação (conforme definido na Seção \ref{sec:avaliacao_validacao}) serão detalhados nos capítulos subsequentes. O \textbf{Capítulo \ref{chap:projeto_desenvolvimento}} apresentará a implementação técnica do artefato e a arquitetura da solução. O \textbf{Capítulo \ref{chap:resultados}} analisará os dados gerados, a qualidade dos tópicos (via \gls{npmi} e Diversidade) e a validade da interface de visualização.
+Os resultados da aplicação do \textit{pipeline} e de sua validação (conforme definido na Seção \ref{sec:avaliacao_validacao}) serão detalhados nos capítulos subsequentes. O \textit{Capítulo \ref{chap:projeto_desenvolvimento}} apresentará a implementação técnica do artefato e a arquitetura da solução. O \textit{Capítulo \ref{chap:resultados}} analisará os dados gerados, a qualidade dos tópicos (via \gls{npmi} e Diversidade) e a validade da interface de visualização.
 
 O objetivo desta comunicação é apresentar e validar uma solução tecnológica para o problema de exploração de conhecimento no Observatório, documentando o processo de desenvolvimento e os resultados obtidos. Este trabalho visa demonstrar a aplicação prática de técnicas de modelagem de tópicos e visualização interativa, consolidando o aprendizado e a experiência adquiridos no desenvolvimento de um sistema funcional.
