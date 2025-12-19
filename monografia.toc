@@ -58,5 +58,5 @@
 \vspace {\cftbeforepartskip }
 \vspace {\cftbeforepartskip }
 \vspace {-38pt}
-\contentsline {chapter}{REFER\^ENCIAS}{69}{chapter*.41}%
+\contentsline {chapter}{REFER\^ENCIAS}{69}{chapter*.40}%
 \vspace {\cftbeforepartskip }
